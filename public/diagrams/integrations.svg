@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" viewBox="0 0 1080 300" role="img" aria-label="One hosted MCP endpoint connects to Cursor, Claude Desktop, VS Code, Windsurf, and OpenAI Agents" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <linearGradient id="i-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+    <marker id="i-ar" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6366f1"/></marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="1079" height="299" rx="18" fill="#0a0a0f" stroke="#1d1d28"/>
+  <text x="32" y="40" fill="#e5e7eb" font-size="16" font-weight="600">One endpoint, every MCP client</text>
+  <text x="32" y="60" fill="#8b8b9a" font-size="12">The same remote URL + Bearer token works across all MCP-compatible tools</text>
+
+  <!-- endpoint -->
+  <rect x="60" y="116" width="220" height="96" rx="14" fill="#120f1d" stroke="url(#i-a)"/>
+  <text x="170" y="152" fill="#f3f4f6" font-size="14" font-weight="700" text-anchor="middle">MCP endpoint</text>
+  <text x="170" y="174" fill="#9ca3af" font-size="11" text-anchor="middle">/api/mcp/{projectId}/mcp</text>
+  <text x="170" y="192" fill="#9ca3af" font-size="11" text-anchor="middle">JSON-RPC 2.0 · Bearer</text>
+
+  <!-- clients -->
+  <g font-size="13" font-weight="600" text-anchor="middle">
+    <g><rect x="560" y="64" width="220" height="40" rx="10" fill="#13131b" stroke="#2a2a38"/><text x="670" y="89" fill="#e5e7eb">Cursor</text></g>
+    <g><rect x="560" y="114" width="220" height="40" rx="10" fill="#13131b" stroke="#2a2a38"/><text x="670" y="139" fill="#e5e7eb">Claude Desktop</text></g>
+    <g><rect x="560" y="164" width="220" height="40" rx="10" fill="#13131b" stroke="#2a2a38"/><text x="670" y="189" fill="#e5e7eb">VS Code</text></g>
+    <g><rect x="820" y="89" width="200" height="40" rx="10" fill="#13131b" stroke="#2a2a38"/><text x="920" y="114" fill="#e5e7eb">Windsurf</text></g>
+    <g><rect x="820" y="164" width="200" height="40" rx="10" fill="#13131b" stroke="#2a2a38"/><text x="920" y="189" fill="#e5e7eb">OpenAI Agents</text></g>
+  </g>
+
+  <g stroke="#6366f1" stroke-width="2" fill="none">
+    <path d="M280,150 C420,150 470,84 558,84" marker-end="url(#i-ar)"/>
+    <path d="M280,158 C420,158 470,134 558,134" marker-end="url(#i-ar)"/>
+    <path d="M280,166 C420,166 470,184 558,184" marker-end="url(#i-ar)"/>
+    <path d="M780,104 C800,104 806,109 818,109" marker-end="url(#i-ar)"/>
+    <path d="M780,184 C800,184 806,184 818,184" marker-end="url(#i-ar)"/>
+  </g>
+</svg>

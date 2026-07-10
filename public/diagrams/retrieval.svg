@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="300" viewBox="0 0 1080 300" role="img" aria-label="Retrieval layer: a query is matched against heading-aware chunks, ranked into sections, and returned as a cited answer" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <linearGradient id="r-a" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+    <marker id="r-ar" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#5b5b6e"/></marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="1079" height="299" rx="18" fill="#0a0a0f" stroke="#1d1d28"/>
+  <text x="32" y="40" fill="#e5e7eb" font-size="16" font-weight="600">Retrieval layer</text>
+  <text x="32" y="60" fill="#8b8b9a" font-size="12">Heading-aware section search — one result per docs section, with breadcrumbs and source URLs</text>
+
+  <!-- query -->
+  <rect x="32" y="110" width="200" height="120" rx="13" fill="#13131b" stroke="#2a2a38"/>
+  <text x="132" y="150" fill="#f3f4f6" font-size="13" font-weight="600" text-anchor="middle">Query</text>
+  <text x="132" y="174" fill="#8b8b9a" font-size="11" text-anchor="middle">"How does</text>
+  <text x="132" y="190" fill="#8b8b9a" font-size="11" text-anchor="middle">authentication work?"</text>
+
+  <!-- engine -->
+  <rect x="300" y="100" width="240" height="140" rx="13" fill="#120f1d" stroke="url(#r-a)"/>
+  <text x="420" y="140" fill="#f3f4f6" font-size="13" font-weight="700" text-anchor="middle">Section search</text>
+  <text x="420" y="166" fill="#9ca3af" font-size="11" text-anchor="middle">heading-aware chunking</text>
+  <text x="420" y="184" fill="#9ca3af" font-size="11" text-anchor="middle">keyword + relevance rank</text>
+  <text x="420" y="202" fill="#9ca3af" font-size="11" text-anchor="middle">dedupe per section</text>
+
+  <!-- ranked -->
+  <g>
+    <rect x="608" y="96" width="200" height="34" rx="8" fill="#13131b" stroke="#2a2a38"/>
+    <text x="620" y="118" fill="#e5e7eb" font-size="11">1 · Auth : API keys</text>
+    <rect x="608" y="138" width="200" height="34" rx="8" fill="#13131b" stroke="#2a2a38"/>
+    <text x="620" y="160" fill="#e5e7eb" font-size="11">2 · Auth : Bearer tokens</text>
+    <rect x="608" y="180" width="200" height="34" rx="8" fill="#13131b" stroke="#2a2a38"/>
+    <text x="620" y="202" fill="#e5e7eb" font-size="11">3 · Auth : OAuth flow</text>
+    <text x="608" y="234" fill="#8b8b9a" font-size="11">ranked sections</text>
+  </g>
+
+  <!-- answer -->
+  <rect x="876" y="110" width="172" height="120" rx="13" fill="#0f1f17" stroke="#10b981"/>
+  <text x="962" y="150" fill="#6ee7b7" font-size="13" font-weight="600" text-anchor="middle">Cited answer</text>
+  <text x="962" y="174" fill="#9ca3af" font-size="11" text-anchor="middle">grounded text</text>
+  <text x="962" y="190" fill="#9ca3af" font-size="11" text-anchor="middle">+ source URLs</text>
+
+  <line x1="232" y1="170" x2="298" y2="170" stroke="#5b5b6e" stroke-width="2" marker-end="url(#r-ar)"/>
+  <line x1="540" y1="155" x2="606" y2="135" stroke="#5b5b6e" stroke-width="2" marker-end="url(#r-ar)"/>
+  <line x1="808" y1="155" x2="874" y2="165" stroke="#5b5b6e" stroke-width="2" marker-end="url(#r-ar)"/>
+</svg>

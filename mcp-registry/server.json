@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.doc2mcp/doc2mcp",
+  "title": "doc2mcp",
+  "description": "Remote MCP server that turns docs, GitHub repos, and OpenAPI specs into AI-ready tools.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/doc2mcp/doc2mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://doc2mcp.site/api/mcp/{project_id}/mcp",
+      "variables": {
+        "project_id": {
+          "description": "Your doc2mcp project ID. Find it under Dashboard → your project → Connect tab.",
+          "isRequired": true
+        }
+      },
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <your project MCP token>. Generate one under the Connect tab of your project. Treat the token like a password.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

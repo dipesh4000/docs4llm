@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-label="The doc2mcp pipeline: Documentation to Crawling to Knowledge Processing to Retrieval to MCP Generation to AI Agents">
+  <title>The doc2mcp pipeline</title>
+  <defs>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;display=swap");
+      .label { font-family: "Caveat", "Segoe Print", cursive; font-size: 21px; font-weight: 700; fill: #f1f3f5; }
+      .sub { font-family: "Caveat", "Segoe Print", cursive; font-size: 15px; font-weight: 600; fill: #adb5bd; }
+      .title { font-family: "Caveat", "Segoe Print", cursive; font-size: 28px; font-weight: 700; fill: #f8f9fa; }
+      .tagline { font-family: "Caveat", "Segoe Print", cursive; font-size: 18px; font-weight: 600; fill: #868e96; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="300" rx="12" fill="#16161a"/>
+  <rect x="8" y="8" width="1264" height="284" rx="8" fill="none" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
+
+  <text class="title" x="36" y="42">The doc2mcp pipeline</text>
+  <text class="tagline" x="36" y="68">Documentation → AI agents</text>
+
+  <!-- shared sketch box path template: w=168 h=128 -->
+
+  <!-- 1 Documentation -->
+  <g transform="translate(24, 92)">
+    <path d="M4 6 C6 2 12 4 18 3 L158 5 C164 3 170 6 168 12 L166 118 C168 124 162 128 156 126 L12 128 C6 130 2 122 4 116 Z" fill="#1e3a5f" stroke="#74c0fc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M22 24 L22 68 C22 72 26 74 30 72 L52 68 C56 66 58 62 56 58 L56 20 C56 16 52 14 48 16 L26 22 C24 23 22 24 22 24 Z" fill="#a5d8ff" stroke="#1971c2" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M56 20 L56 28 L48 30 L48 16 Z" fill="#d0ebff" stroke="#1971c2" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M30 36 L52 32 M30 46 L48 42 M30 56 L44 52" stroke="#1971c2" stroke-width="1.8" stroke-linecap="round"/>
+    <text class="label" x="72" y="44">Documentation</text>
+    <text class="sub" x="72" y="66">Any docs URL</text>
+  </g>
+
+  <path d="M196 156 C204 150 210 156 218 156 L228 156" fill="none" stroke="#ced4da" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M224 150 L234 156 L224 162" fill="none" stroke="#ced4da" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 2 Crawling -->
+  <g transform="translate(216, 92)">
+    <path d="M4 6 C6 2 12 4 18 3 L158 5 C164 3 170 6 168 12 L166 118 C168 124 162 128 156 126 L12 128 C6 130 2 122 4 116 Z" fill="#1b3d2f" stroke="#69db7c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="42" cy="48" rx="22" ry="22" fill="#b2f2bb" stroke="#2f9e44" stroke-width="2"/>
+    <path d="M20 48 C28 38 36 38 42 48 C48 58 56 58 64 48" fill="none" stroke="#2f9e44" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M42 26 L42 70 M20 48 L64 48 M26 32 C34 42 50 42 58 32 M26 64 C34 54 50 54 58 64" fill="none" stroke="#2f9e44" stroke-width="1.6" stroke-linecap="round"/>
+    <text class="label" x="72" y="44">Crawling</text>
+    <text class="sub" x="72" y="66">Fetch + preserve</text>
+  </g>
+
+  <path d="M388 156 L408 156" fill="none" stroke="#ced4da" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M404 150 L414 156 L404 162" fill="none" stroke="#ced4da" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 3 Knowledge -->
+  <g transform="translate(408, 92)">
+    <path d="M4 6 C6 2 12 4 18 3 L158 5 C164 3 170 6 168 12 L166 118 C168 124 162 128 156 126 L12 128 C6 130 2 122 4 116 Z" fill="#3d3a1f" stroke="#ffd43b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="18" y="54" width="12" height="20" rx="2" fill="#ffec99" stroke="#f08c00" stroke-width="2" transform="rotate(-10 24 64)"/>
+    <rect x="32" y="50" width="12" height="24" rx="2" fill="#ffe066" stroke="#f08c00" stroke-width="2"/>
+    <rect x="46" y="54" width="12" height="20" rx="2" fill="#ffec99" stroke="#f08c00" stroke-width="2" transform="rotate(10 52 64)"/>
+    <path d="M20 40 L54 36 L50 44 L24 48 Z" fill="#fff3bf" stroke="#f08c00" stroke-width="1.8" stroke-linejoin="round"/>
+    <text class="label" x="72" y="40">Knowledge</text>
+    <text class="label" x="72" y="60">Processing</text>
+    <text class="sub" x="72" y="82">Chunk + index</text>
+  </g>
+
+  <path d="M580 156 L600 156" fill="none" stroke="#ced4da" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M596 150 L606 156 L596 162" fill="none" stroke="#ced4da" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 4 Retrieval -->
+  <g transform="translate(600, 92)">
+    <path d="M4 6 C6 2 12 4 18 3 L158 5 C164 3 170 6 168 12 L166 118 C168 124 162 128 156 126 L12 128 C6 130 2 122 4 116 Z" fill="#3d2e1a" stroke="#ffa94d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="40" cy="48" r="16" fill="#ffd8a8" stroke="#e8590c" stroke-width="2.2"/>
+    <path d="M50 58 L62 72" stroke="#e8590c" stroke-width="3.2" stroke-linecap="round"/>
+    <text class="label" x="72" y="44">Retrieval</text>
+    <text class="sub" x="72" y="66">Ranked sections</text>
+  </g>
+
+  <path d="M772 156 L792 156" fill="none" stroke="#ced4da" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M788 150 L798 156 L788 162" fill="none" stroke="#ced4da" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 5 MCP -->
+  <g transform="translate(792, 92)">
+    <path d="M4 6 C6 2 12 4 18 3 L158 5 C164 3 170 6 168 12 L166 118 C168 124 162 128 156 126 L12 128 C6 130 2 122 4 116 Z" fill="#2e2550" stroke="#b197fc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="22" y="28" width="38" height="44" rx="4" fill="#d0bfff" stroke="#7950f2" stroke-width="2"/>
+    <path d="M28 38 L54 38 M28 48 L50 48 M28 58 L46 58" stroke="#7950f2" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="32" cy="38" r="2" fill="#7950f2"/>
+    <circle cx="32" cy="48" r="2" fill="#7950f2"/>
+    <path d="M60 46 L68 46 L68 52 L60 52 Z" fill="#e5dbff" stroke="#7950f2" stroke-width="1.8" stroke-linejoin="round"/>
+    <text class="label" x="72" y="40">MCP</text>
+    <text class="label" x="72" y="60">Generation</text>
+    <text class="sub" x="72" y="82">Hosted endpoint</text>
+  </g>
+
+  <path d="M964 156 L984 156" fill="none" stroke="#ced4da" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M980 150 L990 156 L980 162" fill="none" stroke="#ced4da" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 6 AI Agents -->
+  <g transform="translate(984, 92)">
+    <path d="M4 6 C6 2 12 4 18 3 L158 5 C164 3 170 6 168 12 L166 118 C168 124 162 128 156 126 L12 128 C6 130 2 122 4 116 Z" fill="#3d1f2a" stroke="#ff8787" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="24" y="30" width="36" height="40" rx="7" fill="#ffc9c9" stroke="#e03131" stroke-width="2"/>
+    <circle cx="34" cy="46" r="3.5" fill="#fff" stroke="#e03131" stroke-width="1.5"/>
+    <circle cx="50" cy="46" r="3.5" fill="#fff" stroke="#e03131" stroke-width="1.5"/>
+    <path d="M32 60 C38 66 46 66 52 60" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round"/>
+    <path d="M36 26 L42 20 L48 26" fill="none" stroke="#e03131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="label" x="72" y="44">AI Agents</text>
+    <text class="sub" x="72" y="66">Cursor · Claude</text>
+  </g>
+
+  <path d="M36 248 C400 242 880 252 1244 244" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+  <text class="tagline" x="36" y="278">Excalidraw-style sketch · doc2mcp end-to-end flow</text>
+</svg>

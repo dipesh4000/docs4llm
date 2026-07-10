@@ -1,0 +1,94 @@
+/* Brand-themed driver.js popover for the doc2mcp onboarding tour. */
+
+.driver-popover.doc2mcp-tour {
+  background-color: #ffffff;
+  color: #1f1f1f;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.35);
+  padding: 18px 18px 14px;
+  max-width: 320px;
+  font-family: var(--font-inter, system-ui, sans-serif);
+}
+
+.driver-popover.doc2mcp-tour .driver-popover-title {
+  font-family: var(--font-space-grotesk, var(--font-inter, system-ui));
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.driver-popover.doc2mcp-tour .driver-popover-description {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #5f6368;
+  margin-top: 4px;
+}
+
+.driver-popover.doc2mcp-tour .driver-popover-progress-text {
+  font-size: 11px;
+  font-family: var(--font-geist-mono, ui-monospace, monospace);
+  color: #80868b;
+  letter-spacing: 0.04em;
+}
+
+.driver-popover.doc2mcp-tour .driver-popover-navigation-btns button {
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  text-shadow: none;
+  background-color: #f1f3f4;
+  color: #3c4043;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.driver-popover.doc2mcp-tour
+  .driver-popover-navigation-btns
+  button.driver-popover-next-btn {
+  background-color: #4285f4;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.driver-popover.doc2mcp-tour .driver-popover-close-btn {
+  color: #80868b;
+}
+
+.driver-popover.doc2mcp-tour .driver-popover-arrow {
+  border-color: #ffffff;
+}
+
+/* Dark mode */
+html.dark .driver-popover.doc2mcp-tour {
+  background-color: #1e1f22;
+  color: #e3e3e3;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+}
+
+html.dark .driver-popover.doc2mcp-tour .driver-popover-description {
+  color: #c4c7c5;
+}
+
+html.dark .driver-popover.doc2mcp-tour .driver-popover-progress-text {
+  color: #9aa0a6;
+}
+
+html.dark .driver-popover.doc2mcp-tour .driver-popover-navigation-btns button {
+  background-color: #303134;
+  color: #e3e3e3;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html.dark
+  .driver-popover.doc2mcp-tour
+  .driver-popover-navigation-btns
+  button.driver-popover-next-btn {
+  background-color: #8ab4f8;
+  color: #131314;
+}
+
+html.dark .driver-popover.doc2mcp-tour .driver-popover-arrow {
+  border-color: #1e1f22;
+}

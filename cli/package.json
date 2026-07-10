@@ -1,0 +1,66 @@
+{
+  "name": "doc2mcp",
+  "version": "0.1.22",
+  "description": "Turn any documentation site into a hosted MCP server from your terminal — for Cursor, Claude, VS Code, Windsurf, and OpenAI agents.",
+  "type": "module",
+  "bin": {
+    "doc2mcp": "./dist/index.js"
+  },
+  "homepage": "https://doc2mcp.site",
+  "repository": {
+    "type": "git",
+<<<<<<< HEAD
+    "url": "git+https://github.com/garvitsingh006/doc2mcp.git",
+=======
+    "url": "git+https://github.com/doc2mcp/doc2mcp.git",
+>>>>>>> upstream/main
+    "directory": "cli"
+  },
+  "bugs": {
+    "url": "https://github.com/garvitsingh006/doc2mcp/issues"
+  },
+  "files": [
+    "assets",
+    "dist",
+    "scripts",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "postinstall": "node ./scripts/postinstall.js",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "documentation",
+    "docs",
+    "cli",
+    "cursor",
+    "claude",
+    "windsurf",
+    "vscode",
+    "openai",
+    "ai",
+    "agents",
+    "rag",
+    "llm"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.10.1",
+    "commander": "^13.1.0",
+    "open": "^10.1.0",
+    "ora": "^8.2.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}

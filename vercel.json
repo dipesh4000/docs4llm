@@ -1,0 +1,34 @@
+{
+  "framework": "nextjs",
+  "regions": ["bom1"],
+  "git": {
+    "deploymentEnabled": {
+      "main": false
+    }
+  },
+  "ignoreCommand": "bash scripts/vercel-ignore.sh",
+  "functions": {
+    "app/api/convert/route.ts": { "maxDuration": 60 },
+    "app/api/internal/pipeline-worker/route.ts": { "maxDuration": 60 },
+    "app/api/mcp/[projectId]/mcp/route.ts": { "maxDuration": 30 },
+    "app/(chat)/api/chat/route.ts": { "maxDuration": 60 },
+    "app/(chat)/api/files/upload/route.ts": { "maxDuration": 30 }
+  },
+  "headers": [
+    {
+      "source": "/api/mcp/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "authorization, x-doc2mcp-token, content-type"
+        },
+        { "key": "Access-Control-Max-Age", "value": "86400" }
+      ]
+    }
+  ]
+}

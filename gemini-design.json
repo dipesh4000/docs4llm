@@ -1,0 +1,62 @@
+{
+  "design_system": "Gemini-Inspired Aesthetic Spec",
+  "ideology": "Utilitarian minimalism, content-first canvas, extreme negative space, zero visual friction",
+  "typography": {
+    "font_family_sans": "Google Sans, Inter, system-ui, sans-serif",
+    "font_family_mono": "Google Sans Mono, JetBrains Mono, monospace",
+    "base_size": "16px",
+    "line_height_relaxed": "1.625",
+    "letter_spacing_tight": "-0.01em"
+  },
+  "color_palette": {
+    "dark_mode_default": {
+      "bg_main": "#131314",
+      "bg_surface": "#1e1e20",
+      "bg_surface_variant": "#282a2d",
+      "text_primary": "#e3e3e3",
+      "text_secondary": "#b4b4b4",
+      "text_muted": "#757575",
+      "border_subtle": "#303134"
+    },
+    "light_mode_optional": {
+      "bg_main": "#f0f4f9",
+      "bg_surface": "#ffffff",
+      "bg_surface_variant": "#e9eef6",
+      "text_primary": "#1f1f1f",
+      "text_secondary": "#444746",
+      "text_muted": "#757575",
+      "border_subtle": "#deede2"
+    },
+    "brand_gradients": {
+      "gemini_spark": "linear-gradient(135deg, #4285f4 0%, #9b72cb 50%, #d96570 100%)",
+      "subtle_shimmer": "linear-gradient(90deg, rgba(66,133,244,0.05) 0%, rgba(155,114,203,0.05) 100%)"
+    }
+  },
+  "geometry_and_spacing": {
+    "border_radius": {
+      "pill": "32px",
+      "container": "24px",
+      "component": "16px",
+      "interactive": "12px"
+    },
+    "shadows": {
+      "soft_elevation": "0 4px 24px -1px rgba(0, 0, 0, 0.2)",
+      "focus_glow": "0 0 0 2px rgba(155, 114, 203, 0.3)"
+    },
+    "layout_padding": {
+      "canvas_gap": "32px",
+      "section_padding": "40px"
+    }
+  },
+  "iconography_rules": {
+    "provider": "Lucide / Material Symbols (Outline variant only)",
+    "stroke_width": "1.5px",
+    "behavior": "Hollow outline by default. Fill states or color shifts are prohibited unless actively hovered, focused, or selected."
+  },
+  "component_guidelines": {
+    "layout": "Enforce borderless components wherever possible. Use background color changes or padding over explicit stroke borders.",
+    "buttons": "Ghost or subtle variants dominate. Only use solid fills for primary call-to-actions, preferably leveraging the brand gradient.",
+    "inputs": "Must use the pill shape. Maximize height and interior padding. Placeholder text must be highly desaturated.",
+    "transitions": "All state changes (hover, active, visibility) must use an ultra-smooth cubic-bezier curve: `all 280ms cubic-bezier(0.4, 0, 0.2, 1)`."
+  }
+}
