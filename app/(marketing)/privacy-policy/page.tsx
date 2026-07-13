@@ -6,9 +6,9 @@ import { LegalPage } from "@/components/legal/legal-page";
 import { CONTACT_EMAIL } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — doc2mcp",
+  title: "Privacy Policy — docs4llm",
   description:
-    "How doc2mcp collects, uses, stores, and protects your personal data, documentation sources, and payment information.",
+    "How docs4llm collects, uses, stores, and protects your personal data, documentation sources, and payment information.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -16,14 +16,14 @@ export default function PrivacyPolicyPage() {
     <main className="landing-page relative min-h-screen overflow-x-hidden">
       <AuthAwareLandingNavigation />
       <LegalPage
-        intro="This Privacy Policy explains what information doc2mcp (operated by Gautam Manak) collects when you use our website, app, and APIs, how we use it, and what controls you have over it. We try to keep this short and human-readable — if anything is unclear, please contact us."
+        intro="This Privacy Policy explains what information docs4llm (operated by Gautam Manak) collects when you use our website, app, and APIs, how we use it, and what controls you have over it. We try to keep this short and human-readable — if anything is unclear, please contact us."
         lastUpdated="29 May 2026"
         sections={[
           {
             heading: "1. Who we are",
             body: (
               <p>
-                doc2mcp (“we”, “us”, “our”) is a software-as-a-service product
+                docs4llm (“we”, “us”, “our”) is a software-as-a-service product
                 operated by Gautam Manak from India. You can reach us at{" "}
                 <a
                   className="underline hover:text-foreground"
@@ -67,7 +67,7 @@ export default function PrivacyPolicyPage() {
               <>
                 <p>We use your data to:</p>
                 <ul className="list-disc space-y-1 pl-5">
-                  <li>Provide and operate the doc2mcp service.</li>
+                  <li>Provide and operate the docs4llm service.</li>
                   <li>
                     Run docs → MCP conversions, store generated artifacts, and
                     serve them back to you and your AI agents.
@@ -107,8 +107,8 @@ export default function PrivacyPolicyPage() {
                     plans.
                   </li>
                   <li>
-                    <strong>Google Gemini</strong> — the LLM provider that
-                    powers chat, workflow inference, and image / PDF generation.
+                    <strong>OpenRouter and its selected model provider</strong>{" "}
+                    — power chat, documentation analysis, and workflow inference.
                   </li>
                 </ul>
               </>
@@ -158,7 +158,7 @@ export default function PrivacyPolicyPage() {
             heading: "8. Children",
             body: (
               <p>
-                doc2mcp is not directed at children under 16. If you believe a
+                docs4llm is not directed at children under 16. If you believe a
                 child has provided us personal data, please contact us and we
                 will remove it.
               </p>

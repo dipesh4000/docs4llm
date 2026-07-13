@@ -1,14 +1,14 @@
 ---
 title: Hosted version
-description: The fully managed doc2mcp service — the recommended way to use it.
+description: The fully managed docs4llm service — the recommended way to use it.
 category: Deployment
 order: 1
 ---
 
 ## Overview
 
-The hosted version at [doc2mcp.site](https://doc2mcp.site) is the recommended
-way to use doc2mcp. Conversions, hosting, retrieval, and the MCP endpoints are
+The hosted version at [docs4llm.site](https://docs4llm.site) is the recommended
+way to use docs4llm. Conversions, hosting, retrieval, and the MCP endpoints are
 all managed for you.
 
 ## Why it matters
@@ -28,7 +28,7 @@ to scale. You paste a URL and get a live endpoint.
 
 ## Step-by-step
 
-1. Sign in at [doc2mcp.site](https://doc2mcp.site).
+1. Sign in at [docs4llm.site](https://docs4llm.site).
 2. Convert a docs URL ([Quick start](/docs/quickstart)).
 3. Connect your client ([Agent compatibility](/docs/agent-compatibility)).
 

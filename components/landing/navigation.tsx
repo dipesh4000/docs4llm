@@ -16,8 +16,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { Doc2McpLogo } from "@/components/doc2mcp/logo";
-import { ThemeToggle } from "@/components/doc2mcp/theme-toggle";
+import { Docs4LlmLogo } from "@/components/docs4llm/logo";
+import { ThemeToggle } from "@/components/docs4llm/theme-toggle";
 import { GithubStarButton } from "@/components/landing/github-star-button";
 import {
   MobileNav,
@@ -134,11 +134,11 @@ export function LandingNavigation({
     <Navbar>
       <NavBody>
         <Link
-          aria-label="doc2mcp home"
+          aria-label="docs4llm home"
           className="relative z-20 flex shrink-0 items-center"
           href="/"
         >
-          <Doc2McpLogo size={28} />
+          <Docs4LlmLogo size={28} />
         </Link>
 
         <NavItems
@@ -168,8 +168,8 @@ export function LandingNavigation({
 
       <MobileNav>
         <MobileNavHeader>
-          <Link aria-label="doc2mcp home" href="/">
-            <Doc2McpLogo size={24} />
+          <Link aria-label="docs4llm home" href="/">
+            <Docs4LlmLogo size={24} />
           </Link>
           <MobileNavToggle
             isOpen={isMobileMenuOpen}

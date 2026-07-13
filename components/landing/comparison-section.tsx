@@ -81,10 +81,10 @@ const CAPABILITIES: Capability[] = [
 
 const COMPETITORS: Competitor[] = [
   {
-    id: "doc2mcp",
-    name: "doc2mcp",
+    id: "docs4llm",
+    name: "docs4llm",
     tagline: "AI-native docs-to-MCP, the right way.",
-    url: "https://doc2mcp.com",
+    url: "https://docs4llm.com",
     highlight: true,
     cells: {
       smart_tools: "yes",
@@ -268,20 +268,20 @@ const TRUST_LISTINGS: TrustListing[] = [
   {
     id: "mcp-registry",
     label: "Official MCP Registry",
-    detail: "io.github.doc2mcp",
-    url: "https://registry.modelcontextprotocol.io/?search=doc2mcp",
+    detail: "io.github.docs4llm",
+    url: "https://registry.modelcontextprotocol.io/?search=docs4llm",
   },
   {
     id: "claude-marketplaces",
     label: "Claude Code Marketplaces",
     detail: "claudemarketplaces.com",
-    url: "https://claudemarketplaces.com/mcp/doc2mcp/doc2mcp",
+    url: "https://claudemarketplaces.com/mcp/docs4llm/docs4llm",
   },
   {
     id: "pulsemcp",
     label: "PulseMCP",
     detail: "pulsemcp.com",
-    url: "https://www.pulsemcp.com/servers/doc2mcp/serverjson",
+    url: "https://www.pulsemcp.com/servers/docs4llm/serverjson",
   },
 ];
 
@@ -392,18 +392,18 @@ export function ComparisonSection() {
               Manual MCP development{" "}
               <span className="text-muted-foreground">vs</span>{" "}
               <span className="text-[#4285f4] dark:text-[#8ab4f8] font-semibold">
-                Doc2MCP
+                Docs4LLM
               </span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               Build it by hand and you ship a one-off, brittle integration. Use
-              Doc2MCP and you ship{" "}
+              Docs4LLM and you ship{" "}
               <span className="text-foreground">infrastructure</span> —
               structured, current, and ready for every agent in your stack.
             </p>
           </div>
 
-          <ManualVsDoc2McpTable />
+          <ManualVsDocs4LlmTable />
 
           <div className="mt-10 flex flex-col items-center gap-4">
             <Link
@@ -718,7 +718,7 @@ function CompetitorCard({ profile }: { profile: CompetitorProfile }) {
           href={`/comparison#${profile.id}`}
         >
           <Network className="size-3" />
-          Migrate to doc2mcp
+          Migrate to docs4llm
         </Link>
       </footer>
     </article>
@@ -747,50 +747,50 @@ function StatTile({
   );
 }
 
-const MANUAL_VS_ROWS: { label: string; manual: string; doc2mcp: string }[] = [
+const MANUAL_VS_ROWS: { label: string; manual: string; docs4llm: string }[] = [
   {
     label: "Setup time",
     manual: "Days to weeks of engineering",
-    doc2mcp: "Minutes from a docs URL",
+    docs4llm: "Minutes from a docs URL",
   },
   {
     label: "Maintenance",
     manual: "Manual diffs on every API change",
-    doc2mcp: "Continuous, automated sync",
+    docs4llm: "Continuous, automated sync",
   },
   {
     label: "Documentation understanding",
     manual: "You read it, model guesses",
-    doc2mcp: "Structured, schema-aware context",
+    docs4llm: "Structured, schema-aware context",
   },
   {
     label: "Updates",
     manual: "Redeploy, regenerate tools",
-    doc2mcp: "Live — same endpoint, fresh content",
+    docs4llm: "Live — same endpoint, fresh content",
   },
   {
     label: "Retrieval layer",
     manual: "DIY embeddings + glue code",
-    doc2mcp: "Semantic + workflow-aware out of the box",
+    docs4llm: "Semantic + workflow-aware out of the box",
   },
   {
     label: "AI readiness",
     manual: "Endpoint-shaped tools",
-    doc2mcp: "LLM-shaped tools and workflows",
+    docs4llm: "LLM-shaped tools and workflows",
   },
   {
     label: "Deployment",
     manual: "Self-host a server per integration",
-    doc2mcp: "One hosted remote MCP, multi-tenant",
+    docs4llm: "One hosted remote MCP, multi-tenant",
   },
   {
     label: "Support",
     manual: "Internal, ad hoc",
-    doc2mcp: "Dedicated team, audit logs, SLAs",
+    docs4llm: "Dedicated team, audit logs, SLAs",
   },
 ];
 
-function ManualVsDoc2McpTable() {
+function ManualVsDocs4LlmTable() {
   return (
     <div className="overflow-hidden rounded-3xl border border-border/60 bg-card/40 backdrop-blur-xl">
       <div className="grid grid-cols-1 border-border/40 border-b sm:grid-cols-[1.1fr_1fr_1fr]">
@@ -808,7 +808,7 @@ function ManualVsDoc2McpTable() {
         <div className="bg-gradient-to-br from-violet-500/15 via-fuchsia-500/10 to-sky-500/15 px-5 py-4">
           <p className="flex items-center gap-1.5 font-mono text-[11px] text-violet-700 uppercase tracking-[0.16em] dark:text-violet-200">
             <Sparkles className="size-3" />
-            Doc2MCP
+            Docs4LLM
           </p>
           <p className="mt-1 font-display font-semibold text-base">
             Infrastructure · automated · current
@@ -841,7 +841,7 @@ function ManualVsDoc2McpTable() {
               aria-hidden="true"
               className="size-3.5 shrink-0 text-emerald-500"
             />
-            <span>{row.doc2mcp}</span>
+            <span>{row.docs4llm}</span>
           </div>
         </div>
       ))}

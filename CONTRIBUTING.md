@@ -1,14 +1,14 @@
-# Contributing to doc2mcp
+# Contributing to docs4llm
 
-Thanks for your interest in contributing! doc2mcp turns documentation into
+Thanks for your interest in contributing! docs4llm turns documentation into
 MCP infrastructure for AI agents. This guide covers local setup, the preview
 deployment workflow, and our PR conventions.
 
 ## Getting started
 
 ```bash
-git clone https://github.com/doc2mcp/doc2mcp.git
-cd doc2mcp
+git clone https://github.com/docs4llm/docs4llm.git
+cd docs4llm
 pnpm install
 cp .env.example .env.local   # then fill in values (see below)
 pnpm dev
@@ -30,7 +30,7 @@ pnpm exec next build                    # production build
 ## Working with Vercel preview deployments
 
 Every PR gets a unique Vercel **preview URL** (for example
-`doc2mcp-git-<branch>-<team>.vercel.app`). Two things must be configured so
+`docs4llm-git-<branch>-<team>.vercel.app`). Two things must be configured so
 **login works on preview deployments**, not just production:
 
 ### 1. Scope environment variables to Preview
@@ -60,7 +60,7 @@ In **Supabase → Authentication → URL Configuration → Redirect URLs**, add 
 wildcard that matches your preview deployments:
 
 ```
-https://doc2mcp-*-<your-team>.vercel.app/**
+https://docs4llm-*-<your-team>.vercel.app/**
 https://*.vercel.app/**          # broader, optional
 http://localhost:3000/**
 ```
@@ -130,7 +130,7 @@ Every non-draft PR targeting `staging` or `main` triggers
 (same key as production Gemini). Without it, the workflow skips quietly.
 
 For a deeper local review in Cursor, use the project skill
-`.cursor/skills/doc2mcp-pr-review` (Bugbot + Security subagents).
+`.cursor/skills/docs4llm-pr-review` (Bugbot + Security subagents).
 
 ## Pull request conventions
 

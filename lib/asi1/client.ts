@@ -3,21 +3,19 @@ import "server-only";
 import { enhanceImagePrompt } from "@/lib/asi1/image-prompt";
 
 /**
- * AI client. Backed by Google Gemini.
- *
- * Text/chat uses Gemini's OpenAI-compatible endpoint so the request/response
- * (and SSE streaming) shapes stay identical to the previous provider; image
- * generation uses the native `generateContent` endpoint (Gemini 3 Pro Image
- * model returns base64 PNG via inlineData with 2K imageConfig).
+ * AI client. Text and chat use an OpenAI-compatible provider (OpenRouter is
+ * preferred, with Gemini retained as a backwards-compatible fallback).
+ * Image generation remains Gemini-native and is disabled without a Gemini key.
  *
  * Function names keep their historical `asi1*` prefix so existing callers do
- * not need to change; the implementation underneath is Gemini.
+ * not need to change.
  */
 
 const GEMINI_OPENAI_BASE_URL =
   "https://generativelanguage.googleapis.com/v1beta/openai";
 const GEMINI_NATIVE_BASE_URL =
   "https://generativelanguage.googleapis.com/v1beta";
+const OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1";
 
 function readEnv(name: string): string | undefined {
   const value = process.env[name]?.trim();
@@ -29,8 +27,13 @@ function readEnv(name: string): string | undefined {
 // rate-limited / 503-prone on the free tier, which surfaced as "Failed after 3
 // attempts / Too Many Requests" in chat. flash-lite returns content reliably,
 // is faster, and has higher free-tier limits.
+const OPENROUTER_FREE_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free";
+
 export const ASI1_MODEL =
-  readEnv("GEMINI_MODEL") ?? readEnv("ASI1_MODEL") ?? "gemini-2.5-flash-lite";
+  readEnv("OPENROUTER_MODEL") ??
+  readEnv("GEMINI_MODEL") ??
+  readEnv("ASI1_MODEL") ??
+  OPENROUTER_FREE_MODEL;
 export const ASI1_IMAGE_MODEL =
   readEnv("GEMINI_IMAGE_MODEL") ??
   readEnv("ASI1_IMAGE_MODEL") ??
@@ -68,12 +71,38 @@ export type Asi1ChatCompletionResponse = {
   };
 };
 
+function isOpenRouterConfigured(): boolean {
+  return Boolean(readEnv("OPENROUTER_API_KEY"));
+}
+
+function getTextBaseUrl(): string {
+  return isOpenRouterConfigured()
+    ? OPENROUTER_BASE_URL
+    : GEMINI_OPENAI_BASE_URL;
+}
+
 function getApiKey(): string {
-  const key = readEnv("GEMINI_API_KEY") ?? readEnv("ASI_ONE_API_KEY");
+  const key =
+    readEnv("OPENROUTER_API_KEY") ??
+    readEnv("GEMINI_API_KEY") ??
+    readEnv("ASI_ONE_API_KEY");
   if (!key) {
-    throw new Error("GEMINI_API_KEY is not configured");
+    throw new Error("OPENROUTER_API_KEY is not configured");
   }
   return key;
+}
+
+function getTextHeaders(): Record<string, string> {
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${getApiKey()}`,
+  };
+  if (isOpenRouterConfigured()) {
+    headers["HTTP-Referer"] =
+      readEnv("NEXT_PUBLIC_APP_URL") ?? "http://localhost:3000";
+    headers["X-Title"] = "docs4llm";
+  }
+  return headers;
 }
 
 function getImageApiKey(): string {
@@ -89,12 +118,9 @@ function getImageApiKey(): string {
 export async function asi1ChatCompletion(
   request: Omit<Asi1ChatCompletionRequest, "model"> & { model?: string }
 ): Promise<Asi1ChatCompletionResponse> {
-  const response = await fetch(`${GEMINI_OPENAI_BASE_URL}/chat/completions`, {
+  const response = await fetch(`${getTextBaseUrl()}/chat/completions`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${getApiKey()}`,
-    },
+    headers: getTextHeaders(),
     body: JSON.stringify({
       model: ASI1_MODEL,
       ...request,
@@ -103,7 +129,7 @@ export async function asi1ChatCompletion(
 
   if (!response.ok) {
     const errorText = await response.text();
-    throw new Error(`Gemini API error (${response.status}): ${errorText}`);
+    throw new Error(`AI provider error (${response.status}): ${errorText}`);
   }
 
   return response.json() as Promise<Asi1ChatCompletionResponse>;
@@ -117,12 +143,9 @@ export async function asi1ChatCompletionStream(
   }
 ): Promise<Response> {
   const { signal, ...rest } = request;
-  const response = await fetch(`${GEMINI_OPENAI_BASE_URL}/chat/completions`, {
+  const response = await fetch(`${getTextBaseUrl()}/chat/completions`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${getApiKey()}`,
-    },
+    headers: getTextHeaders(),
     body: JSON.stringify({
       model: ASI1_MODEL,
       stream: true,
@@ -133,7 +156,7 @@ export async function asi1ChatCompletionStream(
 
   if (!response.ok) {
     const errorText = await response.text();
-    throw new Error(`Gemini API error (${response.status}): ${errorText}`);
+    throw new Error(`AI provider error (${response.status}): ${errorText}`);
   }
 
   return response;
@@ -186,19 +209,45 @@ type GeminiGenerateContentResponse = {
   error?: { message?: string };
 };
 
-function getGeminiTextModels(): string[] {
-  const configured = process.env.GEMINI_FALLBACK_MODELS?.split(",")
+function isFreeOpenRouterModel(model: string): boolean {
+  return model === "openrouter/free" || model.endsWith(":free");
+}
+
+function getTextModels(): string[] {
+  const configured = (
+    isOpenRouterConfigured()
+      ? process.env.OPENROUTER_FALLBACK_MODELS
+      : process.env.GEMINI_FALLBACK_MODELS
+  )
+    ?.split(",")
     .map((model) => model.trim())
     .filter(Boolean);
-  const models =
-    configured && configured.length > 0
-      ? configured
+  const models = configured?.length
+    ? configured
+    : isOpenRouterConfigured()
+      ? [ASI1_MODEL, "openrouter/free"]
       : DEFAULT_TEXT_FALLBACK_MODELS;
+
+  if (isOpenRouterConfigured()) {
+    const freeModels = models.filter(isFreeOpenRouterModel);
+    if (freeModels.length === 0) {
+      throw new Error(
+        "OpenRouter is configured for free-only inference, but no :free model was provided"
+      );
+    }
+    return Array.from(new Set(freeModels));
+  }
   return Array.from(new Set(models));
 }
 
-function isRetriableGeminiError(error: Error): boolean {
-  return /Gemini API error \((429|500|502|503|504)\)|UNAVAILABLE|RESOURCE_EXHAUSTED|rate.?limit|overloaded|high demand/i.test(
+function isRetriableTextError(error: Error): boolean {
+  return /AI provider error \((429|500|502|503|504)\)|UNAVAILABLE|RESOURCE_EXHAUSTED|rate.?limit|overloaded|high demand|no endpoints found/i.test(
+    error.message
+  );
+}
+
+function isRetriableGeminiImageError(error: Error): boolean {
+  return /Gemini image API error \((429|500|502|503|504)\)|UNAVAILABLE|RESOURCE_EXHAUSTED|rate.?limit|overloaded|high demand/i.test(
     error.message
   );
 }
@@ -362,7 +411,7 @@ export async function asi1GenerateImage(
       return { images, raw };
     } catch (error) {
       lastError = error instanceof Error ? error : new Error(String(error));
-      if (!isRetriableGeminiError(lastError)) {
+      if (!isRetriableGeminiImageError(lastError)) {
         throw lastError;
       }
     }
@@ -372,11 +421,11 @@ export async function asi1GenerateImage(
 }
 
 /**
- * Generate text via Gemini chat completions.
+ * Generate text through the configured OpenAI-compatible provider.
  *
- * Defaults tuned for doc2mcp's actual workload (structured extraction,
+ * Defaults tuned for docs4llm's actual workload (structured extraction,
  * documentation Q&A, deterministic API simulation):
- *   - temperature: 0.1 — doc2mcp parses JSON out of nearly every response;
+ *   - temperature: 0.1 — docs4llm parses JSON out of nearly every response;
  *     high temperature wastes tokens on creative phrasing and produces
  *     unparseable output ~5-10% of the time.
  *   - max_tokens: 2048 — the longest legitimate response in this codebase is
@@ -395,7 +444,7 @@ export async function asi1GenerateText(
   const temperature = options?.temperature ?? 0.1;
   const maxTokens = options?.max_tokens ?? 2048;
 
-  for (const model of getGeminiTextModels()) {
+  for (const model of getTextModels()) {
     for (let attempt = 0; attempt < maxRetries; attempt++) {
       try {
         const result = await asi1ChatCompletion({
@@ -408,7 +457,7 @@ export async function asi1GenerateText(
         return { text, usage: result.usage };
       } catch (error) {
         lastError = error instanceof Error ? error : new Error(String(error));
-        if (!isRetriableGeminiError(lastError)) {
+        if (!isRetriableTextError(lastError)) {
           throw lastError;
         }
         if (attempt < maxRetries - 1) {
@@ -420,5 +469,5 @@ export async function asi1GenerateText(
     }
   }
 
-  throw lastError ?? new Error("Gemini request failed");
+  throw lastError ?? new Error("AI provider request failed");
 }

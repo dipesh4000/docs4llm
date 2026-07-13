@@ -8,13 +8,13 @@ nav_title: Access tokens
 
 # MCP access tokens
 
-doc2mcp uses **two kinds of tokens**. They look similar but do different jobs.
+docs4llm uses **two kinds of tokens**. They look similar but do different jobs.
 
 | Token | Prefix | Who gets it | Used for |
 |-------|--------|-------------|----------|
 | **Project token** | `d2mcp_…` | MCP creator | Your own MCP only — shown once after conversion |
 | **MCP access token** | `d2mcp_usr_…` | Any signed-in user | Any **marketplace** MCP you want to install |
-| **CLI PAT** | `d2mcp_pat_…` | CLI users | `doc2mcp` terminal commands only |
+| **CLI PAT** | `d2mcp_pat_…` | CLI users | `docs4llm` terminal commands only |
 
 ## If you created the MCP
 
@@ -26,7 +26,7 @@ doc2mcp uses **two kinds of tokens**. They look similar but do different jobs.
 {
   "mcpServers": {
     "stripe": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer d2mcp_<your-project-token>" }
     }
   }
@@ -37,7 +37,7 @@ The marketplace **never** shows this token.
 
 ## If you use someone else's MCP (marketplace)
 
-1. Sign in at [doc2mcp.site](https://doc2mcp.site).
+1. Sign in at [docs4llm.site](https://docs4llm.site).
 2. Open **Dashboard → Profile → MCP access tokens**.
 3. Click **Create token** and copy `d2mcp_usr_…` (shown once).
 4. Open the marketplace listing, copy the MCP endpoint URL.
@@ -47,7 +47,7 @@ The marketplace **never** shows this token.
 {
   "mcpServers": {
     "langchain": {
-      "url": "https://doc2mcp.site/api/mcp/<their-project-id>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<their-project-id>/mcp",
       "headers": { "Authorization": "Bearer d2mcp_usr_<your-token>" }
     }
   }
@@ -59,13 +59,13 @@ One access token works across every marketplace MCP you install.
 ## CLI
 
 ```bash
-doc2mcp login
-doc2mcp token create          # saves mcpAccessToken to ~/.doc2mcp/config.json
-doc2mcp token list
-doc2mcp marketplace <id>      # install a marketplace MCP with your token
+docs4llm login
+docs4llm token create          # saves mcpAccessToken to ~/.docs4llm/config.json
+docs4llm token list
+docs4llm marketplace <id>      # install a marketplace MCP with your token
 ```
 
-Your own conversions still print the **project token** at the end of `doc2mcp <url>`.
+Your own conversions still print the **project token** at the end of `docs4llm <url>`.
 
 ## Revoke a token
 

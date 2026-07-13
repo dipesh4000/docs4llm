@@ -3,8 +3,8 @@
 import { ArrowUpRight, Check, Copy, Package, Terminal } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-const NPM_PACKAGE_URL = "https://www.npmjs.com/package/doc2mcp";
-const INSTALL_COMMAND = "npm i -g doc2mcp";
+const NPM_PACKAGE_URL = "https://www.npmjs.com/package/docs4llm";
+const INSTALL_COMMAND = "npm i -g docs4llm";
 
 function NpmInstallCard() {
   const [copied, setCopied] = useState(false);
@@ -54,7 +54,7 @@ function NpmInstallCard() {
       </button>
 
       <p className="font-mono text-[11px] text-muted-foreground uppercase tracking-[0.18em]">
-        doc2mcp login · doc2mcp &lt;docs-url&gt;
+        docs4llm login · docs4llm &lt;docs-url&gt;
       </p>
     </div>
   );
@@ -74,10 +74,10 @@ type Frame = {
 };
 
 const SCRIPT: Line[] = [
-  { text: "npm install -g doc2mcp", kind: "input" },
-  { text: "doc2mcp login", kind: "input" },
+  { text: "npm install -g docs4llm", kind: "input" },
+  { text: "docs4llm login", kind: "input" },
   { text: "✓ Authenticated as you@dev", kind: "success" },
-  { text: "doc2mcp https://stripe.com/docs", kind: "input" },
+  { text: "docs4llm https://stripe.com/docs", kind: "input" },
   { text: "→ crawling 142 pages", kind: "output" },
   { text: "→ generating MCP · 11 tools", kind: "output" },
   { text: "✓ MCP ready in 47s", kind: "success" },
@@ -158,7 +158,7 @@ export function CliSection() {
               <span className="text-muted-foreground">from your terminal.</span>
             </h2>
             <p className="mt-5 max-w-md text-base text-muted-foreground leading-relaxed">
-              Install the doc2mcp CLI to convert docs, generate MCPs, and wire
+              Install the docs4llm CLI to convert docs, generate MCPs, and wire
               them into Cursor, VS Code, Claude, and Windsurf — all from your
               terminal with the same limits as the web app.
             </p>
@@ -190,7 +190,7 @@ export function CliSection() {
                 </div>
                 <p className="flex items-center gap-1.5 font-mono text-[10px] text-zinc-400 uppercase tracking-[0.18em]">
                   <Terminal className="size-3" />
-                  doc2mcp — zsh
+                  docs4llm — zsh
                 </p>
               </div>
               <div className="flex h-72 flex-col justify-end space-y-1 overflow-hidden p-4 font-mono text-[12.5px] leading-relaxed sm:h-80">

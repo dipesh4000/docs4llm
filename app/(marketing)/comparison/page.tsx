@@ -7,18 +7,18 @@ import { SocialProofSection } from "@/components/landing/social-proof-section";
 import CompareUILib from "@/components/shadcn-studio/blocks/compare-07/compare-07";
 
 export const metadata: Metadata = {
-  title: "doc2mcp vs Mintlify vs Stainless — Comparison",
+  title: "docs4llm vs Mintlify vs Stainless — Comparison",
   description:
-    "Compare doc2mcp with Mintlify and Stainless. AI-native docs-to-MCP with smart toolkits, workflow inference, auto-sync and a live playground.",
+    "Compare docs4llm with Mintlify and Stainless. AI-native docs-to-MCP with smart toolkits, workflow inference, auto-sync and a live playground.",
 };
 
 const comparisonData = {
   column1Header: {
     icon: {
-      light: "/brand/doc2mcp-mark.png",
-      dark: "/brand/doc2mcp-mark.png",
+      light: "/brand/docs4llm-mark.png",
+      dark: "/brand/docs4llm-mark.png",
     },
-    title: "doc2mcp",
+    title: "docs4llm",
   },
   column2Header: {
     icon: "https://mintlify.com/favicon.svg",
@@ -31,21 +31,21 @@ const comparisonData = {
       column1: "A live MCP server agents can call from Cursor, Claude, VS Code",
       column2: "A docs website with search and AI chat",
       column3:
-        "doc2mcp ships the runtime your AI editor actually uses, not a website wrapper",
+        "docs4llm ships the runtime your AI editor actually uses, not a website wrapper",
     },
     {
       name: "Setup time",
       column1: "Paste a docs URL, MCP server is ready in minutes",
       column2: "Repo setup, MDX migration, theming, deploy pipeline",
       column3:
-        "Zero migration with doc2mcp — your existing docs stay as the source of truth",
+        "Zero migration with docs4llm — your existing docs stay as the source of truth",
     },
     {
       name: "Tool discovery",
       column1: "AI-inferred tools and workflows from real docs structure",
       column2: "Manual: you describe endpoints and write reference pages",
       column3:
-        "Skip the boilerplate. doc2mcp learns your API and exposes typed tools",
+        "Skip the boilerplate. docs4llm learns your API and exposes typed tools",
     },
     {
       name: "Auto-sync",
@@ -64,7 +64,7 @@ const comparisonData = {
       name: "Live playground",
       column1: "Run any tool against a real MCP transport, inspect the JSON",
       column2: "Search-style chat that quotes your docs",
-      column3: "doc2mcp tests behaviour. Mintlify tests phrasing",
+      column3: "docs4llm tests behaviour. Mintlify tests phrasing",
     },
     {
       name: "Editor coverage",

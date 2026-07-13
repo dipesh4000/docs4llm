@@ -24,7 +24,7 @@ https://supabase.com/docs
 {
   "mcpServers": {
     "supabase": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer <project-token>" }
     }
   }

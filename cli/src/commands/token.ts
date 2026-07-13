@@ -38,7 +38,7 @@ export async function runTokenCreate(name = "Marketplace"): Promise<void> {
     process.stdout.write(`${pc.bold("Name:")} ${data.token.name}\n`);
     process.stdout.write(`${pc.bold("Token:")} ${data.token.plaintext}\n`);
     process.stdout.write(
-      `${pc.dim("Saved to ~/.doc2mcp/config.json as mcpAccessToken")}\n`
+      `${pc.dim("Saved to ~/.docs4llm/config.json as mcpAccessToken")}\n`
     );
     process.stdout.write(
       `${pc.dim("Use this token for any marketplace MCP install.")}\n`
@@ -55,7 +55,7 @@ export async function runTokenList(): Promise<void> {
     const data = await apiFetch<TokenListResponse>("/api/cli/mcp-tokens");
     if (data.tokens.length === 0) {
       process.stdout.write(`${pc.dim("No MCP access tokens yet.")}\n`);
-      process.stdout.write(`${pc.dim("Run: doc2mcp token create")}\n`);
+      process.stdout.write(`${pc.dim("Run: docs4llm token create")}\n`);
       return;
     }
 

@@ -13,11 +13,7 @@ export function LoginForm({
   return (
     <GitHubAuthButton
       className={cn(className)}
-<<<<<<< HEAD
       label="Sign up with GitHub"
-=======
-      label="Continue with Google"
->>>>>>> upstream/main
       redirectUrl={redirectUrl}
     />
   );

@@ -12,7 +12,7 @@ const TIMELINE = [
   },
   {
     time: "08:14",
-    label: "doc2mcp detects the change",
+    label: "docs4llm detects the change",
     delta: "Content hash diff",
     icon: Webhook,
   },
@@ -55,7 +55,7 @@ export function AutoSyncSection() {
               <span className="text-muted-foreground">Your MCP follows.</span>
             </h2>
             <p className="mt-5 max-w-md text-base text-muted-foreground leading-relaxed">
-              Coming soon: turn on auto-sync once per project and doc2mcp will
+              Coming soon: turn on auto-sync once per project and docs4llm will
               watch the source URL, detect content changes, and silently
               regenerate the MCP server — no redeploy, no token rotation, no
               copy-paste. Join the waitlist below to be early.
@@ -78,7 +78,7 @@ export function AutoSyncSection() {
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <a
                 className="inline-flex h-9 items-center gap-1.5 rounded-full border border-amber-500/40 bg-amber-500/10 px-3.5 font-medium text-amber-700 text-xs transition-colors hover:bg-amber-500/15 dark:text-amber-200"
-                href="https://calendly.com/doc2mcp/30min"
+                href="https://calendly.com/docs4llm/30min"
                 rel="noopener noreferrer"
                 target="_blank"
               >

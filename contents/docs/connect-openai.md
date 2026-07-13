@@ -1,6 +1,6 @@
 ---
 title: Connect to OpenAI Agents
-description: Use a doc2mcp server as a hosted MCP tool with the OpenAI Agents SDK.
+description: Use a docs4llm server as a hosted MCP tool with the OpenAI Agents SDK.
 category: Guides
 order: 5
 ---
@@ -8,7 +8,7 @@ order: 5
 ## Overview
 
 The OpenAI Agents SDK can call remote MCP servers as hosted tools. Point it at
-your doc2mcp endpoint.
+your docs4llm endpoint.
 
 ## Step-by-step (Python)
 
@@ -19,7 +19,7 @@ docs = HostedMCPTool(
     tool_config={
         "type": "mcp",
         "server_label": "stripe",
-        "server_url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+        "server_url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
         "headers": {"Authorization": "Bearer <project-token>"},
         "require_approval": "never",
     }

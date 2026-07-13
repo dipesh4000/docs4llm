@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * doc2mcp stdio MCP bridge.
+ * docs4llm stdio MCP bridge.
  *
  * This is a thin proxy: it forwards `tools/list` and `tools/call` to the
- * hosted doc2mcp MCP endpoint over JSON-RPC. The tool set is therefore
- * **always the tools doc2mcp generated for that specific project** (derived
+ * hosted docs4llm MCP endpoint over JSON-RPC. The tool set is therefore
+ * **always the tools docs4llm generated for that specific project** (derived
  * from the crawled docs) — never a hard-coded generic list. Re-sync the docs
  * and the tools update here with no code change.
  *
@@ -18,11 +18,11 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 
 const BASE_URL = (
-  process.env.DOC2MCP_BASE_URL ?? "http://localhost:3000"
+  process.env.DOCS4LLM_BASE_URL ?? "http://localhost:3000"
 ).replace(/\/$/, "");
-const PROJECT_ID = process.env.DOC2MCP_PROJECT_ID ?? "";
-const PROJECT_TOKEN = process.env.DOC2MCP_PROJECT_TOKEN ?? "";
-const SERVER_NAME = process.env.DOC2MCP_SERVER_NAME ?? "doc2mcp";
+const PROJECT_ID = process.env.DOCS4LLM_PROJECT_ID ?? "";
+const PROJECT_TOKEN = process.env.DOCS4LLM_PROJECT_TOKEN ?? "";
+const SERVER_NAME = process.env.DOCS4LLM_SERVER_NAME ?? "docs4llm";
 
 type JsonRpcResponse = {
   result?: unknown;
@@ -35,14 +35,14 @@ type ToolDefinition = {
   inputSchema?: Record<string, unknown>;
 };
 
-/** Forward a single JSON-RPC method to the hosted doc2mcp MCP endpoint. */
+/** Forward a single JSON-RPC method to the hosted docs4llm MCP endpoint. */
 async function rpc(
   method: string,
   params?: Record<string, unknown>
 ): Promise<unknown> {
   if (!(PROJECT_ID && PROJECT_TOKEN)) {
     throw new Error(
-      "Set DOC2MCP_PROJECT_ID and DOC2MCP_PROJECT_TOKEN from the doc2mcp Connect tab"
+      "Set DOCS4LLM_PROJECT_ID and DOCS4LLM_PROJECT_TOKEN from the docs4llm Connect tab"
     );
   }
 
@@ -57,12 +57,12 @@ async function rpc(
 
   if (!res.ok) {
     const detail = (await res.json().catch(() => ({}))) as JsonRpcResponse;
-    throw new Error(detail.error?.message ?? `doc2mcp MCP ${res.status}`);
+    throw new Error(detail.error?.message ?? `docs4llm MCP ${res.status}`);
   }
 
   const payload = (await res.json()) as JsonRpcResponse;
   if (payload.error) {
-    throw new Error(payload.error.message ?? "doc2mcp MCP error");
+    throw new Error(payload.error.message ?? "docs4llm MCP error");
   }
   return payload.result;
 }

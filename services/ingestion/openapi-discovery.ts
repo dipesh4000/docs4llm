@@ -57,7 +57,7 @@ async function fetchProbe(url: string): Promise<Probe | null> {
       headers: {
         Accept:
           "application/json, application/yaml, text/yaml, application/x-yaml, */*;q=0.5",
-        "User-Agent": "doc2mcp/1.0 (+https://doc2mcp.site)",
+        "User-Agent": "docs4llm/1.0 (+https://docs4llm.site)",
       },
       signal: controller.signal,
       redirect: "follow",

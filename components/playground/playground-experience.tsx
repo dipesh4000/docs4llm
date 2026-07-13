@@ -3,7 +3,7 @@
 import { MessageSquare, Play } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { McpChat } from "@/components/doc2mcp/mcp-chat";
+import { McpChat } from "@/components/docs4llm/mcp-chat";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -31,7 +31,7 @@ function PlaygroundChrome({ children }: { children: React.ReactNode }) {
           <span className="size-2.5 rounded-full bg-[#febc2e]" />
           <span className="size-2.5 rounded-full bg-[#28c840]" />
           <span className="ml-2 font-mono text-[11px] text-white/50">
-            doc2mcp · mcp chat
+            docs4llm · mcp chat
           </span>
         </div>
         <span className="inline-flex items-center gap-1.5 font-mono text-[10px] text-white/40 uppercase tracking-wider">

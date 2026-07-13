@@ -6,9 +6,9 @@ import { LegalPage } from "@/components/legal/legal-page";
 import { CONTACT_EMAIL } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Refund & Cancellation Policy — doc2mcp",
+  title: "Refund & Cancellation Policy — docs4llm",
   description:
-    "How refunds and cancellations work for doc2mcp paid plans on Razorpay.",
+    "How refunds and cancellations work for docs4llm paid plans on Razorpay.",
 };
 
 export default function RefundPolicyPage() {
@@ -25,7 +25,7 @@ export default function RefundPolicyPage() {
             >
               {CONTACT_EMAIL}
             </a>{" "}
-            from the email address on your doc2mcp account, or fill out the{" "}
+            from the email address on your docs4llm account, or fill out the{" "}
             <Link className="underline hover:text-foreground" href="/contact">
               contact form
             </Link>
@@ -33,7 +33,7 @@ export default function RefundPolicyPage() {
             under Billing).
           </p>
         }
-        intro="We want you to be happy with doc2mcp. This page explains how cancellations and refunds work for our paid plans on Razorpay."
+        intro="We want you to be happy with docs4llm. This page explains how cancellations and refunds work for our paid plans on Razorpay."
         lastUpdated="29 May 2026"
         sections={[
           {
@@ -77,7 +77,7 @@ export default function RefundPolicyPage() {
                   </li>
                   <li>
                     <strong>Pro-rated refund</strong> for the unused portion of
-                    your billing window if doc2mcp is unavailable due to a
+                    your billing window if docs4llm is unavailable due to a
                     sustained outage on our side (more than 72 cumulative hours
                     of downtime within a 30-day window).
                   </li>

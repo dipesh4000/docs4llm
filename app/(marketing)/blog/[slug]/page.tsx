@@ -21,10 +21,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) {
-    return { title: "Post not found — doc2mcp" };
+    return { title: "Post not found — docs4llm" };
   }
   return {
-    title: `${post.title} — doc2mcp blog`,
+    title: `${post.title} — docs4llm blog`,
     description: post.excerpt,
     openGraph: {
       title: post.title,

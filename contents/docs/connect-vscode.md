@@ -1,13 +1,13 @@
 ---
 title: Connect to VS Code
-description: Use a doc2mcp server from VS Code's MCP support (GitHub Copilot).
+description: Use a docs4llm server from VS Code's MCP support (GitHub Copilot).
 category: Guides
 order: 4
 ---
 
 ## Overview
 
-VS Code supports MCP servers for agent mode. Add the doc2mcp endpoint via a
+VS Code supports MCP servers for agent mode. Add the docs4llm endpoint via a
 workspace `.vscode/mcp.json` or user settings.
 
 ## Step-by-step
@@ -19,7 +19,7 @@ workspace `.vscode/mcp.json` or user settings.
   "servers": {
     "stripe": {
       "type": "http",
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer <project-token>" }
     }
   }

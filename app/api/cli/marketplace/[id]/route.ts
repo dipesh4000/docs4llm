@@ -7,7 +7,7 @@ import {
 import {
   createMcpUserAccessToken,
   hashMcpUserAccessToken,
-} from "@/lib/doc2mcp/mcp-user-tokens";
+} from "@/lib/docs4llm/mcp-user-tokens";
 import { ChatbotError } from "@/lib/errors";
 
 function resolveUserMcpToken(provided?: string | null): string | null {
@@ -45,7 +45,7 @@ export async function GET(
       needsToken: true,
       endpointUrl: preview?.endpointUrl ?? null,
       serverName: preview?.serverName ?? null,
-      message: "Run: doc2mcp token create",
+      message: "Run: docs4llm token create",
     });
   }
 

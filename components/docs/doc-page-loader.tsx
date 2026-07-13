@@ -69,7 +69,7 @@ export async function DocPageLoader({
             </p>
             <a
               className="mt-3 inline-flex h-8 items-center rounded-md bg-primary px-3 font-medium text-primary-foreground text-xs transition-colors hover:bg-primary/90"
-              href="https://doc2mcp.site"
+              href="https://docs4llm.site"
             >
               Open app
             </a>

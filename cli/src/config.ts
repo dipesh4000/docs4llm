@@ -1,7 +1,7 @@
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-export const DEFAULT_API_URL = "https://doc2mcp.site";
+export const DEFAULT_API_URL = "https://docs4llm.site";
 
 export type CliConfig = {
   apiUrl: string;
@@ -16,9 +16,9 @@ export type CliConfig = {
 };
 
 export function getConfigPath(): string {
-  return join(homedir(), ".doc2mcp", "config.json");
+  return join(homedir(), ".docs4llm", "config.json");
 }
 
 export function getApiUrl(): string {
-  return process.env.DOC2MCP_API_URL?.replace(/\/$/, "") ?? DEFAULT_API_URL;
+  return process.env.DOCS4LLM_API_URL?.replace(/\/$/, "") ?? DEFAULT_API_URL;
 }

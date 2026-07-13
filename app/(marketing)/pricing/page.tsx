@@ -4,7 +4,7 @@ import { AuthenticatedPricingSection } from "@/components/landing/authenticated-
 import { FooterSection } from "@/components/landing/footer-section";
 
 export const metadata: Metadata = {
-  title: "Pricing — doc2mcp",
+  title: "Pricing — docs4llm",
   description:
     "Free forever for tinkering. Starter ₹299, Pro ₹999, Team ₹2,999 per month. Razorpay checkout, INR pricing, monthly / 6-month / yearly cycles.",
 };

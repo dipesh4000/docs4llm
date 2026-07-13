@@ -7,7 +7,7 @@ import { FooterSection } from "@/components/landing/footer-section";
 import { BLOG_POSTS } from "@/lib/blog/posts";
 
 export const metadata: Metadata = {
-  title: "Blog — doc2mcp",
+  title: "Blog — docs4llm",
   description:
     "Notes on MCP, AI tooling, agent workflows and the operations behind shipping AI-native developer products.",
 };

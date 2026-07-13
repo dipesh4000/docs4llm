@@ -2,12 +2,12 @@
 
 ## Reporting a vulnerability
 
-If you discover a security vulnerability in doc2mcp, please report it
+If you discover a security vulnerability in docs4llm, please report it
 **privately**. Do not open a public GitHub issue.
 
-- Email: **doc2mcp@gmail.com**
+- Email: **docs4llm@gmail.com**
 - Or use GitHub's private vulnerability reporting:
-  <https://github.com/doc2mcp/doc2mcp/security/advisories/new>
+  <https://github.com/docs4llm/docs4llm/security/advisories/new>
 
 Please include:
 

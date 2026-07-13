@@ -44,7 +44,7 @@ Returns ranked sections, each with a breadcrumb, snippet, and source URL.
 ```
 
 Returns a natural-language answer grounded in the crawled docs, with citations.
-No third-party API key is required — doc2mcp uses platform AI.
+No third-party API key is required — docs4llm uses platform AI.
 
 ## Best practices
 

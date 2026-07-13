@@ -1,6 +1,6 @@
 ---
 title: Documentation crawling
-description: How doc2mcp discovers and fetches documentation across many formats.
+description: How docs4llm discovers and fetches documentation across many formats.
 category: Core Concepts
 order: 1
 ---
@@ -13,20 +13,20 @@ while preserving structure (headings, code blocks, links).
 ## Why it matters
 
 Documentation lives in many shapes — static sites, SPAs, OpenAPI specs, GitBook,
-GitHub markdown. A single naive scraper misses most of it. doc2mcp picks the
+GitHub markdown. A single naive scraper misses most of it. docs4llm picks the
 right strategy per source.
 
 ## How discovery works
 
 1. **`llms.txt` / `llms-full.txt`** — Mintlify, OpenAI, Anthropic, Stripe, and
    LangChain expose these manifests; every listed URL is queued.
-2. **Sitemap & links** — when no manifest exists, doc2mcp falls back to the
+2. **Sitemap & links** — when no manifest exists, docs4llm falls back to the
    sitemap and on-page links.
 3. **Web search assist** — optionally enriches thin sites.
 
 ## Fetch strategy
 
-For each page, doc2mcp tries the cleanest source first:
+For each page, docs4llm tries the cleanest source first:
 
 ```text
 ${url}.md  →  ${url}.mdx  →  HTML (code-preserving)  →  Jina Reader (SPA shells)
@@ -46,7 +46,7 @@ ${url}.md  →  ${url}.mdx  →  HTML (code-preserving)  →  Jina Reader (SPA s
 
 ## Auto-detection
 
-doc2mcp chooses a handler from URL extension, hostname, path hints
+docs4llm chooses a handler from URL extension, hostname, path hints
 (`/openapi`, `/swagger`), and content sniffing (`"openapi":` keys). If you paste
 a marketing homepage, it redirects to the docs subdomain automatically.
 
@@ -62,4 +62,4 @@ a marketing homepage, it redirects to the docs subdomain automatically.
 |---------|-------|-----|
 | Zero pages | URL blocked or JS-only shell | Use docs subdomain; Jina fallback kicks in |
 | Missing pages | No manifest/sitemap | Re-run; link crawl is best-effort |
-| Garbled code | Aggressive HTML | doc2mcp preserves `<pre><code>` — report the URL |
+| Garbled code | Aggressive HTML | docs4llm preserves `<pre><code>` — report the URL |

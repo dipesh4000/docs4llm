@@ -1,5 +1,5 @@
 /**
- * Crisp SVG icons for the Features section, themed for doc2mcp's
+ * Crisp SVG icons for the Features section, themed for docs4llm's
  * violet/cyan dark palette. All icons inherit `currentColor`.
  */
 
@@ -208,7 +208,7 @@ export function RemoteMcpIcon() {
         x="76"
         y="50"
       >
-        doc2mcp
+        docs4llm
       </text>
 
       {/* Cursor app */}
@@ -352,7 +352,7 @@ export function ChatToggleIcon() {
           x="52"
           y="8"
         >
-          doc2mcp
+          docs4llm
         </text>
       </g>
 

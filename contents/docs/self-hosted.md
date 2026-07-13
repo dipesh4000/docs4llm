@@ -1,13 +1,13 @@
 ---
 title: Self hosted
-description: Run doc2mcp on your own infrastructure for full data control.
+description: Run docs4llm on your own infrastructure for full data control.
 category: Deployment
 order: 2
 ---
 
 ## Overview
 
-doc2mcp is a Next.js application backed by Postgres (Supabase). For strict
+docs4llm is a Next.js application backed by Postgres (Supabase). For strict
 data-residency or air-gapped requirements, you can run it yourself.
 
 > **Tip** Most teams should use the [hosted version](/docs/deployment-hosted).
@@ -24,8 +24,8 @@ data-residency or air-gapped requirements, you can run it yourself.
 1. Clone and install:
 
 ```bash
-git clone https://github.com/doc2mcp/doc2mcp.git
-cd doc2mcp
+git clone https://github.com/docs4llm/docs4llm.git
+cd docs4llm
 pnpm install
 ```
 
@@ -38,7 +38,8 @@ NEXT_PUBLIC_SUPABASE_URL="https://<project>.supabase.co"
 NEXT_PUBLIC_SUPABASE_ANON_KEY="..."
 SUPABASE_SERVICE_ROLE_KEY="..."
 AUTH_SECRET="<random-secret>"
-GEMINI_API_KEY="<google-gemini-api-key>"
+OPENROUTER_API_KEY="<openrouter-api-key>"
+OPENROUTER_MODEL="nvidia/nemotron-3-ultra-550b-a55b:free"
 ```
 
 3. Run migrations and start:

@@ -2,7 +2,7 @@
  * OpenTelemetry tracing helpers.
  *
  * Wraps every async operation in a span. Records exceptions, sets status,
- * and attaches semantic attributes (service.*, doc2mcp.*).
+ * and attaches semantic attributes (service.*, docs4llm.*).
  *
  * Used everywhere we want a measurable unit of work: pipeline phases,
  * AI calls, fetches, DB queries with hot paths, etc.
@@ -10,7 +10,7 @@
 
 import { type Attributes, SpanStatusCode, trace } from "@opentelemetry/api";
 
-const TRACER_NAME = "doc2mcp";
+const TRACER_NAME = "docs4llm";
 
 export function getTracer() {
   return trace.getTracer(TRACER_NAME);

@@ -25,7 +25,7 @@ export function LegalPage({
           className="font-mono text-[11px] text-muted-foreground uppercase tracking-[0.18em] hover:text-foreground"
           href="/"
         >
-          ← back to doc2mcp
+          ← back to docs4llm
         </Link>
         <h1 className="mt-4 font-display font-bold text-4xl tracking-tight sm:text-5xl">
           {title}

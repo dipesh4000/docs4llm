@@ -8,7 +8,7 @@ const STEPS: TourStep[] = [
     popover: {
       title: "Paste any docs URL",
       description:
-        "Drop in a documentation link — Stripe, GitHub, Mintlify, OpenAPI — and doc2mcp turns it into a hosted MCP server in seconds.",
+        "Drop in a documentation link — Stripe, GitHub, Mintlify, OpenAPI — and docs4llm turns it into a hosted MCP server in seconds.",
       side: "bottom",
       align: "center",
     },
@@ -18,7 +18,7 @@ const STEPS: TourStep[] = [
     popover: {
       title: "Prefer the terminal?",
       description:
-        "Install the CLI with `npm i -g doc2mcp` and generate MCPs without leaving your editor.",
+        "Install the CLI with `npm i -g docs4llm` and generate MCPs without leaving your editor.",
       side: "bottom",
       align: "center",
     },

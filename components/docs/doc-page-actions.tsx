@@ -26,7 +26,7 @@ import { cn } from "@/lib/utils";
 
 function pageUrl(): string {
   if (typeof window === "undefined") {
-    return "https://doc2mcp.site/docs";
+    return "https://docs4llm.site/docs";
   }
   return window.location.href;
 }
@@ -61,7 +61,7 @@ export function DocPageActions({
     setTimeout(() => URL.revokeObjectURL(url), 60_000);
   };
 
-  const askPrompt = `Read ${pageUrl()} (doc2mcp docs: "${title}") and help me with questions about it.`;
+  const askPrompt = `Read ${pageUrl()} (docs4llm docs: "${title}") and help me with questions about it.`;
 
   return (
     <div className="flex items-center gap-1.5">
@@ -141,18 +141,18 @@ export function DocPageActions({
           </DropdownMenuItem>
           <DropdownMenuItem asChild className="gap-3 py-2">
             <a
-              href="https://doc2mcp.site/chat"
+              href="https://docs4llm.site/chat"
               rel="noopener noreferrer"
               target="_blank"
             >
               <MessageSquare className="size-4 shrink-0" />
               <span className="flex flex-col">
                 <span className="flex items-center gap-1 font-medium text-sm">
-                  Open in doc2mcp chat
+                  Open in docs4llm chat
                   <ExternalLink className="size-3 opacity-60" />
                 </span>
                 <span className="text-muted-foreground text-xs">
-                  Ask the doc2mcp assistant about this page
+                  Ask the docs4llm assistant about this page
                 </span>
               </span>
             </a>

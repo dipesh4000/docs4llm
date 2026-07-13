@@ -2,7 +2,7 @@ import { Loader2 } from "lucide-react";
 import { notFound, redirect } from "next/navigation";
 import { Suspense } from "react";
 import { auth } from "@/app/(auth)/auth";
-import { ConvertExperience } from "@/features/doc2mcp/convert-experience";
+import { ConvertExperience } from "@/features/docs4llm/convert-experience";
 import { getPlatformProjectById } from "@/lib/db/queries";
 import { redactSecrets } from "@/services/mcp/exports";
 

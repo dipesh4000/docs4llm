@@ -37,7 +37,7 @@ export async function apiFetch<T>(
   const needsAuth = options.auth !== false;
   if (needsAuth) {
     if (!config.token) {
-      throw new ApiError("Not logged in. Run: doc2mcp login", 401, null);
+      throw new ApiError("Not logged in. Run: docs4llm login", 401, null);
     }
     headers.set("Authorization", `Bearer ${config.token}`);
   }

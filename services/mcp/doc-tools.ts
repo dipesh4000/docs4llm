@@ -1,6 +1,6 @@
 import type { McpToolDefinition } from "@/types/platform";
 
-/** Standard doc2mcp MCP tools — read full crawled documentation in Cursor. */
+/** Standard docs4llm MCP tools — read full crawled documentation in Cursor. */
 export const DOC_MCP_TOOLS: McpToolDefinition[] = [
   {
     name: "list_documentation_pages",
@@ -74,7 +74,7 @@ export const DOC_MCP_TOOLS: McpToolDefinition[] = [
   {
     name: "ask_documentation",
     description:
-      "Ask a natural-language question; doc2mcp answers from crawled docs using platform AI (no user API key).",
+      "Ask a natural-language question; docs4llm answers from crawled docs using platform AI (no user API key).",
     inputSchema: {
       type: "object",
       properties: {

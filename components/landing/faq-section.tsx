@@ -15,11 +15,11 @@ const FAQS: Faq[] = [
   {
     id: "what-is-mcp",
     q: "What is MCP?",
-    a: "The Model Context Protocol is an open standard from Anthropic that lets AI agents (Cursor, Claude Desktop, Windsurf, OpenAI Agents) discover and call tools over a uniform JSON-RPC interface. doc2mcp produces fully compliant MCP servers your agents can connect to with a URL + Bearer token.",
+    a: "The Model Context Protocol is an open standard from Anthropic that lets AI agents (Cursor, Claude Desktop, Windsurf, OpenAI Agents) discover and call tools over a uniform JSON-RPC interface. docs4llm produces fully compliant MCP servers your agents can connect to with a URL + Bearer token.",
   },
   {
     id: "how-it-works",
-    q: "How does doc2mcp work?",
+    q: "How does docs4llm work?",
     a: "Paste a documentation URL. We crawl the site (Mintlify, Docusaurus, Swagger, GitBook, plain HTML — all supported), preserve code blocks, run an AI understanding pass that detects auth, workflows, and endpoint groups, and generate a hosted MCP server with semantic tools — typically in under 60 seconds.",
   },
   {
@@ -30,7 +30,7 @@ const FAQS: Faq[] = [
   {
     id: "private-docs",
     q: "Can I use private documentation?",
-    a: "Yes. Pro and Team plans support private projects with authenticated crawling and per-MCP Bearer tokens. Enterprise customers can self-host doc2mcp inside their VPC with SSO, RBAC, and audit logging — your docs and tokens never leave your perimeter.",
+    a: "Yes. Pro and Team plans support private projects with authenticated crawling and per-MCP Bearer tokens. Enterprise customers can self-host docs4llm inside their VPC with SSO, RBAC, and audit logging — your docs and tokens never leave your perimeter.",
   },
   {
     id: "updates",
@@ -153,7 +153,7 @@ export function FaqSection() {
           Still curious?{" "}
           <a
             className="font-medium text-foreground underline underline-offset-4 hover:text-[#4285f4] transition-colors"
-            href="https://calendly.com/doc2mcp/30min"
+            href="https://calendly.com/docs4llm/30min"
             rel="noopener noreferrer"
             target="_blank"
           >

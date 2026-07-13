@@ -11,8 +11,8 @@ import {
 import Link from "next/link";
 import { useCallback, useState } from "react";
 
-const NPM_PACKAGE_URL = "https://www.npmjs.com/package/doc2mcp";
-const INSTALL_COMMAND = "npm install -g doc2mcp";
+const NPM_PACKAGE_URL = "https://www.npmjs.com/package/docs4llm";
+const INSTALL_COMMAND = "npm install -g docs4llm";
 
 function useCopy() {
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
@@ -64,25 +64,25 @@ function CommandPill({
 const COMMANDS = [
   {
     id: "login",
-    command: "doc2mcp login",
+    command: "docs4llm login",
     title: "Authenticate",
     desc: "Browser-based login — no API keys to copy around.",
   },
   {
     id: "convert",
-    command: "doc2mcp https://docs.stripe.com",
+    command: "docs4llm https://docs.stripe.com",
     title: "Convert docs",
     desc: "Point at any docs URL and get a hosted, token-secured MCP.",
   },
   {
     id: "install",
-    command: "doc2mcp install <id>",
+    command: "docs4llm install <id>",
     title: "Install into editors",
     desc: "Wire the MCP into Cursor, VS Code, Claude, or Windsurf.",
   },
   {
     id: "chat",
-    command: "doc2mcp chat https://uagents.fetch.ai/docs",
+    command: "docs4llm chat https://uagents.fetch.ai/docs",
     title: "Chat in terminal",
     desc: "Paste a docs URL, convert it, then ask questions in the same shell.",
   },
@@ -122,7 +122,7 @@ export function CliHero() {
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground leading-relaxed sm:text-lg">
             Paste a documentation URL — Stripe, Anthropic, your own — and
-            doc2mcp crawls it into a hosted, token-secured MCP server your
+            docs4llm crawls it into a hosted, token-secured MCP server your
             editor can call. Then chat with it without leaving the shell.
           </p>
           <div className="mx-auto mt-8 flex max-w-md flex-col items-center gap-3">
@@ -253,17 +253,17 @@ export function CliChat() {
             <p className="mt-5 max-w-md text-base text-muted-foreground leading-relaxed">
               Paste a docs URL into{" "}
               <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-sm text-foreground">
-                doc2mcp chat
+                docs4llm chat
               </code>{" "}
               and it converts the site, opens a Claude Code-style loop, and
               answers from your crawled docs with cited sources.
             </p>
             <div className="mt-7 max-w-sm">
               <CommandPill
-                command="doc2mcp chat https://uagents.fetch.ai/docs"
+                command="docs4llm chat https://uagents.fetch.ai/docs"
                 copied={copiedKey === "chat"}
                 onCopy={() =>
-                  copy("doc2mcp chat https://uagents.fetch.ai/docs", "chat")
+                  copy("docs4llm chat https://uagents.fetch.ai/docs", "chat")
                 }
               />
             </div>
@@ -276,12 +276,12 @@ export function CliChat() {
               <span className="size-2.5 rounded-full bg-emerald-400/80" />
               <p className="ml-2 flex items-center gap-1.5 font-mono text-[10px] text-zinc-400 uppercase tracking-[0.18em]">
                 <Terminal className="size-3" />
-                doc2mcp chat
+                docs4llm chat
               </p>
             </div>
             <div className="space-y-2 p-5 font-mono text-[12.5px] leading-relaxed">
               <p className="text-zinc-100">
-                <span className="text-violet-400">$</span> doc2mcp chat
+                <span className="text-violet-400">$</span> docs4llm chat
                 https://uagents.fetch.ai/docs
               </p>
               <p className="text-sky-300/90">→ Converting docs into an MCP…</p>

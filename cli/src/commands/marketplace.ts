@@ -50,7 +50,7 @@ export async function runMarketplaceInstall(projectId: string): Promise<void> {
 
     if (detail.needsToken) {
       process.stderr.write(
-        `${pc.red("No MCP access token.")} Run: ${pc.bold("doc2mcp token create")}\n`
+        `${pc.red("No MCP access token.")} Run: ${pc.bold("docs4llm token create")}\n`
       );
       process.exitCode = 1;
       return;

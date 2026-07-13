@@ -11,7 +11,7 @@ export function readMarketplaceEndpoint(
   if (!config) {
     return null;
   }
-  const name = config.name || "doc2mcp";
+  const name = config.name || "docs4llm";
   const servers = config.cursorConfig?.mcpServers as
     | Record<string, { url?: string }>
     | undefined;

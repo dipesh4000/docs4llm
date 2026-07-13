@@ -2,7 +2,7 @@ import { registerOTel } from "@vercel/otel";
 
 export function register() {
   registerOTel({
-    serviceName: process.env.OTEL_SERVICE_NAME ?? "doc2mcp",
+    serviceName: process.env.OTEL_SERVICE_NAME ?? "docs4llm",
     attributes: {
       "deployment.environment":
         process.env.VERCEL_ENV ?? process.env.NODE_ENV ?? "development",

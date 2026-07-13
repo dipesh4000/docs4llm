@@ -41,7 +41,7 @@ export default async function DashboardSettingsPage() {
         <Card>
           <CardHeader>
             <CardTitle>Profile</CardTitle>
-            <CardDescription>Identity used across doc2mcp.</CardDescription>
+            <CardDescription>Identity used across docs4llm.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
             <Field

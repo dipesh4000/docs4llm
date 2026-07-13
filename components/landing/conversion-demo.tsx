@@ -21,7 +21,7 @@ type Phase =
 
 const PHASE_LABEL: Record<Phase, string> = {
   typing: "Paste docs URL",
-  submitting: "Sending to doc2mcp",
+  submitting: "Sending to docs4llm",
   crawling: "Crawling pages",
   analyzing: "Indexing chunks with AI",
   building: "Building MCP endpoint",
@@ -137,12 +137,12 @@ export function ConversionDemo() {
               <span className="size-2.5 rounded-full bg-amber-400/70" />
               <span className="size-2.5 rounded-full bg-emerald-400/70" />
               <span className="ml-3 truncate font-mono text-[11px] text-muted-foreground">
-                doc2mcp.dev/chat
+                docs4llm.dev/chat
               </span>
             </div>
             <div className="px-4 py-6">
               <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-wider">
-                doc2mcp toggle: ON
+                docs4llm toggle: ON
               </p>
               <div className="mt-2 flex items-center gap-2 rounded-lg border border-violet-500/40 bg-violet-500/5 px-3 py-2">
                 <span className="font-mono text-violet-700 text-xs dark:text-violet-300">
@@ -263,7 +263,7 @@ function renderConfig(slug: string, phase: Phase): string {
     return `{
   "mcpServers": {
     "${slug}": {
-      "url": "https://doc2mcp.site/api/mcp/…/mcp",
+      "url": "https://docs4llm.site/api/mcp/…/mcp",
       "headers": {
         "Authorization": "Bearer …"
       }
@@ -274,7 +274,7 @@ function renderConfig(slug: string, phase: Phase): string {
   return `{
   "mcpServers": {
     "${slug}": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": {
         "Authorization": "Bearer d2mcp_…"
       }
@@ -291,7 +291,7 @@ export function HeroVisual() {
       </div>
       <div className="relative mx-auto max-w-[1200px] overflow-hidden rounded-2xl border border-border/60 bg-card/30 shadow-[0_30px_120px_-30px_oklch(0.55_0.2_280/40%)]">
         <Image
-          alt="doc2mcp: paste a docs URL, get a Cursor-ready MCP server"
+          alt="docs4llm: paste a docs URL, get a Cursor-ready MCP server"
           className="w-full h-auto"
           height={1024}
           priority
@@ -317,7 +317,7 @@ export function FlowShowcase() {
             From URL to MCP, in three frames.
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Paste any docs URL. doc2mcp crawls, indexes, and hands you a
+            Paste any docs URL. docs4llm crawls, indexes, and hands you a
             Cursor-ready MCP config in seconds — no clone, no API keys.
           </p>
         </div>

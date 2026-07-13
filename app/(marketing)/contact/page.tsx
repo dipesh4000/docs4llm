@@ -7,9 +7,9 @@ import { FooterSection } from "@/components/landing/footer-section";
 import { CONTACT_EMAIL } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Contact — doc2mcp",
+  title: "Contact — docs4llm",
   description:
-    "Get in touch with the doc2mcp team for support, billing, partnership, or press enquiries.",
+    "Get in touch with the docs4llm team for support, billing, partnership, or press enquiries.",
 };
 
 export default function ContactPage() {
@@ -22,7 +22,7 @@ export default function ContactPage() {
             className="font-mono text-[11px] text-muted-foreground uppercase tracking-[0.18em] hover:text-foreground"
             href="/"
           >
-            ← back to doc2mcp
+            ← back to docs4llm
           </Link>
           <h1 className="mt-4 font-display font-bold text-4xl tracking-tight sm:text-5xl">
             Contact us

@@ -9,7 +9,7 @@ export async function runLogout(): Promise<void> {
 export async function runWhoami(): Promise<void> {
   const config = await loadConfig();
   if (!config.token || !config.user) {
-    process.stdout.write(`${pc.yellow("Not logged in.")} Run ${pc.bold("doc2mcp login")}\n`);
+    process.stdout.write(`${pc.yellow("Not logged in.")} Run ${pc.bold("docs4llm login")}\n`);
     process.exitCode = 1;
     return;
   }

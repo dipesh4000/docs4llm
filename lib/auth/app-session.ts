@@ -7,7 +7,7 @@ export type AppSession = {
   expiresAt: number;
 };
 
-export const APP_SESSION_COOKIE = "doc2mcp_session";
+export const APP_SESSION_COOKIE = "docs4llm_session";
 
 const SESSION_MAX_AGE_SECONDS = 60 * 60 * 24 * 30;
 const encoder = new TextEncoder();

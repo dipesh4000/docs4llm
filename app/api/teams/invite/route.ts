@@ -4,7 +4,7 @@ import {
   getOrCreateOwnedTeam,
   listTeamInvitesForOwner,
 } from "@/lib/db/queries";
-import { getDoc2McpBaseUrl } from "@/lib/doc2mcp/app-url";
+import { getDocs4LlmBaseUrl } from "@/lib/docs4llm/app-url";
 
 /**
  * Team invites are owner-scoped only:
@@ -132,7 +132,7 @@ export async function POST(request: Request) {
       role: body.role === "admin" ? "admin" : "member",
     });
 
-    const acceptUrl = `${getDoc2McpBaseUrl()}/dashboard/settings?invite=${rawToken}`;
+    const acceptUrl = `${getDocs4LlmBaseUrl()}/dashboard/settings?invite=${rawToken}`;
 
     return Response.json({
       invite: {

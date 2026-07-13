@@ -8,7 +8,7 @@ import { CustomCursor } from "@/components/ui/custom-cursor";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
-const fallbackAppUrl = "https://doc2mcp.site";
+const fallbackAppUrl = "https://docs4llm.site";
 
 function getPublicAppUrl() {
   const configured = process.env.NEXT_PUBLIC_APP_URL?.trim();
@@ -27,28 +27,28 @@ const publicAppUrl = getPublicAppUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(publicAppUrl),
-  title: "doc2mcp — Paste Docs URL, Get MCP Server",
+  title: "docs4llm — Paste Docs URL, Get MCP Server",
   description:
     "Turn any documentation URL into a Cursor-ready MCP server in seconds. No install, no API keys.",
   openGraph: {
-    title: "doc2mcp — Any docs URL → Cursor-ready MCP",
+    title: "docs4llm — Any docs URL → Cursor-ready MCP",
     description:
       "Paste a documentation URL. Get a hosted MCP server Cursor can read in seconds. No install, no API keys.",
     url: publicAppUrl,
-    siteName: "doc2mcp",
+    siteName: "docs4llm",
     images: [
       {
         url: "/og-image-v2.png",
         width: 1200,
         height: 630,
-        alt: "doc2mcp — paste docs URL, get MCP server",
+        alt: "docs4llm — paste docs URL, get MCP server",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "doc2mcp — Any docs URL → Cursor-ready MCP",
+    title: "docs4llm — Any docs URL → Cursor-ready MCP",
     description:
       "Paste a docs URL. Get a remote MCP server. No install, no API keys.",
     images: ["/og-image-v2.png"],

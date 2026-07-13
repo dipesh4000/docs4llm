@@ -50,7 +50,7 @@ export function CliAuthorizeShell({ userCode }: { userCode: string }) {
           <Terminal aria-hidden="true" className="size-6" />
         </div>
         <h1 className="font-semibold text-2xl tracking-tight">
-          Authorize doc2mcp CLI
+          Authorize docs4llm CLI
         </h1>
         <p className="text-muted-foreground text-sm">
           Approve access so your terminal can generate and install MCP servers

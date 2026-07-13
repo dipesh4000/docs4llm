@@ -15,7 +15,7 @@ type FreePlan = {
 const FREE_PLAN: FreePlan = {
   id: "free",
   name: "Free",
-  tagline: "For trying doc2mcp and one-off experiments.",
+  tagline: "For trying docs4llm and one-off experiments.",
   features: [
     "Unlimited MCP conversions",
     "Unlimited pages per docs site",

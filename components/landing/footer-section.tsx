@@ -4,11 +4,11 @@ import { Calendar, Github, Heart, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Doc2McpLogo } from "@/components/doc2mcp/logo";
+import { Docs4LlmLogo } from "@/components/docs4llm/logo";
 import { CONTACT_EMAIL } from "@/lib/config/site";
 
 const PRODUCT_HUNT_URL =
-  "https://www.producthunt.com/products/doc2mcp?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-doc2mcp";
+  "https://www.producthunt.com/products/docs4llm?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-docs4llm";
 const PRODUCT_HUNT_BADGE =
   "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1171095&theme=light&t=1781401698614";
 
@@ -37,12 +37,12 @@ const LEGAL_LINKS = [
 const SOCIAL_LINKS = [
   {
     label: "GitHub",
-    href: "https://github.com/doc2mcp",
+    href: "https://github.com/docs4llm",
     icon: Github,
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/doc2mcp",
+    href: "https://www.linkedin.com/company/docs4llm",
     icon: Linkedin,
   },
 ];
@@ -88,7 +88,7 @@ export function FooterSection() {
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:gap-16">
           <div className="space-y-6">
             <Link className="inline-flex items-center gap-2" href="/">
-              <Doc2McpLogo size={32} />
+              <Docs4LlmLogo size={32} />
             </Link>
             <p className="max-w-xs text-muted-foreground text-sm leading-relaxed">
               The fastest way to turn any documentation into an MCP server your
@@ -116,7 +116,7 @@ export function FooterSection() {
               <a
                 aria-label="Book a 30-minute demo on Calendly"
                 className="inline-flex h-9 items-center gap-2 rounded-full border border-border/60 bg-card/40 px-3.5 text-foreground/80 text-xs transition-colors hover:border-border hover:text-foreground"
-                href="https://calendly.com/doc2mcp/30min"
+                href="https://calendly.com/docs4llm/30min"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -140,14 +140,14 @@ export function FooterSection() {
             </div>
 
             <a
-              aria-label="doc2mcp on Product Hunt"
+              aria-label="docs4llm on Product Hunt"
               className="inline-block pt-2"
               href={PRODUCT_HUNT_URL}
               rel="noopener noreferrer"
               target="_blank"
             >
               <Image
-                alt="doc2mcp - Paste a docs URL, get a hosted MCP server for AI agents | Product Hunt"
+                alt="docs4llm - Paste a docs URL, get a hosted MCP server for AI agents | Product Hunt"
                 height={54}
                 src={PRODUCT_HUNT_BADGE}
                 unoptimized
@@ -163,7 +163,7 @@ export function FooterSection() {
 
         <div className="mt-16 flex flex-col gap-4 border-border/40 border-t pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-muted-foreground text-xs">
-            © {currentYear} doc2mcp. All rights reserved.
+            © {currentYear} docs4llm. All rights reserved.
           </p>
           <p className="font-mono text-[11px] text-muted-foreground/80">
             <a
@@ -175,11 +175,11 @@ export function FooterSection() {
             {" · Built by the "}
             <a
               className="font-medium text-foreground/90 underline decoration-foreground/20 decoration-dotted underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground/60"
-              href="https://www.linkedin.com/company/doc2mcp"
+              href="https://www.linkedin.com/company/docs4llm"
               rel="noopener noreferrer"
               target="_blank"
             >
-              doc2mcp team
+              docs4llm team
             </a>
           </p>
         </div>
@@ -197,7 +197,7 @@ function AnimatedWordmark() {
       className="pointer-events-none relative mt-12 select-none overflow-hidden text-center"
     >
       <p className="-mb-4 footer-wordmark font-display font-bold leading-none tracking-tight text-[clamp(3rem,14vw,18rem)] sm:-mb-10 lg:-mb-16">
-        doc2mcp
+        docs4llm
       </p>
       <style>{`
         .footer-wordmark {

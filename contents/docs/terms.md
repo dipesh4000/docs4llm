@@ -1,6 +1,6 @@
 ---
 title: Terms of Service
-description: The terms you agree to when you use doc2mcp.
+description: The terms you agree to when you use docs4llm.
 category: Legal
 order: 1
 ---
@@ -11,11 +11,11 @@ Last updated: {{ date }}
 
 ## 1. Acceptance
 
-By accessing or using doc2mcp ("the Service"), you agree to be bound by these Terms of Service. If you do not agree, do not use the Service.
+By accessing or using docs4llm ("the Service"), you agree to be bound by these Terms of Service. If you do not agree, do not use the Service.
 
 ## 2. The service
 
-doc2mcp converts publicly accessible documentation URLs into hosted MCP (Model Context Protocol) servers that AI clients such as Cursor, Claude, and Windsurf can read.
+docs4llm converts publicly accessible documentation URLs into hosted MCP (Model Context Protocol) servers that AI clients such as Cursor, Claude, and Windsurf can read.
 
 ## 3. Your account
 
@@ -34,13 +34,13 @@ See the [Acceptable Use Policy](/docs/acceptable-use). In short:
 
 ## 5. Content
 
-You retain ownership of your inputs. By using the Service you grant doc2mcp a non-exclusive licence to process inputs solely to deliver and improve the Service.
+You retain ownership of your inputs. By using the Service you grant docs4llm a non-exclusive licence to process inputs solely to deliver and improve the Service.
 
 Generated MCP servers are yours to use. The Service does not claim ownership of the documentation you point it at; that content belongs to its original publisher.
 
 ## 6. Plans and billing
 
-Plan pricing and limits are listed on [doc2mcp.dev/pricing](/pricing). We may change pricing with at least 30 days notice. Cancellations take effect at the end of the current billing cycle. No prorated refunds on monthly plans.
+Plan pricing and limits are listed on [docs4llm.dev/pricing](/pricing). We may change pricing with at least 30 days notice. Cancellations take effect at the end of the current billing cycle. No prorated refunds on monthly plans.
 
 ## 7. Availability
 
@@ -52,7 +52,7 @@ The Service is provided "as is" without warranties of any kind. We do not warran
 
 ## 9. Limitation of liability
 
-To the maximum extent permitted by law, doc2mcp is not liable for indirect, incidental, or consequential damages, or for any lost data or profits.
+To the maximum extent permitted by law, docs4llm is not liable for indirect, incidental, or consequential damages, or for any lost data or profits.
 
 ## 10. Changes
 
@@ -60,4 +60,4 @@ We may update these terms. Material changes will be announced at least 14 days b
 
 ## 11. Contact
 
-Questions or notices: doc2mcp@gmail.com
+Questions or notices: docs4llm@gmail.com

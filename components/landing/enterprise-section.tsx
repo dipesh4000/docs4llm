@@ -27,7 +27,7 @@ const FEATURES: EnterpriseFeature[] = [
   {
     id: "self_hosted",
     title: "Self Hosted",
-    body: "Deploy doc2mcp inside your own VPC. Your docs and your generated MCP servers never leave your perimeter.",
+    body: "Deploy docs4llm inside your own VPC. Your docs and your generated MCP servers never leave your perimeter.",
     icon: Building2,
   },
   {
@@ -57,7 +57,7 @@ const FEATURES: EnterpriseFeature[] = [
   {
     id: "pipelines",
     title: "Custom Pipelines",
-    body: "Bring your own crawler, embedder, or post-processing step via webhook — doc2mcp orchestrates the rest.",
+    body: "Bring your own crawler, embedder, or post-processing step via webhook — docs4llm orchestrates the rest.",
     icon: Cog,
   },
   {
@@ -143,7 +143,7 @@ export function EnterpriseSection() {
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
             <Button asChild className="h-11 rounded-full px-6" size="lg">
               <a
-                href="https://calendly.com/doc2mcp/30min"
+                href="https://calendly.com/docs4llm/30min"
                 rel="noopener noreferrer"
                 target="_blank"
               >

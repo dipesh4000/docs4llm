@@ -17,7 +17,7 @@ import type {
 import {
   DOC_MCP_TOOL_NAMES,
   isBuiltinDocTool,
-} from "../../lib/doc2mcp/doc-tools-registry";
+} from "../../lib/docs4llm/doc-tools-registry";
 
 export type ToolSmokeResult = {
   toolName: string;

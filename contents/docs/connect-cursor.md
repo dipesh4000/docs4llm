@@ -1,6 +1,6 @@
 ---
 title: Connect to Cursor
-description: Add a doc2mcp server to Cursor and query your docs from chat.
+description: Add a docs4llm server to Cursor and query your docs from chat.
 category: Guides
 order: 1
 ---
@@ -12,7 +12,7 @@ your documentation.
 
 ## Prerequisites
 
-- A **ready** project on [doc2mcp.site](https://doc2mcp.site) (see [Quick start](/docs/quickstart))
+- A **ready** project on [docs4llm.site](https://docs4llm.site) (see [Quick start](/docs/quickstart))
 - **Cursor** with MCP enabled (Settings → MCP)
 
 ## Step-by-step
@@ -23,7 +23,7 @@ your documentation.
 {
   "mcpServers": {
     "stripe": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer <project-token>" }
     }
   }

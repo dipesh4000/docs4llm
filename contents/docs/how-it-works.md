@@ -7,10 +7,10 @@ order: 4
 
 ## Overview
 
-When you paste a documentation URL, doc2mcp runs a multi-stage pipeline
+When you paste a documentation URL, docs4llm runs a multi-stage pipeline
 server-side. Nothing runs on your machine.
 
-![The doc2mcp pipeline](/diagrams/pipeline.svg)
+![The docs4llm pipeline](/diagrams/pipeline.svg)
 
 ## Why it matters
 
@@ -22,7 +22,7 @@ reads your real docs.
 
 1. **Documentation** — you provide any docs URL (site, OpenAPI spec, GitBook,
    GitHub repo, or raw markdown).
-2. **Crawling** — doc2mcp discovers pages via `llms.txt`, sitemaps, and links,
+2. **Crawling** — docs4llm discovers pages via `llms.txt`, sitemaps, and links,
    then fetches each one, preserving code blocks and headings.
    See [Documentation crawling](/docs/crawling).
 3. **Knowledge processing** — pages are cleaned and split into heading-aware
@@ -39,7 +39,7 @@ reads your real docs.
 
 The conversion (write) path and the agent-query (read) path share one database.
 
-![doc2mcp system architecture](/diagrams/architecture.svg)
+![docs4llm system architecture](/diagrams/architecture.svg)
 
 - **Write path:** `POST /api/convert` creates the project and token, then a
   background pipeline crawls, chunks, and analyzes into Postgres.
@@ -50,7 +50,7 @@ The conversion (write) path and the agent-query (read) path share one database.
 
 ```bash
 # Conversion is kicked off for you from the app, but the shape is:
-curl -X POST https://doc2mcp.site/api/convert \
+curl -X POST https://docs4llm.site/api/convert \
   -H "Content-Type: application/json" \
   -d '{"url":"https://docs.stripe.com"}'
 ```
@@ -68,4 +68,4 @@ curl -X POST https://doc2mcp.site/api/convert \
 |---------|--------------|-----|
 | Stuck on `crawling` | Large site or slow origin | Wait; status polls automatically |
 | `error` immediately | Marketing page or blocked URL | Use the `docs.` subdomain |
-| Few pages indexed | No `llms.txt`/sitemap | doc2mcp falls back to link crawl; re-run |
+| Few pages indexed | No `llms.txt`/sitemap | docs4llm falls back to link crawl; re-run |

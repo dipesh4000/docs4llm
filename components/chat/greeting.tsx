@@ -21,7 +21,7 @@ export const Greeting = () => {
           <span className="size-3 rounded-full bg-yellow-500/80" />
           <span className="size-3 rounded-full bg-green-500/80" />
           <span className="ml-2 font-mono text-white/40 text-xs">
-            doc2mcp — chat
+            docs4llm — chat
           </span>
         </div>
 
@@ -37,7 +37,7 @@ export const Greeting = () => {
           <div className="mt-5 flex items-start gap-2 text-sm">
             <span className="select-none text-emerald-400">$</span>
             <span className="text-zinc-300">
-              Ask anything — or toggle doc2mcp and paste a docs URL to build an
+              Ask anything — or toggle docs4llm and paste a docs URL to build an
               MCP.
             </span>
           </div>

@@ -7,18 +7,18 @@ order: 6
 
 ## Overview
 
-doc2mcp works with internal documentation as well as public sites — as long as
+docs4llm works with internal documentation as well as public sites — as long as
 the docs URL is reachable when the crawl runs.
 
 ## Why it matters
 
 Your most valuable context is often internal: platform docs, runbooks, internal
-API references. Making it agent-accessible is where doc2mcp pays off most.
+API references. Making it agent-accessible is where docs4llm pays off most.
 
 ## Step-by-step
 
 1. Confirm the docs URL is reachable from the internet (a hosted internal docs
-   site, a published GitBook space, or a GitHub repo doc2mcp can read).
+   site, a published GitBook space, or a GitHub repo docs4llm can read).
 2. Convert it exactly like a public site.
 3. Distribute the project token to your team through a secrets manager — not
    chat or commits.
@@ -30,8 +30,8 @@ API references. Making it agent-accessible is where doc2mcp pays off most.
 
 | Source | Approach |
 |--------|----------|
-| Internal docs site | Expose a read-only hosted URL doc2mcp can fetch |
-| Private GitHub repo | Use a repo doc2mcp is authorized to read |
+| Internal docs site | Expose a read-only hosted URL docs4llm can fetch |
+| Private GitHub repo | Use a repo docs4llm is authorized to read |
 | Behind SSO/VPN | Not directly crawlable — publish a reachable mirror |
 
 ## Best practices

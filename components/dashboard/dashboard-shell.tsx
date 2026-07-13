@@ -15,7 +15,7 @@ import {
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Doc2McpLogo } from "@/components/doc2mcp/logo";
+import { Docs4LlmLogo } from "@/components/docs4llm/logo";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -76,7 +76,7 @@ export function DashboardShell({
       <aside className="sticky top-0 hidden h-dvh w-64 shrink-0 border-border/50 border-r bg-card/30 backdrop-blur-xl md:flex md:flex-col">
         <div className="flex h-16 items-center gap-2 border-border/50 border-b px-5">
           <Link className="flex items-center gap-2" href="/">
-            <Doc2McpLogo size={28} />
+            <Docs4LlmLogo size={28} />
           </Link>
         </div>
 
@@ -151,7 +151,7 @@ export function DashboardShell({
       <div className="flex min-w-0 flex-1 flex-col">
         <header className="sticky top-0 z-20 flex h-16 items-center justify-between gap-4 border-border/50 border-b bg-background/80 px-6 backdrop-blur-xl md:hidden">
           <Link className="flex items-center gap-2" href="/dashboard">
-            <Doc2McpLogo size={26} />
+            <Docs4LlmLogo size={26} />
           </Link>
           <Button asChild size="sm" type="button" variant="outline">
             <Link href="/chat">

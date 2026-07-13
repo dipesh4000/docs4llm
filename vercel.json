@@ -25,7 +25,7 @@
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "authorization, x-doc2mcp-token, content-type"
+          "value": "authorization, x-docs4llm-token, content-type"
         },
         { "key": "Access-Control-Max-Age", "value": "86400" }
       ]

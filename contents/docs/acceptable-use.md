@@ -1,18 +1,18 @@
 ---
 title: Acceptable Use Policy
-description: What you can and cannot do with doc2mcp.
+description: What you can and cannot do with docs4llm.
 category: Legal
 order: 3
 ---
 
 # Acceptable Use Policy
 
-Use doc2mcp to make documentation more useful to AI agents. Do not use it to harm others or circumvent third-party rights.
+Use docs4llm to make documentation more useful to AI agents. Do not use it to harm others or circumvent third-party rights.
 
 ## You may
 
 - Convert publicly accessible documentation sites (LangChain, Stripe, your own, etc.) into MCP servers.
-- Build paid products on top of doc2mcp-hosted MCPs.
+- Build paid products on top of docs4llm-hosted MCPs.
 - Share project tokens with teammates and clients — they are read-only and project-scoped.
 - Crawl your own documentation as often as your plan allows.
 
@@ -29,13 +29,13 @@ Use doc2mcp to make documentation more useful to AI agents. Do not use it to har
 - Run automated tooling that creates conversions in a tight loop with the intent of overwhelming our or any third-party infrastructure.
 - Attempt to access other users' projects, tokens, or data.
 - Reverse-engineer, decompile, or attempt to extract our prompts or models.
-- Resell raw doc2mcp infrastructure as a competing MCP-hosting product.
+- Resell raw docs4llm infrastructure as a competing MCP-hosting product.
 
 ### Don't be a jerk
 
 - Generate, host, or distribute illegal, fraudulent, defamatory, or hateful content.
-- Use doc2mcp to build tools that target individuals for harassment.
-- Use doc2mcp to facilitate spam, phishing, or malware distribution.
+- Use docs4llm to build tools that target individuals for harassment.
+- Use docs4llm to facilitate spam, phishing, or malware distribution.
 
 ## Enforcement
 
@@ -50,4 +50,4 @@ We will, in good faith, attempt to reach out before terminating accounts unless 
 
 ## Report abuse
 
-Found a project that violates this policy? Email doc2mcp@gmail.com with the project URL.
+Found a project that violates this policy? Email docs4llm@gmail.com with the project URL.

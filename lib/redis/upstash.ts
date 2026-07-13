@@ -10,11 +10,11 @@
  *
  *   2. Per-user / per-IP rate limiting for the MCP and ingestion routes.
  *      The Vercel Hobby plan gives us no built-in WAF — without ratelimit
- *      a single attacker can burn through Gemini budget in
+ *      a single attacker can burn through AI-provider limits in
  *      minutes.
  *
  * Free tier (Upstash, no-auth REST): 10 k commands/day, 256 MB storage.
- * Both are plenty for doc2mcp's current scale, but we expose
+ * Both are plenty for docs4llm's current scale, but we expose
  * `isUpstashConfigured()` so callers can gracefully degrade to local
  * fallbacks when the env vars are missing (e.g., during local dev).
  *

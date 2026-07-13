@@ -11,9 +11,9 @@ import { getMarketplaceProjects } from "@/lib/db/queries";
 import { toMarketplaceMcp } from "@/lib/marketplace/transform";
 
 export const metadata: Metadata = {
-  title: "MCP Marketplace — doc2mcp",
+  title: "MCP Marketplace — docs4llm",
   description:
-    "Browse every MCP server generated on doc2mcp. Discover documentation turned into AI-ready infrastructure for Cursor, Claude, VS Code, Windsurf and OpenAI Agents.",
+    "Browse every MCP server generated on docs4llm. Discover documentation turned into AI-ready infrastructure for Cursor, Claude, VS Code, Windsurf and OpenAI Agents.",
 };
 
 export default function MarketplacePage() {
@@ -71,7 +71,7 @@ async function MarketplaceContent() {
             The MCP marketplace
           </h1>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            Every MCP server generated on doc2mcp is published here
+            Every MCP server generated on docs4llm is published here
             automatically. Browse documentation that&apos;s already been turned
             into AI-ready infrastructure — then build your own in minutes.
           </p>

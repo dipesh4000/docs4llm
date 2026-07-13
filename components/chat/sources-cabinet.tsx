@@ -25,7 +25,7 @@ export function SourcesCabinet({
 
   useEffect(() => {
     try {
-      const raw = localStorage.getItem(`doc2mcp:memory:${chatId}`);
+      const raw = localStorage.getItem(`docs4llm:memory:${chatId}`);
       setMemory(raw ?? "");
     } catch {
       setMemory("");
@@ -35,7 +35,7 @@ export function SourcesCabinet({
   const saveMemory = (value: string) => {
     setMemory(value);
     try {
-      localStorage.setItem(`doc2mcp:memory:${chatId}`, value);
+      localStorage.setItem(`docs4llm:memory:${chatId}`, value);
     } catch {
       // ignore quota / private mode
     }

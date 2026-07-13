@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Doc2McpLogo } from "@/components/doc2mcp/logo";
-import { ThemeToggle } from "@/components/doc2mcp/theme-toggle";
+import { Docs4LlmLogo } from "@/components/docs4llm/logo";
+import { ThemeToggle } from "@/components/docs4llm/theme-toggle";
 import { ConversionDemo } from "@/components/landing/conversion-demo";
 
 export const metadata: Metadata = {
-  title: "doc2mcp — Live demo",
+  title: "docs4llm — Live demo",
   description:
-    "Watch doc2mcp turn a docs URL into a Cursor-ready MCP server in real time.",
+    "Watch docs4llm turn a docs URL into a Cursor-ready MCP server in real time.",
 };
 
 export default function DemoPage() {
@@ -16,7 +16,7 @@ export default function DemoPage() {
       <header className="sticky top-0 z-10 border-b border-border/40 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4">
           <Link className="flex items-center gap-2" href="/">
-            <Doc2McpLogo size={28} />
+            <Docs4LlmLogo size={28} />
           </Link>
           <div className="flex items-center gap-2 text-sm">
             <Link

@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-description: What doc2mcp collects, why, and how to control it.
+description: What docs4llm collects, why, and how to control it.
 category: Legal
 order: 2
 ---
@@ -26,9 +26,9 @@ We do **not** collect:
 
 ## Third parties we share data with
 
-doc2mcp processes data through a small number of vendors:
+docs4llm processes data through a small number of vendors:
 
-- **Google Gemini (generativelanguage.googleapis.com)** — receives doc excerpts and chat messages when generating MCP tools or answering `ask_documentation`.
+- **OpenRouter and the selected free model provider** — receive doc excerpts and chat messages when generating MCP tools or answering `ask_documentation`. Free endpoints may retain inputs and outputs under their provider terms; use public documentation only unless you have reviewed those terms.
 - **Supabase** — stores project rows, crawled pages, chunks, and tokens.
 - **Vercel** — hosts the application and edge functions.
 - **Web search providers (optional)** — Tavily / Brave / Exa receive search queries when configured.
@@ -43,7 +43,7 @@ You may:
 - Export all project data via the dashboard.
 - Delete a project (irreversibly deletes its crawled content, chunks, and token).
 - Delete your account (removes all projects and personal data).
-- Request a copy of your data: doc2mcp@gmail.com
+- Request a copy of your data: docs4llm@gmail.com
 
 GDPR / UK GDPR / CCPA requests are honoured within 30 days.
 
@@ -53,7 +53,7 @@ See the [Security](/docs/security) page for technical details — token isolatio
 
 ## Children
 
-doc2mcp is not directed at children under 13 and we do not knowingly collect their data.
+docs4llm is not directed at children under 13 and we do not knowingly collect their data.
 
 ## Changes
 
@@ -61,4 +61,4 @@ We will notify users by email of material changes at least 14 days before they t
 
 ## Contact
 
-Privacy questions: doc2mcp@gmail.com
+Privacy questions: docs4llm@gmail.com

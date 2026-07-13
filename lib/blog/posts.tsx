@@ -89,7 +89,7 @@ export const BLOG_POSTS: BlogPost[] = [
     heroImage: "/blog/better-docs-wont-fix-hallucinations.png",
     heroAlt:
       "Editorial cover: bold serif headline 'Why better docs won't fix AI hallucinations' on a deep matte-black background, with a small Cursor terminal panel on the right highlighting one invented line labelled INVENTED.",
-    author: { name: "Gautam Manak", role: "Founder, doc2mcp" },
+    author: { name: "Gautam Manak", role: "Founder, docs4llm" },
     publishedOn: "Jun 2, 2026",
     readingMinutes: 8,
     tags: ["MCP", "AI Agents", "Field Essay"],
@@ -350,7 +350,7 @@ export const BLOG_POSTS: BlogPost[] = [
           read from.
         </P>
         <P>
-          That layer is what we are building at doc2mcp. You point us at a docs
+          That layer is what we are building at docs4llm. You point us at a docs
           URL. We generate a production-ready MCP server your agents — Cursor,
           Claude, OpenAI Agents, Windsurf, anything MCP-compatible — can call
           instead of guessing.
@@ -470,7 +470,7 @@ Agents       |  One-off Copilot demos   |  Long-running workflows that
     heroImage: "/blog/skills-library.png",
     heroAlt:
       "Floating glass cards labelled API Reference, OpenAPI Spec, Crawled Pages, Live Examples and MCP Server orbiting a glowing assistant orb on a dark navy background.",
-    author: { name: "Gautam Manak", role: "Founder, doc2mcp" },
+    author: { name: "Gautam Manak", role: "Founder, docs4llm" },
     publishedOn: "May 30, 2026",
     readingMinutes: 6,
     tags: ["MCP", "Workflow", "Editor"],
@@ -484,7 +484,7 @@ Agents       |  One-off Copilot demos   |  Long-running workflows that
           stopped questioning.
         </P>
         <P>
-          doc2mcp exists because that tax is unnecessary. You don’t need smarter
+          docs4llm exists because that tax is unnecessary. You don’t need smarter
           prompts — you need a smaller surface area between the docs and the
           model. An MCP server is exactly that surface.
         </P>
@@ -538,7 +538,7 @@ Agents       |  One-off Copilot demos   |  Long-running workflows that
           </li>
         </UL>
 
-        <H2 id="how-doc2mcp-works">How doc2mcp does it in 90 seconds</H2>
+        <H2 id="how-docs4llm-works">How docs4llm does it in 90 seconds</H2>
         <P>
           Paste a docs URL. We crawl it, detect the format (Mintlify,
           Docusaurus, OpenAPI, plain Markdown, GitBook, even a GitHub branch
@@ -558,7 +558,7 @@ Agents       |  One-off Copilot demos   |  Long-running workflows that
 {
   "mcpServers": {
     "my-api": {
-      "url": "https://mcp.doc2mcp.site/v1/<your-id>",
+      "url": "https://mcp.docs4llm.site/v1/<your-id>",
       "headers": { "Authorization": "Bearer ***" }
     }
   }
@@ -585,11 +585,11 @@ Agents       |  One-off Copilot demos   |  Long-running workflows that
     slug: "one-mcp-six-editors",
     title: "One MCP server, six editors. Why the registry shape matters.",
     excerpt:
-      "Cursor, Claude Desktop, VS Code, Windsurf, Codex and Zed all speak MCP — but they consume it differently. Here’s how doc2mcp produces a single artifact that fits all of them.",
+      "Cursor, Claude Desktop, VS Code, Windsurf, Codex and Zed all speak MCP — but they consume it differently. Here’s how docs4llm produces a single artifact that fits all of them.",
     heroImage: "/blog/mcp-tools.png",
     heroAlt:
       "Glassmorphism cards for Cursor IDE, Claude Desktop, VS Code, Claude Code and Windsurf orbiting a glowing blue neural brain on a dark background.",
-    author: { name: "Gautam Manak", role: "Founder, doc2mcp" },
+    author: { name: "Gautam Manak", role: "Founder, docs4llm" },
     publishedOn: "May 28, 2026",
     readingMinutes: 5,
     tags: ["MCP", "Tooling", "Cursor", "Claude"],
@@ -601,7 +601,7 @@ Agents       |  One-off Copilot demos   |  Long-running workflows that
           own little dialect of <em>how</em> you wire one in.
         </P>
         <P>
-          doc2mcp’s job isn’t just to generate an MCP. It’s to generate{" "}
+          docs4llm’s job isn’t just to generate an MCP. It’s to generate{" "}
           <em>one</em> MCP that lands cleanly in all of them, without you
           forking the artifact for each tool.
         </P>
@@ -626,7 +626,7 @@ Agents       |  One-off Copilot demos   |  Long-running workflows that
 
         <H2 id="what-we-ship">What we ship in the export drawer</H2>
         <P>
-          Every conversion in doc2mcp ends with a one-click export panel that
+          Every conversion in docs4llm ends with a one-click export panel that
           gives you copy-ready snippets for:
         </P>
         <UL>
@@ -689,7 +689,7 @@ Agents       |  One-off Copilot demos   |  Long-running workflows that
 
         <H2 id="the-test">The test we run before shipping a conversion</H2>
         <P>
-          Inside doc2mcp we run a synthetic “first-use” trace against the
+          Inside docs4llm we run a synthetic “first-use” trace against the
           generated server from each editor’s perspective. If a tool would break
           the editor’s schema (e.g. a parameter type it doesn’t accept), the
           export panel surfaces it before you paste anything.
@@ -713,7 +713,7 @@ Agents       |  One-off Copilot demos   |  Long-running workflows that
     heroImage: "/blog/security.png",
     heroAlt:
       "Glass cards labelled Bearer Token, RLS Policies, Signed Webhooks, Audit Logs and Zero Trust orbiting a glowing shield with a padlock on a dark navy background.",
-    author: { name: "Gautam Manak", role: "Founder, doc2mcp" },
+    author: { name: "Gautam Manak", role: "Founder, docs4llm" },
     publishedOn: "May 26, 2026",
     readingMinutes: 7,
     tags: ["Security", "MCP", "Operations"],
@@ -730,7 +730,7 @@ Agents       |  One-off Copilot demos   |  Long-running workflows that
           When you’re shipping AI tooling, the threat model is wider than a
           normal web app. The model sees secrets. The IDE renders them. The
           browser extension on top of your app reads the DOM. Logs land in three
-          different places. Here’s the checklist we apply to every doc2mcp
+          different places. Here’s the checklist we apply to every docs4llm
           release.
         </P>
 
@@ -823,13 +823,13 @@ Permissions-Policy: camera=(), microphone=(), geolocation=()`}
 BLOG_POSTS.push(
   {
     slug: "your-mcp-should-auto-sync",
-    title: "Your MCP should auto-sync. Here's how doc2mcp does it.",
+    title: "Your MCP should auto-sync. Here's how docs4llm does it.",
     excerpt:
       "Vendor docs change quietly. Your AI agent doesn't notice until it ships a broken API call. Content hashing + cron + diff-aware regeneration is the fix.",
     heroImage: "/blog/auto-sync.png",
     heroAlt:
       "Glass cards labelled Diff, Auto-sync, Push, Cron and Up to date orbiting a glowing sync-icon orb on a dark navy background.",
-    author: { name: "Gautam Manak", role: "Founder, doc2mcp" },
+    author: { name: "Gautam Manak", role: "Founder, docs4llm" },
     publishedOn: "May 25, 2026",
     readingMinutes: 5,
     tags: ["MCP", "Sync", "Reliability"],
@@ -844,7 +844,7 @@ BLOG_POSTS.push(
         </P>
         <P>
           Auto-sync is the cheapest reliability investment you can make in an AI
-          stack. Here's the loop we run on every doc2mcp project.
+          stack. Here's the loop we run on every docs4llm project.
         </P>
 
         <H2 id="hash">1. Hash the source, not the screenshot</H2>
@@ -918,7 +918,7 @@ BLOG_POSTS.push(
     heroImage: "/blog/openapi.png",
     heroAlt:
       "Glass cards labelled JSON Schema, REST Routes, OpenAPI 3.1, Webhooks and v2.1.0 orbiting a glowing schema-tree sphere on a dark navy background.",
-    author: { name: "Gautam Manak", role: "Founder, doc2mcp" },
+    author: { name: "Gautam Manak", role: "Founder, docs4llm" },
     publishedOn: "May 22, 2026",
     readingMinutes: 6,
     tags: ["MCP", "OpenAPI", "Workflow"],
@@ -955,7 +955,7 @@ PUT    /memberships/:id         move between workspaces`}
 
         <H2 id="workflows">Workflows are the unit of usefulness</H2>
         <P>
-          The doc2mcp pipeline groups routes into <em>workflows</em>: chains of
+          The docs4llm pipeline groups routes into <em>workflows</em>: chains of
           calls that map to one human-intent. The four routes above become one
           tool:
         </P>
@@ -1006,7 +1006,7 @@ PUT    /memberships/:id         move between workspaces`}
           </li>
         </UL>
         <Quote>
-          OpenAPI tells the model what exists. doc2mcp tells the model what to
+          OpenAPI tells the model what exists. docs4llm tells the model what to
           do.
         </Quote>
       </>
@@ -1020,7 +1020,7 @@ PUT    /memberships/:id         move between workspaces`}
     heroImage: "/blog/observability.png",
     heroAlt:
       "Glass cards labelled Latency p95, Cold Starts, Token Burn, Error Rate and Traces orbiting a glowing EKG-pulse sphere on a dark navy background.",
-    author: { name: "Gautam Manak", role: "Founder, doc2mcp" },
+    author: { name: "Gautam Manak", role: "Founder, docs4llm" },
     publishedOn: "May 19, 2026",
     readingMinutes: 7,
     tags: ["Observability", "Production", "Cost"],
@@ -1124,7 +1124,7 @@ notify: oncall
     heroImage: "/blog/agents.png",
     heroAlt:
       "Glass cards labelled Deploy Agent, Plan Task, Browse Web, Run Tools and Talk Back orbiting a glowing terminal-cursor orb on a dark navy background.",
-    author: { name: "Gautam Manak", role: "Founder, doc2mcp" },
+    author: { name: "Gautam Manak", role: "Founder, docs4llm" },
     publishedOn: "May 16, 2026",
     readingMinutes: 5,
     tags: ["Agents", "Architecture"],
@@ -1203,7 +1203,7 @@ notify: oncall
           and a hand-tuned planner.
         </Quote>
         <P>
-          doc2mcp focuses on the first part — making tool definitions that the
+          docs4llm focuses on the first part — making tool definitions that the
           model can actually use without copy-paste. The loop is yours. Keep it
           small.
         </P>
@@ -1218,7 +1218,7 @@ notify: oncall
     heroImage: "/blog/prompting.png",
     heroAlt:
       "Glass cards labelled System Prompt, Temperature, Chain of Thought, Tool Calls and Evals orbiting a glowing prompt-input sphere on a dark navy background.",
-    author: { name: "Gautam Manak", role: "Founder, doc2mcp" },
+    author: { name: "Gautam Manak", role: "Founder, docs4llm" },
     publishedOn: "May 12, 2026",
     readingMinutes: 6,
     tags: ["Prompting", "Practical"],
@@ -1286,7 +1286,7 @@ notify: oncall
         <H2 id="template">A template you can paste</H2>
         <Pre lang="markdown">
           {`# Role
-You are doc2mcp's onboarding assistant. You help developers paste a docs URL and ship a working MCP server.
+You are docs4llm's onboarding assistant. You help developers paste a docs URL and ship a working MCP server.
 
 # Capabilities
 You can call:

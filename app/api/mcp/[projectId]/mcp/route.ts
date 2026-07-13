@@ -1,5 +1,5 @@
-import { attributeMcpHit, resolveMcpProject } from "@/lib/doc2mcp/mcp-api";
-import { runDocMcpTool } from "@/lib/doc2mcp/mcp-tools-runtime";
+import { attributeMcpHit, resolveMcpProject } from "@/lib/docs4llm/mcp-api";
+import { runDocMcpTool } from "@/lib/docs4llm/mcp-tools-runtime";
 import { addSpanAttributes, withSpan } from "@/lib/observability/tracing";
 import { getRatelimiter } from "@/lib/redis/upstash";
 import { DOC_MCP_TOOLS } from "@/services/mcp/doc-tools";
@@ -66,7 +66,7 @@ function rpcHttpError(status: number, code: number, message: string) {
 // biome-ignore lint/suspicious/useAwait: Next.js route handlers must be async
 export async function GET() {
   return new Response(
-    "doc2mcp HTTP MCP — use POST with JSON-RPC 2.0 (initialize, tools/list, tools/call)",
+    "docs4llm HTTP MCP — use POST with JSON-RPC 2.0 (initialize, tools/list, tools/call)",
     { status: 200, headers: { "content-type": "text/plain; charset=utf-8" } }
   );
 }
@@ -99,7 +99,7 @@ export async function POST(
         tools: { listChanged: false },
       },
       serverInfo: {
-        name: "doc2mcp",
+        name: "docs4llm",
         version: "1.0.0",
       },
     });
@@ -220,10 +220,10 @@ export async function POST(
         {
           attributes: {
             "mcp.tool_name": toolName,
-            "doc2mcp.project_id": projectId,
-            "doc2mcp.page_count": resolved.pages.length,
-            "doc2mcp.owner_type": resolved.project.ownerType,
-            "doc2mcp.team_id": resolved.project.teamId ?? "none",
+            "docs4llm.project_id": projectId,
+            "docs4llm.page_count": resolved.pages.length,
+            "docs4llm.owner_type": resolved.project.ownerType,
+            "docs4llm.team_id": resolved.project.teamId ?? "none",
           },
         },
         async () => {

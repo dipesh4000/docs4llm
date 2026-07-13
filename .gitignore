@@ -36,3 +36,5 @@ tsconfig.tsbuildinfo
 .mimocode
 .vscode
 .brain
+.next
+.agents

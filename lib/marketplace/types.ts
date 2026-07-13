@@ -17,7 +17,7 @@ export type MarketplaceMcp = {
   mcpScore: number | null;
   /** Official MCP Registry listing URL, when the server is published. */
   registryUrl: string | null;
-  /** Fully-qualified registry name, e.g. io.github.doc2mcp/stripe. */
+  /** Fully-qualified registry name, e.g. io.github.docs4llm/stripe. */
   registryName: string | null;
   createdAt: string;
   updatedAt: string;

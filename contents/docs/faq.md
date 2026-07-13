@@ -1,6 +1,6 @@
 ---
 title: FAQ
-description: Common questions about MCP, doc2mcp, agents, and retrieval.
+description: Common questions about MCP, docs4llm, agents, and retrieval.
 category: Reference
 order: 9
 ---
@@ -8,7 +8,7 @@ order: 9
 ## What is MCP?
 
 The **Model Context Protocol** is an open standard (JSON-RPC 2.0) that lets AI clients
-call external **tools** and read **resources** through one interface. doc2mcp hosts an
+call external **tools** and read **resources** through one interface. docs4llm hosts an
 MCP server backed by your crawled documentation. See [What is MCP?](/docs/what-is-mcp).
 
 ## Why not build an MCP server manually?
@@ -20,12 +20,12 @@ You can — but you own every part of the pipeline:
 - Hosting, auth, rate limits, and observability
 - Re-syncing when docs change
 
-doc2mcp is **managed documentation infrastructure**: one URL in, hosted tools out. Most
+docs4llm is **managed documentation infrastructure**: one URL in, hosted tools out. Most
 teams spend days on a one-off script and still ship stale indexes. See
-[Why doc2mcp?](/docs/why-doc2mcp).
+[Why docs4llm?](/docs/why-docs4llm).
 
 > **Tip** Hand-written tool wrappers drift the moment your docs team renames a section.
-> doc2mcp re-crawls when you re-run a conversion.
+> docs4llm re-crawls when you re-run a conversion.
 
 ## How often is documentation updated?
 
@@ -54,8 +54,8 @@ cited answer from the top hits. See [Retrieval layer](/docs/retrieval).
 
 ## Do I need API keys for the source docs?
 
-No for **public** documentation. doc2mcp reads the site like a browser. You only manage
-the per-project **Bearer token** doc2mcp issues. See
+No for **public** documentation. docs4llm reads the site like a browser. You only manage
+the per-project **Bearer token** docs4llm issues. See
 [Authentication](/docs/api-authentication).
 
 ## Is my token secret?
@@ -70,5 +70,5 @@ fetch). See [Convert private documentation](/docs/private-docs).
 
 ## Hosted vs self-hosted?
 
-- **Hosted** — fastest path; doc2mcp runs crawl, index, and MCP endpoint.
+- **Hosted** — fastest path; docs4llm runs crawl, index, and MCP endpoint.
 - **Self-hosted** — run the stack in your VPC; see [Self hosted](/docs/self-hosted).

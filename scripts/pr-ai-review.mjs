@@ -14,8 +14,8 @@
  * - REQUEST_CHANGES when any must_fix remains; otherwise COMMENT/APPROVE
  */
 
-const MARKER = "<!-- doc2mcp-ai-review -->";
-const INLINE_MARKER = "<!-- doc2mcp-ai-inline -->";
+const MARKER = "<!-- docs4llm-ai-review -->";
+const INLINE_MARKER = "<!-- docs4llm-ai-inline -->";
 const MODEL = process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
 const MAX_DIFF_CHARS = Number(process.env.REVIEW_MAX_DIFF_CHARS ?? 180_000);
 const DEEP_REVIEW = process.env.REVIEW_DEEP === "1";
@@ -78,8 +78,8 @@ const SECRET_PATTERNS = [
     regex: /\b(?:ghp|gho|ghu|ghs|ghr)_[A-Za-z0-9]{20,}\b/g,
   },
   {
-    id: "doc2mcp_token",
-    label: "Possible doc2mcp token",
+    id: "docs4llm_token",
+    label: "Possible docs4llm token",
     regex: /\bd2mcp_(?:pat|usr)_[A-Za-z0-9]{16,}\b/g,
   },
   {
@@ -104,13 +104,13 @@ const SECRET_PATTERNS = [
   },
 ];
 
-const DOC2MCP_CHECKLIST = [
+const DOCS4LLM_CHECKLIST = [
   "Auth/session checks on new or changed mutating API routes",
   "Authorization: callers cannot act on another user's/team's resources",
   "MCP access via resolveMcpProject + token verification (not bypassed)",
   "No secrets, .env*, or real credentials committed",
   "vercel.json functions paths match existing route.ts files",
-  "QStash worker URL uses getDoc2McpBaseUrl (not hardcoded localhost in prod paths)",
+  "QStash worker URL uses getDocs4LlmBaseUrl (not hardcoded localhost in prod paths)",
   "Razorpay webhooks verify signatures before trusting payload",
   "No new orphaned legacy MCP REST routes (/pages, /ask, /search, etc.)",
   "CLI routes under /api/cli/* remain backward compatible when changed",
@@ -731,7 +731,7 @@ async function geminiReview({
   secretHits,
   groups,
 }) {
-  const checklist = DOC2MCP_CHECKLIST.map((item) => `- ${item}`).join("\n");
+  const checklist = DOCS4LLM_CHECKLIST.map((item) => `- ${item}`).join("\n");
 
   const fileList = files
     .slice(0, 80)
@@ -745,7 +745,7 @@ async function geminiReview({
           .join("\n")}\n`
       : "";
 
-  const systemContext = `You are a principal engineer doing a REAL code review of doc2mcp, in CodeRabbit style.
+  const systemContext = `You are a principal engineer doing a REAL code review of docs4llm, in CodeRabbit style.
 
 Product: Next.js 16 App Router + Supabase auth/Postgres + QStash + Gemini + hosted MCP at /api/mcp/{id}/mcp + CLI /api/cli/* + Razorpay.
 
@@ -930,7 +930,7 @@ async function upsertReviewComment(body) {
   );
   const existing = comments.find((c) => c.body?.includes(MARKER));
 
-  const fullBody = `${MARKER}\n## 🤖 doc2mcp AI code review\n\n${body}\n\n_Automated review — not a substitute for human review._`;
+  const fullBody = `${MARKER}\n## 🤖 docs4llm AI code review\n\n${body}\n\n_Automated review — not a substitute for human review._`;
 
   if (existing) {
     await githubRequest(
@@ -1040,7 +1040,7 @@ async function submitInlineReview({ findings, verdict, summary }) {
 
   const shortBody = [
     MARKER,
-    `## 🤖 doc2mcp AI review — ${
+    `## 🤖 docs4llm AI review — ${
       event === "REQUEST_CHANGES"
         ? "changes requested"
         : event === "APPROVE"

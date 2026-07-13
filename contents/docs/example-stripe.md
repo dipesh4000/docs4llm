@@ -25,7 +25,7 @@ https://docs.stripe.com
 {
   "mcpServers": {
     "stripe": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer <project-token>" }
     }
   }
@@ -45,7 +45,7 @@ A grounded answer cites a real page, e.g.
 
 ## Best practices
 
-- For the API surface specifically, you can also point doc2mcp at Stripe's
+- For the API surface specifically, you can also point docs4llm at Stripe's
   OpenAPI spec to get one page per endpoint.
 
 ## Troubleshooting

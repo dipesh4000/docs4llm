@@ -22,7 +22,7 @@ const steps = [
     code: `https://docs.stripe.com
 https://docs.langchain.com
 
-# doc2mcp parsing triggered`,
+# docs4llm parsing triggered`,
     files: [
       { name: "stripe_docs.url", active: true, icon: "url" },
       { name: "langchain.url", active: false, icon: "url" },
@@ -69,7 +69,7 @@ retrieval   → AI Engine`,
       "Publishes a secure, hosted Model Context Protocol server exposing customized query tools and schemas.",
     code: `tools:     23
 workflows: 6
-endpoint:  https://doc2mcp.site/api/mcp/<id>
+endpoint:  https://docs4llm.site/api/mcp/<id>
 auth:      bearer token`,
     files: [
       { name: "server.ts", active: true, icon: "ts" },
@@ -86,7 +86,7 @@ auth:      bearer token`,
     code: `{
   "mcpServers": {
     "stripe": {
-      "url": "https://doc2mcp.site/api/mcp/<id>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<id>/mcp",
       "headers": {
         "Authorization": "Bearer <token>"
       }
@@ -358,7 +358,7 @@ export function HowItWorksSection() {
                       <span className="size-2 rounded-full bg-[#10b981] opacity-80" />
                     </div>
                     <span className="font-mono text-[10px] text-muted-foreground/60">
-                      doc2mcp-ide
+                      docs4llm-ide
                     </span>
                     <span className="w-10" />
                   </div>

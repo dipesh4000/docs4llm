@@ -30,7 +30,7 @@ const CRAWL_STEPS = [
 ];
 
 export function DocPreviewPanel({ className }: { className?: string }) {
-  const { url, doc2mcpMode, isLoading, dismiss } = useChatDocPreview();
+  const { url, docs4llmMode, isLoading, dismiss } = useChatDocPreview();
   const parsed = useMemo(() => (url ? parseUrl(url) : null), [url]);
 
   if (!url || !parsed) {
@@ -89,7 +89,7 @@ export function DocPreviewPanel({ className }: { className?: string }) {
                 <div className="flex flex-col items-center gap-2">
                   <Loader2 className="size-6 animate-spin text-primary" />
                   <p className="font-mono text-muted-foreground text-xs">
-                    Starting doc2mcp pipeline…
+                    Starting docs4llm pipeline…
                   </p>
                 </div>
               </div>
@@ -100,7 +100,7 @@ export function DocPreviewPanel({ className }: { className?: string }) {
             <div className="mb-2 flex items-center gap-2">
               <Terminal className="size-3.5 text-primary" />
               <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-wider">
-                {doc2mcpMode ? "doc2mcp pipeline" : "inspect mode"}
+                {docs4llmMode ? "docs4llm pipeline" : "inspect mode"}
               </span>
             </div>
             <pre className="max-h-[140px] overflow-auto rounded-xl border border-border/50 bg-muted/40 p-3 font-mono text-[11px] leading-relaxed text-foreground/90">

@@ -8,15 +8,15 @@ order: 0
 
 ## Overview
 
-This guide walks the full **docs → agent** pipeline: you provide a URL, doc2mcp crawls and
+This guide walks the full **docs → agent** pipeline: you provide a URL, docs4llm crawls and
 indexes it, then hosts a remote MCP endpoint your tools can query.
 
 ## Why it matters
 
-Manual MCP builds break when docs move, versions multiply, or new pages ship. doc2mcp
+Manual MCP builds break when docs move, versions multiply, or new pages ship. docs4llm
 automates discovery, chunking, tool generation, and hosting so you stay on product work.
 
-![The doc2mcp pipeline](/diagrams/pipeline.svg)
+![The docs4llm pipeline](/diagrams/pipeline.svg)
 
 ## Step-by-step
 
@@ -32,7 +32,7 @@ https://github.com/org/repo/tree/main/docs
 
 ### 2. Crawling — smart discovery
 
-doc2mcp follows sitemaps, nav links, and common doc frameworks (Mintlify, Docusaurus,
+docs4llm follows sitemaps, nav links, and common doc frameworks (Mintlify, Docusaurus,
 GitBook, ReadMe, plain HTML). OpenAPI specs and README trees are supported.
 
 ### 3. Knowledge processing — chunks that retrieve well
@@ -59,7 +59,7 @@ You receive a URL and Bearer token. No cluster to run for the hosted product.
 {
   "mcpServers": {
     "myapi": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer <project-token>" }
     }
   }

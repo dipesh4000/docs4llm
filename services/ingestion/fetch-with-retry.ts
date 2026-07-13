@@ -17,7 +17,7 @@ import {
 const DEFAULT_TIMEOUT_MS = 15_000;
 const DEFAULT_RETRIES = 3;
 const DEFAULT_BASE_DELAY_MS = 400;
-const USER_AGENT = "doc2mcp/1.0 (+https://doc2mcp.site)";
+const USER_AGENT = "docs4llm/1.0 (+https://docs4llm.site)";
 
 const RETRYABLE_STATUS = new Set([408, 425, 429, 500, 502, 503, 504]);
 

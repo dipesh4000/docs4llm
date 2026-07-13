@@ -6,11 +6,11 @@ import path from "node:path";
 function printInstallBanner() {
   process.stdout.write(`
 \x1b[36m╭────────────────────────────────────────────╮\x1b[0m
-\x1b[36m│\x1b[0m \x1b[1mdoc2mcp CLI\x1b[0m is ready                    \x1b[36m│\x1b[0m
+\x1b[36m│\x1b[0m \x1b[1mdocs4llm CLI\x1b[0m is ready                    \x1b[36m│\x1b[0m
 \x1b[36m│\x1b[0m Turn docs into MCP servers from terminal \x1b[36m│\x1b[0m
 \x1b[36m│\x1b[0m                                            \x1b[36m│\x1b[0m
-\x1b[36m│\x1b[0m Start:   \x1b[32mdoc2mcp login\x1b[0m                    \x1b[36m│\x1b[0m
-\x1b[36m│\x1b[0m Convert: \x1b[32mdoc2mcp https://docs.site\x1b[0m        \x1b[36m│\x1b[0m
+\x1b[36m│\x1b[0m Start:   \x1b[32mdocs4llm login\x1b[0m                    \x1b[36m│\x1b[0m
+\x1b[36m│\x1b[0m Convert: \x1b[32mdocs4llm https://docs.site\x1b[0m        \x1b[36m│\x1b[0m
 \x1b[36m╰────────────────────────────────────────────╯\x1b[0m
 
 `);
@@ -42,17 +42,17 @@ if (isGlobalInstall()) {
   const pathEntries = (process.env.PATH || "").split(path.delimiter);
   if (binDir && !pathEntries.includes(binDir)) {
     process.stdout.write(`
-doc2mcp installed, but npm's global bin is not on your PATH.
+docs4llm installed, but npm's global bin is not on your PATH.
 
 Run this once for zsh:
   echo 'export PATH="${binDir}:$PATH"' >> ~/.zshrc
   source ~/.zshrc
 
 Then try:
-  doc2mcp login
+  docs4llm login
 
 Quick alternative (no PATH setup):
-  npx doc2mcp login
+  npx docs4llm login
 
 For pnpm global installs, run:
   pnpm setup

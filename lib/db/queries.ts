@@ -825,7 +825,7 @@ export async function getPlatformProjectById({
   return project ?? null;
 }
 
-/** MCP API: load project by id only (auth via X-Doc2MCP-Token). */
+/** MCP API: load project by id only (auth via X-Docs4LLM-Token). */
 export async function getPlatformProjectForMcp({ id }: { id: string }) {
   const [project] = await db
     .select()

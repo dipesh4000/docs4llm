@@ -2,9 +2,9 @@ export const DEFAULT_CHAT_MODEL = "asi1";
 
 export const titleModel = {
   id: "asi1",
-  name: "Gemini",
-  provider: "gemini",
-  description: "Google Gemini model",
+  name: "NVIDIA Nemotron 3 Ultra (Free)",
+  provider: "openrouter",
+  description: "Free NVIDIA Nemotron inference through OpenRouter",
 };
 
 export type ModelCapabilities = {
@@ -24,10 +24,10 @@ export type ChatModel = {
 export const chatModels: ChatModel[] = [
   {
     id: "asi1",
-    name: "Gemini",
-    provider: "gemini",
+    name: "NVIDIA Nemotron 3 Ultra (Free)",
+    provider: "openrouter",
     description:
-      "Production AI for docs ingestion, MCP generation, and developer workflows",
+      "Free long-context AI for docs ingestion, MCP generation, and developer workflows",
   },
 ];
 
@@ -38,8 +38,7 @@ export async function getCapabilities(): Promise<
   return {
     asi1: {
       tools: true,
-      vision: true,
-      // flash-lite is not a thinking model; don't request/forward reasoning.
+      vision: false,
       reasoning: false,
     },
   };

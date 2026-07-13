@@ -433,7 +433,7 @@ export const teamInvite = pgTable("TeamInvite", {
 
 export type TeamInvite = InferSelectModel<typeof teamInvite>;
 
-/** CliAuthRequest — device authorization flow for the doc2mcp CLI. */
+/** CliAuthRequest — device authorization flow for the docs4llm CLI. */
 export const cliAuthRequest = pgTable("CliAuthRequest", {
   id: uuid("id").primaryKey().notNull().defaultRandom(),
   deviceCodeHash: varchar("deviceCodeHash", { length: 128 }).notNull().unique(),
@@ -453,7 +453,7 @@ export const cliAuthRequest = pgTable("CliAuthRequest", {
 
 export type CliAuthRequest = InferSelectModel<typeof cliAuthRequest>;
 
-/** CliToken — personal access token for doc2mcp CLI (PAT). */
+/** CliToken — personal access token for docs4llm CLI (PAT). */
 export const cliToken = pgTable("CliToken", {
   id: uuid("id").primaryKey().notNull().defaultRandom(),
   userId: uuid("userId")

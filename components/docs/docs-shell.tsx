@@ -1,8 +1,8 @@
 import { Github, Menu } from "lucide-react";
 import Link from "next/link";
 import { Suspense } from "react";
-import { Doc2McpLogo } from "@/components/doc2mcp/logo";
-import { ThemeToggle } from "@/components/doc2mcp/theme-toggle";
+import { Docs4LlmLogo } from "@/components/docs4llm/logo";
+import { ThemeToggle } from "@/components/docs4llm/theme-toggle";
 import { DocsMobileNavLoader } from "@/components/docs/docs-mobile-nav-loader";
 import { DocsSearchLoader } from "@/components/docs/docs-search-loader";
 import { DocsSidebarLoader } from "@/components/docs/docs-sidebar-loader";
@@ -66,7 +66,7 @@ export function DocsShell({ children }: { children: React.ReactNode }) {
               <DocsMobileNavLoader />
             </Suspense>
             <Link className="flex shrink-0 items-center gap-2" href="/">
-              <Doc2McpLogo size={26} />
+              <Docs4LlmLogo size={26} />
             </Link>
           </div>
 
@@ -91,7 +91,7 @@ export function DocsShell({ children }: { children: React.ReactNode }) {
             <Link
               aria-label="GitHub repository"
               className="hidden size-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent/60 hover:text-foreground sm:inline-flex"
-              href="https://github.com/doc2mcp/doc2mcp-registry"
+              href="https://github.com/docs4llm/docs4llm-registry"
               rel="noopener noreferrer"
               target="_blank"
             >

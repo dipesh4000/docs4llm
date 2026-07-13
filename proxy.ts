@@ -60,7 +60,7 @@ function isAdminEmail(email: string | null | undefined): boolean {
     ...splitEmails(process.env.NEXT_PUBLIC_ADMIN_EMAIL),
   ];
   const adminEmails =
-    configured.length > 0 ? configured : ["doc2mcp@gmail.com"];
+    configured.length > 0 ? configured : ["docs4llm@gmail.com"];
 
   return adminEmails.includes(email.toLowerCase());
 }

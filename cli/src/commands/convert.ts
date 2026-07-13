@@ -101,7 +101,7 @@ export async function convertUrlToProject(
   process.stdout.write(`${pc.bold("URL:")} ${finalDetail.mcp.url}\n`);
   process.stdout.write(`${pc.bold("Token:")} ${finalDetail.mcp.token}\n`);
   process.stdout.write(
-    `${pc.dim("Your project token is shown above. Marketplace users need their own token: doc2mcp token create")}\n`
+    `${pc.dim("Your project token is shown above. Marketplace users need their own token: docs4llm token create")}\n`
   );
 
   if (options.offerInstall) {

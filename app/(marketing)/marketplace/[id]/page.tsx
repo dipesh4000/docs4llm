@@ -25,9 +25,9 @@ import { SOURCE_TYPE_LABELS } from "@/lib/marketplace/types";
 type Params = { id: string };
 
 export const metadata: Metadata = {
-  title: "MCP server — doc2mcp marketplace",
+  title: "MCP server — docs4llm marketplace",
   description:
-    "Install a doc2mcp-generated MCP server in Cursor or VS Code with one click.",
+    "Install a docs4llm-generated MCP server in Cursor or VS Code with one click.",
 };
 
 function hostOf(url: string | null): string | null {
@@ -166,7 +166,7 @@ async function MarketplaceDetailContent({
       <p className="mt-6 text-muted-foreground text-sm leading-relaxed">
         MCP server{mcpHost ? ` for ${mcpHost}` : ""} · {mcp.toolCount} tool
         {mcp.toolCount === 1 ? "" : "s"} · published by {mcp.ownerName} on
-        doc2mcp.
+        docs4llm.
       </p>
 
       {mcp.registryUrl ? (

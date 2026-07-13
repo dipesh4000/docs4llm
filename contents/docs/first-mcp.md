@@ -14,7 +14,7 @@ question and watched it answer from real documentation.
 
 ### 1. Convert the docs (≈1 min)
 
-In the doc2mcp chat, enable the toggle and paste:
+In the docs4llm chat, enable the toggle and paste:
 
 ```text
 https://docs.stripe.com
@@ -30,7 +30,7 @@ From the result page, copy the JSON block:
 {
   "mcpServers": {
     "stripe": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer <project-token>" }
     }
   }

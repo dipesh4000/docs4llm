@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 import useSWR from "swr";
 import { cn } from "@/lib/utils";
 
-const REPO = "doc2mcp/doc2mcp-registry";
+const REPO = "docs4llm/docs4llm-registry";
 const REPO_URL = `https://github.com/${REPO}`;
 
 function fetcher(url: string): Promise<{ stargazers_count?: number }> {
@@ -33,7 +33,7 @@ export function GithubStarButton({ className }: { className?: string }) {
 
   return (
     <a
-      aria-label="Star doc2mcp on GitHub"
+      aria-label="Star docs4llm on GitHub"
       className={cn(
         "group flex h-8.5 items-center gap-1.5 rounded-full border border-border/60 bg-background/60 px-3 font-medium text-foreground text-xs transition-colors hover:border-border hover:bg-muted",
         className

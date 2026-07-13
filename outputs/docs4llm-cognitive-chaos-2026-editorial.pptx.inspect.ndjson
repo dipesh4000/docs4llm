@@ -1,0 +1,184 @@
+{"kind":"deck","id":"pr/j6z2ct","name":"Deck"}
+{"kind":"layout","layoutId":"27978b9e-e1aa-4647-9ae5-fe499bf90824","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"7164f5d6-9b67-4163-874f-8d81ad3380b2","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/xk87n3","slide":1,"title":"CONVEX - OPEN INNOVATION","textShapes":10}
+{"kind":"textbox","id":"sh/z6tkvetc","slide":1,"text":"CONVEX - OPEN INNOVATION","textPreview":"CONVEX - OPEN INNOVATION","textChars":24,"textLines":1,"bbox":[64,42,420,20]}
+{"kind":"shape","id":"sh/0r2lojax","slide":1,"bbox":[64,87,1152,2]}
+{"kind":"textbox","id":"sh/lsb2xobi","slide":1,"text":"docs4llm","textPreview":"docs4llm","textChars":8,"textLines":1,"bbox":[64,145,650,92]}
+{"kind":"textbox","id":"sh/mtk3qts3","slide":1,"text":"Documentation that\nLLMs can use.","textPreview":"Documentation that | LLMs can use.","textChars":32,"textLines":2,"bbox":[64,260,650,118]}
+{"kind":"textbox","id":"sh/nutkzyt8","slide":1,"text":"Turn any docs URL into a hosted MCP server - so agents can search, understand, and act.","textPreview":"Turn any docs URL into a hosted MCP server - so agents can search, understand, and act.","textChars":87,"textLines":1,"bbox":[64,418,548,65]}
+{"kind":"shape","id":"sh/8v2lsjat","slide":1,"bbox":[804,138,330,12]}
+{"kind":"textbox","id":"sh/9wv21obe","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[804,171,180,103]}
+{"kind":"textbox","id":"sh/ax43utsz","slide":1,"text":"DOCS URL\nAI ANALYSIS\nMCP ENDPOINT","textPreview":"DOCS URL | AI ANALYSIS | MCP ENDPOINT","textChars":33,"textLines":3,"bbox":[804,320,330,110]}
+{"kind":"textbox","id":"sh/vyd43ytk","slide":1,"text":"Team FireCrackers\nteam-6F2C797C119E","textPreview":"Team FireCrackers | team-6F2C797C119E","textChars":35,"textLines":2,"bbox":[804,490,290,55]}
+{"kind":"textbox","id":"sh/3ilwjahk","slide":1,"text":"Maharaja Surajmal Institute of Technology","textPreview":"Maharaja Surajmal Institute of Technology","textChars":41,"textLines":1,"bbox":[804,563,330,24]}
+{"kind":"shape","id":"sh/2xcfa5gz","slide":1,"name":"footer-rule","bbox":[64,671,1152,1]}
+{"kind":"textbox","id":"sh/pk3elkzq","slide":1,"text":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textPreview":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textChars":50,"textLines":1,"bbox":[64,687,500,16]}
+{"kind":"textbox","id":"sh/ojuxcfy5","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1168,683,48,20]}
+{"kind":"notes","id":"nt/xk87n3","slide":1,"text":""}
+{"kind":"slide","id":"sl/ayqyfo","slide":2,"title":"PROBLEM + EXISTING GAP","textShapes":20}
+{"kind":"textbox","id":"sh/vax0bidg","slide":2,"text":"PROBLEM + EXISTING GAP","textPreview":"PROBLEM + EXISTING GAP","textChars":22,"textLines":1,"bbox":[64,42,420,20]}
+{"kind":"textbox","id":"sh/wb614ne1","slide":2,"text":"The problem is not\nmissing documentation.","textPreview":"The problem is not | missing documentation.","textChars":41,"textLines":2,"bbox":[64,112,570,132]}
+{"kind":"textbox","id":"sh/xcf2dsvm","slide":2,"text":"It is documentation that an agent cannot reliably use.","textPreview":"It is documentation that an agent cannot reliably use.","textChars":54,"textLines":1,"bbox":[64,264,570,62]}
+{"kind":"textbox","id":"sh/m54jydwz","slide":2,"text":"Teams are forced to translate human-readable pages into agent-readable context again and again.","textPreview":"Teams are forced to translate human-readable pages into agent-readable context again and again.","textChars":95,"textLines":1,"bbox":[64,365,508,65]}
+{"kind":"shape","id":"sh/n6d07idk","slide":2,"bbox":[64,498,510,2]}
+{"kind":"textbox","id":"sh/87m10ne5","slide":2,"text":"Affected","textPreview":"Affected","textChars":8,"textLines":1,"bbox":[64,525,200,25]}
+{"kind":"textbox","id":"sh/98fi98vq","slide":2,"text":"Developers  /  Product teams  /  AI agents","textPreview":"Developers  /  Product teams  /  AI agents","textChars":42,"textLines":1,"bbox":[64,556,510,27]}
+{"kind":"textbox","id":"sh/y14jutw3","slide":2,"text":"Current choices: static docs, RAG chatbots, or hand-built MCP wrappers.","textPreview":"Current choices: static docs, RAG chatbots, or hand-built MCP wrappers.","textChars":71,"textLines":1,"bbox":[64,604,545,48]}
+{"kind":"shape","id":"sh/z2d03yd8","slide":2,"bbox":[710,112,2,495]}
+{"kind":"textbox","id":"sh/v6pcbmdw","slide":2,"text":"What agents receive today","textPreview":"What agents receive today","textChars":25,"textLines":1,"bbox":[760,112,350,29]}
+{"kind":"shape","id":"sh/algbihwb","slide":2,"bbox":[760,189,16,16]}
+{"kind":"textbox","id":"sh/x87udcvm","slide":2,"text":"Docs site","textPreview":"Docs site","textChars":9,"textLines":1,"bbox":[794,184,296,30]}
+{"kind":"textbox","id":"sh/w7ytk7e1","slide":2,"text":"pages","textPreview":"pages","textChars":5,"textLines":1,"bbox":[794,219,240,20]}
+{"kind":"shape","id":"sh/japcfmds","slide":2,"bbox":[760,265,16,16]}
+{"kind":"textbox","id":"sh/i9gbmhw7","slide":2,"text":"OpenAPI spec","textPreview":"OpenAPI spec","textChars":12,"textLines":1,"bbox":[794,260,296,30]}
+{"kind":"textbox","id":"sh/5cruhwvy","slide":2,"text":"schema","textPreview":"schema","textChars":6,"textLines":1,"bbox":[794,295,240,20]}
+{"kind":"shape","id":"sh/kbytored","slide":2,"bbox":[760,341,16,16]}
+{"kind":"textbox","id":"sh/ze5s32do","slide":2,"text":"GitHub README","textPreview":"GitHub README","textChars":13,"textLines":1,"bbox":[794,336,296,30]}
+{"kind":"textbox","id":"sh/ydcbaxw3","slide":2,"text":"repository","textPreview":"repository","textChars":10,"textLines":1,"bbox":[794,371,240,20]}
+{"kind":"shape","id":"sh/2l4nypkn","slide":2,"bbox":[760,417,16,16]}
+{"kind":"textbox","id":"sh/nmdo7u18","slide":2,"text":"Changelog","textPreview":"Changelog","textChars":9,"textLines":1,"bbox":[794,412,296,30]}
+{"kind":"textbox","id":"sh/o7m50z2t","slide":2,"text":"history","textPreview":"history","textChars":7,"textLines":1,"bbox":[794,447,240,20]}
+{"kind":"shape","id":"sh/p8v694je","slide":2,"bbox":[760,509,370,2]}
+{"kind":"textbox","id":"sh/ehknupkr","slide":2,"text":"What they need instead","textPreview":"What they need instead","textChars":22,"textLines":1,"bbox":[760,534,350,25]}
+{"kind":"textbox","id":"sh/fid43u1c","slide":2,"text":"A dependable tool interface.","textPreview":"A dependable tool interface.","textChars":28,"textLines":1,"bbox":[760,568,390,38]}
+{"kind":"shape","id":"sh/0jm5wf2x","slide":2,"name":"footer-rule","bbox":[64,671,1152,1]}
+{"kind":"textbox","id":"sh/1kv65kj2","slide":2,"text":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textPreview":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textChars":50,"textLines":1,"bbox":[64,687,500,16]}
+{"kind":"textbox","id":"sh/qdknq5kf","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1168,683,48,20]}
+{"kind":"notes","id":"nt/ayqyfo","slide":2,"text":""}
+{"kind":"slide","id":"sl/7ojt0t","slide":3,"title":"PROPOSED SOLUTION","textShapes":21}
+{"kind":"textbox","id":"sh/ups7698z","slide":3,"text":"PROPOSED SOLUTION","textPreview":"PROPOSED SOLUTION","textChars":17,"textLines":1,"bbox":[64,42,420,20]}
+{"kind":"textbox","id":"sh/hsjqhorq","slide":3,"text":"One URL.\nA usable agent interface.","textPreview":"One URL. | A usable agent interface.","textChars":34,"textLines":2,"bbox":[64,112,660,123]}
+{"kind":"textbox","id":"sh/grap8jq5","slide":3,"text":"docs4llm transforms documentation into a hosted MCP endpoint - not another layer of text for an LLM to guess through.","textPreview":"docs4llm transforms documentation into a hosted MCP endpoint - not another layer of text for an LLM to guess through.","textChars":117,"textLines":1,"bbox":[64,265,670,63]}
+{"kind":"shape","id":"sh/7mh8be9o","slide":3,"bbox":[64,392,1000,2]}
+{"kind":"shape","id":"sh/ml872983","slide":3,"bbox":[64,433,16,16]}
+{"kind":"textbox","id":"sh/tozqdore","slide":3,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,475,50,22]}
+{"kind":"textbox","id":"sh/8nqp4jq9","slide":3,"text":"Paste","textPreview":"Paste","textChars":5,"textLines":1,"bbox":[64,510,240,29]}
+{"kind":"textbox","id":"sh/ril8ny9s","slide":3,"text":"Documentation URL","textPreview":"Documentation URL","textChars":17,"textLines":1,"bbox":[64,549,240,25]}
+{"kind":"textbox","id":"sh/qhcred87","slide":3,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[312,426,40,28]}
+{"kind":"shape","id":"sh/gbu9476t","slide":3,"bbox":[372,433,16,16]}
+{"kind":"textbox","id":"sh/hw3adc7e","slide":3,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[372,475,50,22]}
+{"kind":"textbox","id":"sh/u9cr2xo3","slide":3,"text":"Understand","textPreview":"Understand","textChars":10,"textLines":1,"bbox":[372,510,240,29]}
+{"kind":"textbox","id":"sh/valsb2po","slide":3,"text":"Crawl and classify","textPreview":"Crawl and classify","textChars":18,"textLines":1,"bbox":[372,549,240,25]}
+{"kind":"textbox","id":"sh/87u90nqx","slide":3,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[620,426,40,28]}
+{"kind":"shape","id":"sh/t83a9s7i","slide":3,"bbox":[680,433,16,16]}
+{"kind":"textbox","id":"sh/65sryx8r","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[680,475,50,22]}
+{"kind":"textbox","id":"sh/76l87ipc","slide":3,"text":"Publish","textPreview":"Publish","textChars":7,"textLines":1,"bbox":[680,510,240,29]}
+{"kind":"textbox","id":"sh/k3a9wnq1","slide":3,"text":"Typed MCP tools","textPreview":"Typed MCP tools","textChars":15,"textLines":1,"bbox":[680,549,240,25]}
+{"kind":"textbox","id":"sh/l4jq5s76","slide":3,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[928,426,40,28]}
+{"kind":"shape","id":"sh/1orydkvy","slide":3,"bbox":[988,433,16,16]}
+{"kind":"textbox","id":"sh/0nixkfed","slide":3,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[988,475,50,22]}
+{"kind":"textbox","id":"sh/fm9gbads","slide":3,"text":"Connect","textPreview":"Connect","textChars":7,"textLines":1,"bbox":[988,510,240,29]}
+{"kind":"textbox","id":"sh/el0fi5w7","slide":3,"text":"Any MCP client","textPreview":"Any MCP client","textChars":14,"textLines":1,"bbox":[988,549,240,25]}
+{"kind":"textbox","id":"sh/dkry90vm","slide":3,"text":"Why it is better: structured tools let agents perform the documented work instead of merely summarizing it.","textPreview":"Why it is better: structured tools let agents perform the documented work instead of merely summarizing it.","textChars":107,"textLines":1,"bbox":[64,618,1030,25]}
+{"kind":"shape","id":"sh/sjixgfeh","slide":3,"name":"footer-rule","bbox":[64,671,1152,1]}
+{"kind":"textbox","id":"sh/ri9g7adw","slide":3,"text":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textPreview":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textChars":50,"textLines":1,"bbox":[64,687,500,16]}
+{"kind":"textbox","id":"sh/qx0fe5wb","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1168,683,48,20]}
+{"kind":"notes","id":"nt/7ojt0t","slide":3,"text":""}
+{"kind":"slide","id":"sl/6rwyyt","slide":4,"title":"ARCHITECTURE + TECH STACK","textShapes":28}
+{"kind":"textbox","id":"sh/dg7qh8fu","slide":4,"text":"ARCHITECTURE + TECH STACK","textPreview":"ARCHITECTURE + TECH STACK","textChars":25,"textLines":1,"bbox":[64,42,420,20]}
+{"kind":"textbox","id":"sh/qtg7mtwj","slide":4,"text":"The architecture is simple\nbecause the job is specific.","textPreview":"The architecture is simple | because the job is specific.","textChars":55,"textLines":2,"bbox":[64,106,620,116]}
+{"kind":"textbox","id":"sh/rep8fyxo","slide":4,"text":"Mermaid.js system flow","textPreview":"Mermaid.js system flow","textChars":22,"textLines":1,"bbox":[64,252,300,21]}
+{"kind":"shape","id":"sh/4rypkjed","slide":4,"bbox":[64,290,1152,2]}
+{"kind":"shape","id":"sh/5s7qdofy","slide":4,"bbox":[64,363,1,88]}
+{"kind":"textbox","id":"sh/ipw7itw7","slide":4,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[82,332,35,18]}
+{"kind":"textbox","id":"sh/3q58byxs","slide":4,"text":"Docs URL","textPreview":"Docs URL","textChars":8,"textLines":1,"bbox":[82,377,176,30]}
+{"kind":"textbox","id":"sh/oni9wneh","slide":4,"text":"input","textPreview":"input","textChars":5,"textLines":1,"bbox":[82,416,176,20]}
+{"kind":"textbox","id":"sh/9orqpsv2","slide":4,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[247,394,36,22]}
+{"kind":"shape","id":"sh/l0bqx47m","slide":4,"bbox":[285,363,1,88]}
+{"kind":"textbox","id":"sh/0z294zq1","slide":4,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[303,332,35,18]}
+{"kind":"textbox","id":"sh/zy98vupg","slide":4,"text":"Ingestion","textPreview":"Ingestion","textChars":9,"textLines":1,"bbox":[303,377,176,30]}
+{"kind":"textbox","id":"sh/yx0r2p8b","slide":4,"text":"crawl + parse","textPreview":"crawl + parse","textChars":13,"textLines":1,"bbox":[303,416,176,20]}
+{"kind":"textbox","id":"sh/dcrqtk7q","slide":4,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[468,394,36,22]}
+{"kind":"shape","id":"sh/cbi90fq5","slide":4,"bbox":[506,363,1,88]}
+{"kind":"textbox","id":"sh/ba98rapk","slide":4,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[524,332,35,18]}
+{"kind":"textbox","id":"sh/q907y58z","slide":4,"text":"Gemini","textPreview":"Gemini","textChars":6,"textLines":1,"bbox":[524,377,176,30]}
+{"kind":"textbox","id":"sh/x8vq5o7u","slide":4,"text":"understand","textPreview":"understand","textChars":10,"textLines":1,"bbox":[524,416,176,20]}
+{"kind":"textbox","id":"sh/w7m9cjq9","slide":4,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[689,394,36,22]}
+{"kind":"shape","id":"sh/gnu1o7ix","slide":4,"bbox":[727,363,1,88]}
+{"kind":"textbox","id":"sh/hon2xcj2","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[745,332,35,18]}
+{"kind":"textbox","id":"sh/ulcjmh0r","slide":4,"text":"MCP tools","textPreview":"MCP tools","textChars":9,"textLines":1,"bbox":[745,377,176,30]}
+{"kind":"textbox","id":"sh/fmlkvm1c","slide":4,"text":"generate","textPreview":"generate","textChars":8,"textLines":1,"bbox":[745,416,176,20]}
+{"kind":"textbox","id":"sh/sju1k72l","slide":4,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[910,394,36,22]}
+{"kind":"shape","id":"sh/tk32tcj6","slide":4,"bbox":[948,363,1,88]}
+{"kind":"textbox","id":"sh/6hcjixkf","slide":4,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[966,332,35,18]}
+{"kind":"textbox","id":"sh/7ilkr210","slide":4,"text":"AI clients","textPreview":"AI clients","textChars":10,"textLines":1,"bbox":[966,377,176,30]}
+{"kind":"textbox","id":"sh/kva1gn2p","slide":4,"text":"use","textPreview":"use","textChars":3,"textLines":1,"bbox":[966,416,176,20]}
+{"kind":"shape","id":"sh/5gj2psja","slide":4,"bbox":[64,494,1152,1]}
+{"kind":"textbox","id":"sh/nq1kzilw","slide":4,"text":"Convex","textPreview":"Convex","textChars":6,"textLines":1,"bbox":[64,530,130,30]}
+{"kind":"textbox","id":"sh/mps3qx4b","slide":4,"text":"Integration in progress: project state, workflow events, and realtime conversion status.","textPreview":"Integration in progress: project state, workflow events, and realtime conversion status.","textChars":88,"textLines":1,"bbox":[202,534,760,25]}
+{"kind":"textbox","id":"sh/9sj21s32","slide":4,"text":"Current stack  /  Next.js + React  /  TypeScript  /  Gemini  /  Supabase + Drizzle  /  Upstash QStash  /  MCP SDK","textPreview":"Current stack  /  Next.js + React  /  TypeScript  /  Gemini  /  Supabase + Drizzle  /  Upstash QStash  /  MCP SDK","textChars":113,"textLines":1,"bbox":[64,610,1080,26]}
+{"kind":"textbox","id":"sh/8ralsnmh","slide":4,"text":"Mermaid: DocsURL --> Ingestion --> Gemini --> MCPTools --> AIClients","textPreview":"Mermaid: DocsURL --> Ingestion --> Gemini --> MCPTools --> AIClients","textChars":68,"textLines":1,"bbox":[64,640,820,17]}
+{"kind":"shape","id":"sh/ve1k32ls","slide":4,"name":"footer-rule","bbox":[64,671,1152,1]}
+{"kind":"textbox","id":"sh/ats3ux4n","slide":4,"text":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textPreview":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textChars":50,"textLines":1,"bbox":[64,687,500,16]}
+{"kind":"textbox","id":"sh/xgj25c3y","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1168,683,48,20]}
+{"kind":"notes","id":"nt/6rwyyt","slide":4,"text":""}
+{"kind":"slide","id":"sl/za84gc","slide":5,"title":"KEY FEATURES","textShapes":19}
+{"kind":"textbox","id":"sh/nup8zudc","slide":5,"text":"KEY FEATURES","textPreview":"KEY FEATURES","textChars":12,"textLines":1,"bbox":[64,42,420,20]}
+{"kind":"textbox","id":"sh/8vypszux","slide":5,"text":"Four parts.\nOne useful outcome.","textPreview":"Four parts. | One useful outcome.","textChars":31,"textLines":2,"bbox":[64,108,520,118]}
+{"kind":"textbox","id":"sh/9wrq14vi","slide":5,"text":"Make the documentation callable.","textPreview":"Make the documentation callable.","textChars":32,"textLines":1,"bbox":[64,252,475,30]}
+{"kind":"textbox","id":"sh/y5g7mpcv","slide":5,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,342,48,31]}
+{"kind":"textbox","id":"sh/z6p8vudg","slide":5,"text":"Ingest","textPreview":"Ingest","textChars":6,"textLines":1,"bbox":[126,342,438,34]}
+{"kind":"textbox","id":"sh/07ypozu1","slide":5,"text":"Docs sites, OpenAPI, Postman, GitHub, MD/MDX, and HTML.","textPreview":"Docs sites, OpenAPI, Postman, GitHub, MD/MDX, and HTML.","textChars":55,"textLines":1,"bbox":[126,384,438,55]}
+{"kind":"shape","id":"sh/l87qxkv6","slide":5,"bbox":[64,458,500,1]}
+{"kind":"textbox","id":"sh/q1w7i5cj","slide":5,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[64,486,48,31]}
+{"kind":"textbox","id":"sh/b258rad4","slide":5,"text":"Understand","textPreview":"Understand","textChars":10,"textLines":1,"bbox":[126,486,438,34]}
+{"kind":"textbox","id":"sh/ze14zmds","slide":5,"text":"Gemini extracts endpoints, workflows, and documentation meaning.","textPreview":"Gemini extracts endpoints, workflows, and documentation meaning.","textChars":64,"textLines":1,"bbox":[126,528,438,55]}
+{"kind":"shape","id":"sh/yds3q1w7","slide":5,"bbox":[64,602,500,1]}
+{"kind":"textbox","id":"sh/lg3m1wvi","slide":5,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[664,342,48,31]}
+{"kind":"textbox","id":"sh/kfalsred","slide":5,"text":"Generate","textPreview":"Generate","textChars":8,"textLines":1,"bbox":[726,342,438,34]}
+{"kind":"textbox","id":"sh/7il4n6do","slide":5,"text":"Create typed MCP tools and a documentation agent.","textPreview":"Create typed MCP tools and a documentation agent.","textChars":49,"textLines":1,"bbox":[726,384,438,55]}
+{"kind":"shape","id":"sh/mhc3u1w3","slide":5,"bbox":[664,458,500,1]}
+{"kind":"textbox","id":"sh/9k3mpgvu","slide":5,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[664,486,48,31]}
+{"kind":"textbox","id":"sh/8julwbe9","slide":5,"text":"Validate","textPreview":"Validate","textChars":8,"textLines":1,"bbox":[726,486,438,34]}
+{"kind":"textbox","id":"sh/nmhkr2dk","slide":5,"text":"Check tool schemas and smoke-test the runtime before publishing.","textPreview":"Check tool schemas and smoke-test the runtime before publishing.","textChars":64,"textLines":1,"bbox":[726,528,438,55]}
+{"kind":"shape","id":"sh/2l83ihwz","slide":5,"bbox":[664,602,500,1]}
+{"kind":"textbox","id":"sh/61g7qpgn","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1040,136,150,74]}
+{"kind":"textbox","id":"sh/r2pozax8","slide":5,"text":"The innovation is not another chat window. It is a reusable tool layer for every AI client.","textPreview":"The innovation is not another chat window. It is a reusable tool layer for every AI client.","textChars":91,"textLines":1,"bbox":[64,626,1015,25]}
+{"kind":"shape","id":"sh/s3ypsfyd","slide":5,"name":"footer-rule","bbox":[64,671,1152,1]}
+{"kind":"textbox","id":"sh/t4761kfy","slide":5,"text":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textPreview":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textChars":50,"textLines":1,"bbox":[64,687,500,16]}
+{"kind":"textbox","id":"sh/idw7m5gb","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1168,683,48,20]}
+{"kind":"notes","id":"nt/za84gc","slide":5,"text":""}
+{"kind":"slide","id":"sl/ld5ey2","slide":6,"title":"IMPACT + FEASIBILITY","textShapes":17}
+{"kind":"textbox","id":"sh/lwb2ps7a","slide":6,"text":"IMPACT + FEASIBILITY","textPreview":"IMPACT + FEASIBILITY","textChars":20,"textLines":1,"bbox":[64,42,420,20]}
+{"kind":"shape","id":"sh/yt0jux8j","slide":6,"name":"impact-field","bbox":[0,94,565,577]}
+{"kind":"textbox","id":"sh/ju9kn2p4","slide":6,"text":"Who benefits?","textPreview":"Who benefits?","textChars":13,"textLines":1,"bbox":[64,138,350,50]}
+{"kind":"textbox","id":"sh/8z2l07ql","slide":6,"text":"Developers","textPreview":"Developers","textChars":10,"textLines":1,"bbox":[64,236,300,30]}
+{"kind":"textbox","id":"sh/t0b2tc76","slide":6,"text":"Less hunting. Less manual setup.","textPreview":"Less hunting. Less manual setup.","textChars":32,"textLines":1,"bbox":[64,274,345,29]}
+{"kind":"shape","id":"sh/6xkjyx8v","slide":6,"bbox":[64,328,330,1]}
+{"kind":"textbox","id":"sh/7ytkr2p0","slide":6,"text":"Product teams","textPreview":"Product teams","textChars":13,"textLines":1,"bbox":[64,357,330,30]}
+{"kind":"textbox","id":"sh/gnml4rqx","slide":6,"text":"One source of truth across tools.","textPreview":"One source of truth across tools.","textChars":33,"textLines":1,"bbox":[64,395,345,29]}
+{"kind":"shape","id":"sh/hov2xc7i","slide":6,"bbox":[64,449,330,1]}
+{"kind":"textbox","id":"sh/tgnalore","slide":6,"text":"AI agents","textPreview":"AI agents","textChars":9,"textLines":1,"bbox":[64,478,330,30]}
+{"kind":"textbox","id":"sh/8fetsjat","slide":6,"text":"Structured context they can call.","textPreview":"Structured context they can call.","textChars":33,"textLines":1,"bbox":[64,516,345,29]}
+{"kind":"textbox","id":"sh/7e5sje98","slide":6,"text":"Feasible from day one.","textPreview":"Feasible from day one.","textChars":22,"textLines":1,"bbox":[650,138,450,50]}
+{"kind":"textbox","id":"sh/6dwbq9sn","slide":6,"text":"01  Serverless deployment","textPreview":"01  Serverless deployment","textChars":25,"textLines":1,"bbox":[650,241,430,29]}
+{"kind":"textbox","id":"sh/hk7ap8ra","slide":6,"text":"Next.js and hosted MCP endpoints keep the operating model lightweight.","textPreview":"Next.js and hosted MCP endpoints keep the operating model lightweight.","textChars":70,"textLines":1,"bbox":[650,280,475,46]}
+{"kind":"shape","id":"sh/gjytw3a5","slide":6,"bbox":[650,356,500,1]}
+{"kind":"textbox","id":"sh/vipsny9k","slide":6,"text":"02  Queue-based processing","textPreview":"02  Queue-based processing","textChars":26,"textLines":1,"bbox":[650,390,460,29]}
+{"kind":"textbox","id":"sh/uhgbutsz","slide":6,"text":"Crawling and AI analysis scale independently from live tool calls.","textPreview":"Crawling and AI analysis scale independently from live tool calls.","textChars":66,"textLines":1,"bbox":[650,429,475,46]}
+{"kind":"shape","id":"sh/xo3ad4b6","slide":6,"bbox":[650,505,500,1]}
+{"kind":"textbox","id":"sh/cnu9kzal","slide":6,"text":"03  Convex-ready backend","textPreview":"03  Convex-ready backend","textChars":24,"textLines":1,"bbox":[650,539,460,29]}
+{"kind":"textbox","id":"sh/o7yt0zih","slide":6,"text":"Realtime state and workflow coordination are being integrated for the Convex track.","textPreview":"Realtime state and workflow coordination are being integrated for the Convex track.","textChars":83,"textLines":1,"bbox":[650,578,490,46]}
+{"kind":"shape","id":"sh/ps7at4j2","slide":6,"name":"footer-rule","bbox":[64,671,1152,1]}
+{"kind":"textbox","id":"sh/25gby90b","slide":6,"text":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textPreview":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textChars":50,"textLines":1,"bbox":[64,687,500,16]}
+{"kind":"textbox","id":"sh/36psru1w","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1168,683,48,20]}
+{"kind":"notes","id":"nt/ld5ey2","slide":6,"text":""}
+{"kind":"slide","id":"sl/kww8vg","slide":7,"title":"DEMO + CONCLUSION","textShapes":12}
+{"kind":"textbox","id":"sh/4behkry1","slide":7,"text":"DEMO + CONCLUSION","textPreview":"DEMO + CONCLUSION","textChars":17,"textLines":1,"bbox":[64,42,420,20]}
+{"kind":"textbox","id":"sh/3a5grmhg","slide":7,"text":"Build once.\nLet every agent read the docs.","textPreview":"Build once. | Let every agent read the docs.","textChars":42,"textLines":2,"bbox":[64,116,800,125]}
+{"kind":"textbox","id":"sh/29wzihgv","slide":7,"text":"docs4llm turns the web's documentation into dependable, reusable AI infrastructure.","textPreview":"docs4llm turns the web's documentation into dependable, reusable AI infrastructure.","textChars":83,"textLines":1,"bbox":[64,273,706,57]}
+{"kind":"shape","id":"sh/h83ypcza","slide":7,"bbox":[64,385,420,2]}
+{"kind":"textbox","id":"sh/g7uxg7yp","slide":7,"text":"Prototype demo","textPreview":"Prototype demo","textChars":14,"textLines":1,"bbox":[64,416,260,30]}
+{"kind":"textbox","id":"sh/f6lgn2h4","slide":7,"text":"Paste a docs URL\nWatch crawl and analysis\nReceive a hosted MCP endpoint\nConnect it to an AI client","textPreview":"Paste a docs URL | Watch crawl and analysis | Receive a hosted MCP endpoint | Connect it to an AI client","textChars":98,"textLines":4,"bbox":[64,463,440,136]}
+{"kind":"textbox","id":"sh/u5cfexgj","slide":7,"text":"Live demo: building phase","textPreview":"Live demo: building phase","textChars":25,"textLines":1,"bbox":[64,615,360,24]}
+{"kind":"shape","id":"sh/147y1gze","slide":7,"name":"code-panel","bbox":[796,130,360,430]}
+{"kind":"textbox","id":"sh/03yhsbyt","slide":7,"text":"mcp.json","textPreview":"mcp.json","textChars":8,"textLines":1,"bbox":[830,167,200,25]}
+{"kind":"shape","id":"sh/6t0bytw7","slide":7,"bbox":[830,212,286,1]}
+{"kind":"textbox","id":"sh/7u9cryds","slide":7,"text":"{\n  \"mcpServers\": {\n    \"docs4llm\": {\n      \"url\": \".../mcp\"\n    }\n  }\n}","textPreview":"{ |   \"mcpServers\": { |     \"docs4llm\": { |       \"url\": \".../mcp\" |     } |   } | }","textChars":72,"textLines":7,"bbox":[830,244,286,180]}
+{"kind":"textbox","id":"sh/8vit03ed","slide":7,"text":"Why this should be selected","textPreview":"Why this should be selected","textChars":27,"textLines":1,"bbox":[830,462,260,22]}
+{"kind":"textbox","id":"sh/twbut8vy","slide":7,"text":"A practical tool layer for AI-assisted builders.","textPreview":"A practical tool layer for AI-assisted builders.","textChars":48,"textLines":1,"bbox":[830,494,270,44]}
+{"kind":"shape","id":"sh/yp0bu9wb","slide":7,"name":"footer-rule","bbox":[64,671,1152,1]}
+{"kind":"textbox","id":"sh/jq9cnedw","slide":7,"text":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textPreview":"docs4llm  /  FireCrackers  /  Cognitive Chaos 2026","textChars":50,"textLines":1,"bbox":[64,687,500,16]}
+{"kind":"textbox","id":"sh/kritwjeh","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1168,683,48,20]}
+{"kind":"notes","id":"nt/kww8vg","slide":7,"text":""}

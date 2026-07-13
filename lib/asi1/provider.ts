@@ -4,9 +4,22 @@ import { isTestEnvironment } from "@/lib/constants";
 import { ASI1_MODEL } from "./client";
 
 const asi1 = createOpenAICompatible({
-  name: "gemini",
-  baseURL: "https://generativelanguage.googleapis.com/v1beta/openai",
-  apiKey: process.env.GEMINI_API_KEY ?? process.env.ASI_ONE_API_KEY ?? "",
+  name: process.env.OPENROUTER_API_KEY ? "openrouter" : "gemini",
+  baseURL: process.env.OPENROUTER_API_KEY
+    ? "https://openrouter.ai/api/v1"
+    : "https://generativelanguage.googleapis.com/v1beta/openai",
+  apiKey:
+    process.env.OPENROUTER_API_KEY ??
+    process.env.GEMINI_API_KEY ??
+    process.env.ASI_ONE_API_KEY ??
+    "",
+  headers: process.env.OPENROUTER_API_KEY
+    ? {
+        "HTTP-Referer":
+          process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
+        "X-Title": "docs4llm",
+      }
+    : undefined,
 });
 
 export const asi1Provider = customProvider({

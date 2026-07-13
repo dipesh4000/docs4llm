@@ -1,11 +1,11 @@
 import { headers } from "next/headers";
-import { getDoc2McpBaseUrl } from "@/lib/doc2mcp/app-url";
+import { getDocs4LlmBaseUrl } from "@/lib/docs4llm/app-url";
 
 /**
  * Resolve the origin of the *current* deployment for auth email redirects.
  *
  * On Vercel preview deployments the request host is a unique per-branch URL
- * (for example `doc2mcp-git-feature-team.vercel.app`). Confirmation and
+ * (for example `docs4llm-git-feature-team.vercel.app`). Confirmation and
  * magic-link emails must point back to THAT host — not the configured
  * production URL — otherwise a developer testing a branch finishes login on
  * production and the session cookie never lands on the preview deployment.
@@ -42,7 +42,7 @@ export async function getAuthOrigin(): Promise<string> {
     return `https://${process.env.VERCEL_URL}`;
   }
 
-  return getDoc2McpBaseUrl();
+  return getDocs4LlmBaseUrl();
 }
 
 /** Build the email-confirmation redirect target for the current deployment. */

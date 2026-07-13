@@ -13,7 +13,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
-import { RetryConversionButton } from "@/components/doc2mcp/retry-conversion-button";
+import { RetryConversionButton } from "@/components/docs4llm/retry-conversion-button";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";

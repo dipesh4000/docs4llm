@@ -17,8 +17,8 @@ read — in the time it takes to copy a link.
 
 ## Step-by-step
 
-1. **Sign in** at [doc2mcp.site](https://doc2mcp.site).
-2. **Open the chat** and enable the **doc2mcp** toggle in the input.
+1. **Sign in** at [docs4llm.site](https://docs4llm.site).
+2. **Open the chat** and enable the **docs4llm** toggle in the input.
 3. **Paste a docs URL** and press enter:
 
 ```text
@@ -40,7 +40,7 @@ Using a MCP from the [marketplace](/docs/marketplace)? Create an [MCP access tok
 
 ## Best practices
 
-- Paste the **docs** URL, not the homepage. doc2mcp redirects `stripe.com` to
+- Paste the **docs** URL, not the homepage. docs4llm redirects `stripe.com` to
   `docs.stripe.com` automatically, but being explicit is faster.
 - Keep the token private — anyone with the URL + token can read that project's
   crawled docs.

@@ -38,7 +38,7 @@ const PILLARS: Pillar[] = [
   },
   {
     id: "bridge",
-    title: "doc2mcp closes the gap.",
+    title: "docs4llm closes the gap.",
     body: "We turn any docs URL into a hosted, agent-ready MCP server in under a minute — no manual coding, no infrastructure, no per-vendor lock-in.",
     metric: "< 60s",
     metricLabel: "from URL paste to a Cursor-ready MCP",
@@ -92,7 +92,7 @@ export function WhyNowSection() {
               as the standard protocol for tool access. Millions of APIs and
               documentation sites are not MCP-ready —{" "}
               <span className="text-foreground font-medium">
-                doc2mcp bridges that gap automatically
+                docs4llm bridges that gap automatically
               </span>
               .
             </p>
@@ -109,7 +109,7 @@ export function WhyNowSection() {
             “Documentation is becoming the knowledge layer for AI agents.”
           </blockquote>
           <figcaption className="mt-4 font-mono text-[10px] text-muted-foreground uppercase tracking-[0.16em]">
-            — The thesis behind Doc2MCP
+            — The thesis behind Docs4LLM
           </figcaption>
         </figure>
 

@@ -7,7 +7,7 @@ order: 3
 
 ## Overview
 
-Point doc2mcp at a GitHub repository to index its `README` and markdown docs —
+Point docs4llm at a GitHub repository to index its `README` and markdown docs —
 ideal for open-source libraries.
 
 ## Step-by-step
@@ -18,7 +18,7 @@ ideal for open-source libraries.
 https://github.com/openai/openai-python
 ```
 
-2. doc2mcp lists the repo tree and fetches `README.md` plus `.md`/`.mdx` files in
+2. docs4llm lists the repo tree and fetches `README.md` plus `.md`/`.mdx` files in
    `/docs`, `/examples`, and `/guides`.
 3. Wait for **ready** and copy the config (server id derives from the repo name).
 
@@ -26,7 +26,7 @@ https://github.com/openai/openai-python
 {
   "mcpServers": {
     "openai-python": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer <project-token>" }
     }
   }
@@ -51,4 +51,4 @@ What environment variable holds the API key?
 | Symptom | Fix |
 |---------|-----|
 | Few files indexed | Repo keeps docs elsewhere; point at the docs site instead |
-| Private repo | Must be readable by doc2mcp |
+| Private repo | Must be readable by docs4llm |

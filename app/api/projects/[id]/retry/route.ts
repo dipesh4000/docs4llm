@@ -1,6 +1,6 @@
 import { auth } from "@/app/(auth)/auth";
 import { getPlatformProjectById } from "@/lib/db/queries";
-import { restartProjectPipeline } from "@/lib/doc2mcp/restart-pipeline";
+import { restartProjectPipeline } from "@/lib/docs4llm/restart-pipeline";
 import { ChatbotError } from "@/lib/errors";
 
 export async function POST(

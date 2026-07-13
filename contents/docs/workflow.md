@@ -14,7 +14,7 @@ agent query is served, and how a project transitions through its lifecycle.
 
 The conversion (write) path and the agent-query (read) path share one database.
 
-![doc2mcp system architecture](/diagrams/architecture.svg)
+![docs4llm system architecture](/diagrams/architecture.svg)
 
 - The app calls `POST /api/convert`, which creates a project + token and kicks off
   a background pipeline (crawl → chunk → analyze) writing to Postgres.

@@ -4,7 +4,7 @@ test.describe("Authentication Pages", () => {
   test("login page renders correctly", async ({ page }) => {
     await page.goto("/login");
     await expect(
-      page.getByRole("heading", { name: "Welcome to doc2mcp" })
+      page.getByRole("heading", { name: "Welcome to docs4llm" })
     ).toBeVisible();
     await expect(
       page.getByRole("button", { name: /Continue with Google/i })

@@ -50,7 +50,7 @@ export async function approveCliAuth(
   const tokenRow = await createCliToken({
     userId: session.user.id,
     tokenHash: hashPat(rawPat),
-    name: "doc2mcp CLI",
+    name: "docs4llm CLI",
   });
 
   await approveCliAuthRequest({

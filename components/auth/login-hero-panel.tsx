@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Doc2McpMark } from "@/components/doc2mcp/logo";
+import { Docs4LlmMark } from "@/components/docs4llm/logo";
 import { MCP_TOOL_ICONS } from "@/lib/config/mcp-tool-icons";
 import { cn } from "@/lib/utils";
 
@@ -10,8 +10,8 @@ const TOOL_ICONS = [
 
 const MCP_SNIPPET = `{
   "mcpServers": {
-    "doc2mcp": {
-      "url": "https://doc2mcp.site/api/mcp/…/mcp",
+    "docs4llm": {
+      "url": "https://docs4llm.site/api/mcp/…/mcp",
       "headers": { "Authorization": "Bearer …" }
     }
   }
@@ -45,7 +45,7 @@ export function LoginHeroPanel({ className }: { className?: string }) {
 
       <div className="relative z-10 flex flex-col gap-8 p-10 xl:p-14">
         <div className="flex items-center gap-2.5">
-          <Doc2McpMark size={40} />
+          <Docs4LlmMark size={40} />
           <span className="font-display font-semibold text-xl tracking-tight text-white">
             doc<span className="text-[#8ab4f8]">2</span>mcp
           </span>

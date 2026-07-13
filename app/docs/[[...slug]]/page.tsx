@@ -8,8 +8,8 @@ type PageProps = {
 };
 
 export const metadata: Metadata = {
-  title: "Docs — doc2mcp",
-  description: "doc2mcp product documentation",
+  title: "Docs — docs4llm",
+  description: "docs4llm product documentation",
 };
 
 export default function DocsPage({ params }: PageProps) {

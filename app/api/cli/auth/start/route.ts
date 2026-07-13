@@ -9,7 +9,7 @@ import {
   createCliAuthRequest,
   expireStaleCliAuthRequests,
 } from "@/lib/db/queries";
-import { getDoc2McpBaseUrl } from "@/lib/doc2mcp/app-url";
+import { getDocs4LlmBaseUrl } from "@/lib/docs4llm/app-url";
 
 export async function POST() {
   await expireStaleCliAuthRequests();
@@ -24,7 +24,7 @@ export async function POST() {
     expiresAt,
   });
 
-  const baseUrl = getDoc2McpBaseUrl();
+  const baseUrl = getDocs4LlmBaseUrl();
   const verifyUrl = `${baseUrl}/cli/authorize?code=${encodeURIComponent(userCode)}`;
 
   return Response.json({

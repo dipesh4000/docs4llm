@@ -8,7 +8,7 @@ order: 0
 
 # Documentation as AI infrastructure
 
-Give any developer tool or AI agent **instant access to your docs**. doc2mcp crawls a
+Give any developer tool or AI agent **instant access to your docs**. docs4llm crawls a
 public or private documentation site, indexes it into semantic sections, and hosts an MCP
 server in minutes — so Cursor, Claude, VS Code, Windsurf, and OpenAI Agents query **real**
 content instead of guessing.
@@ -21,7 +21,7 @@ content instead of guessing.
 | Guide | Time | Outcome |
 |-------|------|---------|
 | [What is MCP?](/docs/what-is-mcp) | 2 min | Understand tools, JSON-RPC, and clients |
-| [What is doc2mcp?](/docs/what-is-doc2mcp) | 3 min | Product + pipeline overview |
+| [What is docs4llm?](/docs/what-is-docs4llm) | 3 min | Product + pipeline overview |
 | [Quick start](/docs/quickstart) | 5 min | First hosted MCP from a URL |
 | [First MCP in 5 minutes](/docs/first-mcp) | 5 min | Guided path into Cursor |
 
@@ -29,7 +29,7 @@ content instead of guessing.
 
 Documentation → Crawling → Knowledge processing → Retrieval → MCP generation → AI agents.
 
-![The doc2mcp pipeline](/diagrams/pipeline.svg)
+![The docs4llm pipeline](/diagrams/pipeline.svg)
 
 ## Popular paths
 
@@ -38,4 +38,4 @@ Documentation → Crawling → Knowledge processing → Retrieval → MCP genera
 - **Examples** — [Stripe](/docs/example-stripe) · [Supabase](/docs/example-supabase) · [GitHub](/docs/example-github)
 - **Reference** — [FAQ](/docs/faq) · [API authentication](/docs/api-authentication)
 
-[Open the app →](https://doc2mcp.site)
+[Open the app →](https://docs4llm.site)

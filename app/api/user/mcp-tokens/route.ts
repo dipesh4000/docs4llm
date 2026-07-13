@@ -6,7 +6,7 @@ import {
 import {
   createMcpUserAccessToken,
   hashMcpUserAccessToken,
-} from "@/lib/doc2mcp/mcp-user-tokens";
+} from "@/lib/docs4llm/mcp-user-tokens";
 import { ChatbotError } from "@/lib/errors";
 
 export async function GET() {

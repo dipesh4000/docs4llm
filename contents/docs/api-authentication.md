@@ -1,13 +1,13 @@
 ---
 title: Authentication
-description: How requests to doc2mcp are authenticated.
+description: How requests to docs4llm are authenticated.
 category: API Reference
 order: 1
 ---
 
 ## Overview
 
-doc2mcp has two authentication surfaces:
+docs4llm has two authentication surfaces:
 
 - **App API** (creating/reading projects) — authenticated by your signed-in
   session.
@@ -19,7 +19,7 @@ Every request to `/api/mcp/{projectId}/mcp` must present the project token:
 
 ```http
 POST /api/mcp/<projectId>/mcp HTTP/1.1
-Host: doc2mcp.site
+Host: docs4llm.site
 Authorization: Bearer d2mcp_xxxxxxxxxxxxxxxxxxxx
 Content-Type: application/json
 ```
@@ -27,7 +27,7 @@ Content-Type: application/json
 Fallbacks for clients that can't set headers:
 
 ```text
-X-Doc2MCP-Token: <token>
+X-Docs4LLM-Token: <token>
 ?token=<token>
 ```
 

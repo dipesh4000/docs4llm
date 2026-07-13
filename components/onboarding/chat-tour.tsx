@@ -14,9 +14,9 @@ const STEPS: TourStep[] = [
     },
   },
   {
-    element: '[data-tour="chat-doc2mcp"]',
+    element: '[data-tour="chat-docs4llm"]',
     popover: {
-      title: "Toggle doc2mcp",
+      title: "Toggle docs4llm",
       description:
         "Flip this on, then paste a docs URL to generate a hosted MCP server. With it off, your message just asks a question.",
       side: "top",

@@ -17,7 +17,7 @@ declare const __CLI_VERSION__: string;
 const program = new Command();
 
 program
-  .name("doc2mcp")
+  .name("docs4llm")
   .description("Generate documentation MCP servers from your terminal")
   .version(__CLI_VERSION__, "-v, --version", "Print the installed CLI version");
 
@@ -104,7 +104,7 @@ program
       }
     } catch {
       process.stderr.write(
-        `${pc.red("Error:")} Invalid URL. Example: doc2mcp https://docs.example.com\n`
+        `${pc.red("Error:")} Invalid URL. Example: docs4llm https://docs.example.com\n`
       );
       process.exitCode = 1;
       return;

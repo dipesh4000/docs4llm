@@ -104,7 +104,7 @@ export function ContactForm() {
             </Button>
             <Button asChild className="rounded-full" size="sm" type="button">
               <a
-                href="https://calendly.com/doc2mcp/30min"
+                href="https://calendly.com/docs4llm/30min"
                 rel="noopener noreferrer"
                 target="_blank"
               >

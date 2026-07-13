@@ -7,14 +7,14 @@ order: 1
 
 # Custom domains
 
-Serve a hosted MCP from your own hostname, e.g. `mcp.acme.com`, instead of the default `doc2mcp.site` URL.
+Serve a hosted MCP from your own hostname, e.g. `mcp.acme.com`, instead of the default `docs4llm.site` URL.
 
 **Plans:** Team or Enterprise (request via Settings or admin).
 
 ## Why use a custom domain
 
 - Branded endpoint for customers and internal teams
-- Clear separation from the public doc2mcp hostname
+- Clear separation from the public docs4llm hostname
 - Same Bearer token and MCP tools — only the host changes
 
 ## Step 1 — Pick a hostname
@@ -27,8 +27,8 @@ At your registrar (Cloudflare, Namecheap, Route 53, etc.):
 
 | Type | Host | Value |
 |------|------|-------|
-| CNAME | `mcp` | `cname.doc2mcp.app` |
-| TXT | `_doc2mcp` | `doc2mcp-verify=<code-from-support>` |
+| CNAME | `mcp` | `cname.docs4llm.app` |
+| TXT | `_docs4llm` | `docs4llm-verify=<code-from-support>` |
 
 TTL `3600` or Auto is fine. Propagation usually takes 1–10 minutes.
 
@@ -43,7 +43,7 @@ TTL `3600` or Auto is fine. Propagation usually takes 1–10 minutes.
 Replace the host in your `mcp.json`:
 
 ```diff
-- "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp"
+- "url": "https://docs4llm.site/api/mcp/<projectId>/mcp"
 + "url": "https://mcp.your-domain.com/api/mcp/<projectId>/mcp"
 ```
 
@@ -51,7 +51,7 @@ The Bearer token does **not** change.
 
 ## Verification checklist
 
-- [ ] DNS CNAME resolves to doc2mcp edge
+- [ ] DNS CNAME resolves to docs4llm edge
 - [ ] TXT record present (if required for your project)
 - [ ] Admin marked domain **Verified**
 - [ ] HTTPS works in browser

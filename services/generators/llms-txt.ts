@@ -40,7 +40,7 @@ Source: ${input.sourceUrl}
 
 ${pageSection || "- No pages crawled"}
 
-## MCP tools (doc2mcp)
+## MCP tools (docs4llm)
 
 Use these tools in Cursor to read full page content:
 

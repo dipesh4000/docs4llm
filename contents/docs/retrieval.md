@@ -22,7 +22,7 @@ context.
 ## How it works
 
 1. The agent calls `search_documentation` with a query.
-2. doc2mcp matches against heading-aware chunks and ranks by relevance.
+2. docs4llm matches against heading-aware chunks and ranks by relevance.
 3. Results are deduplicated per section and returned with breadcrumbs + URLs.
 4. `ask_documentation` goes one step further: it synthesizes a cited answer from
    the top sections.

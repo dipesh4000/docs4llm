@@ -1,16 +1,16 @@
 ---
 title: Security
-description: Authentication, token handling, and data isolation in doc2mcp.
+description: Authentication, token handling, and data isolation in docs4llm.
 category: Enterprise
 order: 2
 ---
 
 ## Overview
 
-doc2mcp isolates every project behind a scoped token and minimizes what leaves
+docs4llm isolates every project behind a scoped token and minimizes what leaves
 your environment. This page describes the identity, token, and data-flow model.
 
-![doc2mcp system architecture](/diagrams/architecture.svg)
+![docs4llm system architecture](/diagrams/architecture.svg)
 
 ## Identity and access
 
@@ -53,9 +53,9 @@ the AI provider, and Postgres are contacted.
 - The proxy gates everything except public-by-design routes (`/`, `/login`,
   `/register`, `/pricing`, `/docs`, `/api/auth`, `/chat`, `/api/mcp`).
 - `/api/mcp/{projectId}/mcp` reads the token from `Authorization`, then
-  `X-Doc2MCP-Token`, then `?token=`.
+  `X-Docs4LLM-Token`, then `?token=`.
 
 ## Reporting
 
-Found a security issue? Email doc2mcp@gmail.com — please don't open a public
+Found a security issue? Email docs4llm@gmail.com — please don't open a public
 GitHub issue.

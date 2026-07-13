@@ -7,7 +7,7 @@ order: 5
 
 ## Overview
 
-doc2mcp servers speak the Model Context Protocol over JSON-RPC 2.0, so the same
+docs4llm servers speak the Model Context Protocol over JSON-RPC 2.0, so the same
 endpoint works across every MCP-compatible client.
 
 ![One endpoint, every MCP client](/diagrams/integrations.svg)
@@ -33,7 +33,7 @@ Clients that cannot set custom headers can pass the token other ways:
 
 ```text
 Authorization: Bearer <token>     # preferred
-X-Doc2MCP-Token: <token>          # fallback header
+X-Docs4LLM-Token: <token>          # fallback header
 ?token=<token>                     # query param fallback
 ```
 
@@ -46,5 +46,5 @@ X-Doc2MCP-Token: <token>          # fallback header
 
 | Symptom | Fix |
 |---------|-----|
-| Client lacks header support | Use the `X-Doc2MCP-Token` or `?token=` fallback |
+| Client lacks header support | Use the `X-Docs4LLM-Token` or `?token=` fallback |
 | Tools not listed | Reload/restart MCP in the client |

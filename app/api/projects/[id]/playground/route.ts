@@ -51,7 +51,7 @@ export async function POST(
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "X-Doc2MCP-Token": token,
+      "X-Docs4LLM-Token": token,
     },
     body: JSON.stringify({
       jsonrpc: "2.0",

@@ -13,10 +13,10 @@ import {
 import {
   buildDocAgentSystemPrompt,
   createDocAgentTools,
-} from "@/lib/doc2mcp/doc-agent-tools";
-import { readMcpAuthToken, verifyMcpToken } from "@/lib/doc2mcp/mcp-access";
-import { mcpError } from "@/lib/doc2mcp/mcp-api";
-import type { DocMcpContext } from "@/lib/doc2mcp/mcp-tools-runtime";
+} from "@/lib/docs4llm/doc-agent-tools";
+import { readMcpAuthToken, verifyMcpToken } from "@/lib/docs4llm/mcp-access";
+import { mcpError } from "@/lib/docs4llm/mcp-api";
+import type { DocMcpContext } from "@/lib/docs4llm/mcp-tools-runtime";
 import type { CrawlResult, ProjectArtifacts } from "@/types/platform";
 
 export const maxDuration = 60;
@@ -25,7 +25,7 @@ export const maxDuration = 60;
  * Authorize the internal documentation-chat agent.
  *
  * This endpoint backs our own web chat UI (not the public MCP protocol), so it
- * accepts EITHER a valid `X-Doc2MCP-Token` (external callers) OR the logged-in
+ * accepts EITHER a valid `X-Docs4LLM-Token` (external callers) OR the logged-in
  * project owner's session. The latter lets the browser chat work without the
  * MCP token ever being sent to (or redacted on) the client.
  */

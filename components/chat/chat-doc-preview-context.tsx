@@ -11,12 +11,12 @@ import {
 
 type ChatDocPreviewState = {
   url: string | null;
-  doc2mcpMode: boolean;
+  docs4llmMode: boolean;
   isLoading: boolean;
   isDismissed: boolean;
   setPreview: (next: {
     url: string | null;
-    doc2mcpMode?: boolean;
+    docs4llmMode?: boolean;
     isLoading?: boolean;
     isDismissed?: boolean;
   }) => void;
@@ -27,14 +27,14 @@ const ChatDocPreviewContext = createContext<ChatDocPreviewState | null>(null);
 
 export function ChatDocPreviewProvider({ children }: { children: ReactNode }) {
   const [url, setUrl] = useState<string | null>(null);
-  const [doc2mcpMode, setDoc2mcpMode] = useState(false);
+  const [docs4llmMode, setDocs4llmMode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
   const setPreview = useCallback(
     (next: {
       url: string | null;
-      doc2mcpMode?: boolean;
+      docs4llmMode?: boolean;
       isLoading?: boolean;
       isDismissed?: boolean;
     }) => {
@@ -44,8 +44,8 @@ export function ChatDocPreviewProvider({ children }: { children: ReactNode }) {
           setIsDismissed(false);
         }
       }
-      if (next.doc2mcpMode !== undefined) {
-        setDoc2mcpMode(next.doc2mcpMode);
+      if (next.docs4llmMode !== undefined) {
+        setDocs4llmMode(next.docs4llmMode);
       }
       if (next.isLoading !== undefined) {
         setIsLoading(next.isLoading);
@@ -64,13 +64,13 @@ export function ChatDocPreviewProvider({ children }: { children: ReactNode }) {
   const value = useMemo(
     () => ({
       url,
-      doc2mcpMode,
+      docs4llmMode,
       isLoading,
       isDismissed,
       setPreview,
       dismiss,
     }),
-    [url, doc2mcpMode, isLoading, isDismissed, setPreview, dismiss]
+    [url, docs4llmMode, isLoading, isDismissed, setPreview, dismiss]
   );
 
   return (

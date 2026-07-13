@@ -17,8 +17,8 @@ import Link from "next/link";
 import { useMemo, useState, useTransition } from "react";
 import { toast } from "sonner";
 import { updateProjectOwnership } from "@/app/(dashboard)/dashboard/projects/[id]/ownership-actions";
-import { RegistryStatusCard } from "@/components/doc2mcp/registry-status-card";
-import { RetryConversionButton } from "@/components/doc2mcp/retry-conversion-button";
+import { RegistryStatusCard } from "@/components/docs4llm/registry-status-card";
+import { RetryConversionButton } from "@/components/docs4llm/retry-conversion-button";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -613,7 +613,7 @@ function DomainTab({
             />
             <p className="text-muted-foreground text-xs">
               Point a CNAME from this host to{" "}
-              <code className="font-mono">cname.doc2mcp.site</code>. Domains
+              <code className="font-mono">cname.docs4llm.site</code>. Domains
               activate once verified.
             </p>
             {project.customDomain ? (

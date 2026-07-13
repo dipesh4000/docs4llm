@@ -1,7 +1,7 @@
 import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
 import { LoginHeroPanel } from "@/components/auth/login-hero-panel";
-import { Doc2McpLogo } from "@/components/doc2mcp/logo";
+import { Docs4LlmLogo } from "@/components/docs4llm/logo";
 
 export default function AuthLayout({
   children,
@@ -22,11 +22,11 @@ export default function AuthLayout({
             href="/"
           >
             <ArrowLeftIcon className="size-3.5" />
-            Back to doc2mcp
+            Back to docs4llm
           </Link>
 
           <Link className="mb-8 inline-flex w-fit lg:hidden" href="/">
-            <Doc2McpLogo size={32} />
+            <Docs4LlmLogo size={32} />
           </Link>
 
           <div className="rounded-2xl border border-border/60 bg-card/80 p-6 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.18)] backdrop-blur-sm sm:p-8 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">

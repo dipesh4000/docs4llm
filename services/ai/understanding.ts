@@ -14,7 +14,7 @@ import { parseOpenApiText } from "../ingestion/openapi-source";
 import { compressApiToTools } from "./tool-compression";
 import { inferWorkflowDetection } from "./workflow-engine";
 
-// Per-page truncation in the LLM context. Lower values keep the Gemini
+// Per-page truncation in the LLM context. Lower values keep the provider
 // round-trip well under the 60s Hobby lambda cap and reduce token spend.
 // Increase if you observe systematic endpoint omissions for verbose docs.
 const PROMPT_CHARS_PER_PAGE = 1500;
@@ -158,7 +158,7 @@ export async function analyzeDocumentation(
       useCases: [],
     };
   } else {
-    log("Sending documentation to Gemini for analysis...");
+    log("Sending documentation to OpenRouter for analysis...");
     const aiResult = await asi1GenerateText([
       {
         role: "system",

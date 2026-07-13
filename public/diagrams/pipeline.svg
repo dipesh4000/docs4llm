@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-label="The doc2mcp pipeline: Documentation to Crawling to Knowledge Processing to Retrieval to MCP Generation to AI Agents">
-  <title>The doc2mcp pipeline</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-label="The docs4llm pipeline: Documentation to Crawling to Knowledge Processing to Retrieval to MCP Generation to AI Agents">
+  <title>The docs4llm pipeline</title>
   <defs>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;display=swap");
@@ -13,7 +13,7 @@
   <rect width="1280" height="300" rx="12" fill="#16161a"/>
   <rect x="8" y="8" width="1264" height="284" rx="8" fill="none" stroke="#343a40" stroke-width="2" stroke-linecap="round"/>
 
-  <text class="title" x="36" y="42">The doc2mcp pipeline</text>
+  <text class="title" x="36" y="42">The docs4llm pipeline</text>
   <text class="tagline" x="36" y="68">Documentation → AI agents</text>
 
   <!-- shared sketch box path template: w=168 h=128 -->
@@ -100,5 +100,5 @@
   </g>
 
   <path d="M36 248 C400 242 880 252 1244 244" fill="none" stroke="#495057" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
-  <text class="tagline" x="36" y="278">Excalidraw-style sketch · doc2mcp end-to-end flow</text>
+  <text class="tagline" x="36" y="278">Excalidraw-style sketch · docs4llm end-to-end flow</text>
 </svg>

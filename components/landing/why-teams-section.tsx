@@ -41,7 +41,7 @@ const OUTCOMES: Outcome[] = [
     id: "manual",
     title: "Avoid manual MCP development",
     detail:
-      "Stop hand-writing tool wrappers per product. Doc2MCP generates them from documentation, automatically.",
+      "Stop hand-writing tool wrappers per product. Docs4LLM generates them from documentation, automatically.",
     icon: GitBranch,
     accent: "from-[#4285f4]/15 to-[#8ab4f8]/0",
   },
@@ -122,7 +122,7 @@ export function WhyTeamsSection() {
             <h2 className="font-display text-3xl tracking-tight sm:text-4xl lg:text-5xl leading-tight">
               Why teams use{" "}
               <span className="text-[#4285f4] dark:text-[#8ab4f8] font-semibold">
-                Doc2MCP
+                Docs4LLM
               </span>
             </h2>
           </div>

@@ -97,7 +97,7 @@ function CrawlingCard() {
         <span className="text-[9px] text-muted-foreground uppercase tracking-wider font-semibold border-b border-border/20 pb-1.5 flex items-center justify-between">
           <span>Metadata &amp; Stats</span>
           <span className="text-[#4285f4] dark:text-[#8ab4f8] font-bold">
-            doc2mcp-crawler/1.0
+            docs4llm-crawler/1.0
           </span>
         </span>
         <div className="grid grid-cols-2 gap-2.5 my-auto">
@@ -278,7 +278,7 @@ function ExportCard() {
           <span className="text-emerald-400">"-y"</span>,
         </p>
         <p className="pl-8">
-          <span className="text-emerald-400">"doc2mcp-server@latest"</span>,
+          <span className="text-emerald-400">"docs4llm-server@latest"</span>,
         </p>
         <p className="pl-8">
           <span className="text-emerald-400">"--key=st_3a1"</span>

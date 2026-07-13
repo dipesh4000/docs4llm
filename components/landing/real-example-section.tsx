@@ -32,7 +32,7 @@ const STAGES: Stage[] = [
   },
   {
     id: "crawl",
-    title: "Doc2MCP crawls content",
+    title: "Docs4LLM crawls content",
     detail: "Auto-discovers APIs, guides, SDKs",
     icon: Network,
     accent: "border-violet-500/40 bg-violet-500/10",
@@ -113,7 +113,7 @@ export function RealExampleSection() {
             </span>
           </h2>
           <p className="mt-5 text-base text-muted-foreground leading-relaxed sm:text-lg">
-            Watch how doc2mcp turns the entire Stripe documentation into an
+            Watch how docs4llm turns the entire Stripe documentation into an
             AI-ready MCP server — without writing a line of integration code.
           </p>
         </div>

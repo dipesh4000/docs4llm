@@ -125,7 +125,7 @@ export function UseCasesSection() {
           </div>
           <div className="flex flex-col justify-end lg:pb-1">
             <p className="text-base text-muted-foreground leading-relaxed">
-              From public APIs to private wikis — doc2mcp converts any
+              From public APIs to private wikis — docs4llm converts any
               documentation surface into a hosted MCP server your agents can
               actually use.
             </p>
@@ -227,7 +227,7 @@ export function UseCasesSection() {
                     </p>
                     <p>"stripe": {"{"}</p>
                     <p className="pl-4">
-                      "url": "https://api.doc2mcp.com/stripe"
+                      "url": "https://api.docs4llm.com/stripe"
                     </p>
                     <p>{"}"}</p>
                   </div>
@@ -272,7 +272,7 @@ export function UseCasesSection() {
                   <div className="p-3 rounded border border-zinc-800 bg-zinc-900/40 flex items-center justify-between">
                     <span className="font-mono text-zinc-400 select-all">
                       [![MCP
-                      Server](https://mcp.run/doc2mcp.svg)](https://registry.doc2mcp.com)
+                      Server](https://mcp.run/docs4llm.svg)](https://registry.docs4llm.com)
                     </span>
                   </div>
                 </div>

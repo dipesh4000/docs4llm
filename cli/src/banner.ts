@@ -53,17 +53,17 @@ export function printInstallBanner(): void {
   process.stdout.write("\n");
   process.stdout.write(`${border}\n`);
   process.stdout.write(
-    `${pc.cyan("│")} ${pc.bold("doc2mcp CLI")} ${pc.dim("is ready")}                    ${pc.cyan("│")}\n`
+    `${pc.cyan("│")} ${pc.bold("docs4llm CLI")} ${pc.dim("is ready")}                    ${pc.cyan("│")}\n`
   );
   process.stdout.write(
     `${pc.cyan("│")} ${pc.dim("Turn docs into MCP servers from terminal")} ${pc.cyan("│")}\n`
   );
   process.stdout.write(`${pc.cyan("│")}                                            ${pc.cyan("│")}\n`);
   process.stdout.write(
-    `${pc.cyan("│")} ${pc.bold("Start:")} ${pc.green("doc2mcp login")}                    ${pc.cyan("│")}\n`
+    `${pc.cyan("│")} ${pc.bold("Start:")} ${pc.green("docs4llm login")}                    ${pc.cyan("│")}\n`
   );
   process.stdout.write(
-    `${pc.cyan("│")} ${pc.bold("Convert:")} ${pc.green("doc2mcp https://docs.site")}     ${pc.cyan("│")}\n`
+    `${pc.cyan("│")} ${pc.bold("Convert:")} ${pc.green("docs4llm https://docs.site")}     ${pc.cyan("│")}\n`
   );
   process.stdout.write(`${footer}\n\n`);
 }

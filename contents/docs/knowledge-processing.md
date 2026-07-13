@@ -7,7 +7,7 @@ order: 2
 
 ## Overview
 
-Once pages are fetched, doc2mcp cleans, structures, and indexes them so they can
+Once pages are fetched, docs4llm cleans, structures, and indexes them so they can
 be retrieved precisely — not dumped wholesale into a model's context.
 
 ## Why it matters
@@ -42,7 +42,7 @@ exact section instead of the whole page.
 ## Best practices
 
 - Well-structured source docs (clear `##`/`###` headings) chunk best.
-- Pages with meaningful code blocks retrieve better — doc2mcp keeps them intact.
+- Pages with meaningful code blocks retrieve better — docs4llm keeps them intact.
 
 ## Troubleshooting
 

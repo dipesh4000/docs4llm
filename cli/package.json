@@ -1,23 +1,19 @@
 {
-  "name": "doc2mcp",
+  "name": "docs4llm",
   "version": "0.1.22",
   "description": "Turn any documentation site into a hosted MCP server from your terminal — for Cursor, Claude, VS Code, Windsurf, and OpenAI agents.",
   "type": "module",
   "bin": {
-    "doc2mcp": "./dist/index.js"
+    "docs4llm": "./dist/index.js"
   },
-  "homepage": "https://doc2mcp.site",
+  "homepage": "https://docs4llm.site",
   "repository": {
     "type": "git",
-<<<<<<< HEAD
-    "url": "git+https://github.com/garvitsingh006/doc2mcp.git",
-=======
-    "url": "git+https://github.com/doc2mcp/doc2mcp.git",
->>>>>>> upstream/main
+    "url": "git+https://github.com/garvitsingh006/docs4llm.git",
     "directory": "cli"
   },
   "bugs": {
-    "url": "https://github.com/garvitsingh006/doc2mcp/issues"
+    "url": "https://github.com/garvitsingh006/docs4llm/issues"
   },
   "files": [
     "assets",

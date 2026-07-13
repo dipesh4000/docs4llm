@@ -42,8 +42,8 @@ import type { DBMessage } from "@/lib/db/schema";
 import {
   buildDocAgentSystemPrompt,
   createDocAgentTools,
-} from "@/lib/doc2mcp/doc-agent-tools";
-import type { DocMcpContext } from "@/lib/doc2mcp/mcp-tools-runtime";
+} from "@/lib/docs4llm/doc-agent-tools";
+import type { DocMcpContext } from "@/lib/docs4llm/mcp-tools-runtime";
 import { ChatbotError } from "@/lib/errors";
 import { checkIpRateLimit } from "@/lib/ratelimit";
 import { isWebSearchEnabled } from "@/lib/search/providers";
@@ -96,7 +96,7 @@ export async function POST(request: Request) {
 
     // Admins (and explicit bypass) have no query limit.
     const bypassQueryLimit =
-      process.env.DOC2MCP_BYPASS_LIMITS === "1" ||
+      process.env.DOCS4LLM_BYPASS_LIMITS === "1" ||
       isAdminEmail(session.user.email);
 
     if (!bypassQueryLimit) {
@@ -396,7 +396,7 @@ export async function POST(request: Request) {
         ) {
           return "AI Gateway requires a valid credit card on file to service requests. Please visit https://vercel.com/d?to=%2F%5Bteam%5D%2F%7E%2Fai%3Fmodal%3Dadd-credit-card to add a card and unlock your free credits.";
         }
-        // Gemini / OpenAI-style context overflow surfaces as a 400 with a
+        // OpenAI-compatible context overflow surfaces as a 400 with a
         // "context_length_exceeded" code (sometimes wrapped in Zod parse
         // failures because the upstream uses `type: 400` instead of a string).
         if (

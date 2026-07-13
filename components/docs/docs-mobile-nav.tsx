@@ -47,7 +47,7 @@ export function DocsMobileNav({ groups }: { groups: DocNavGroup[] }) {
             Documentation
           </SheetTitle>
           <SheetDescription className="sr-only">
-            Navigate the doc2mcp documentation.
+            Navigate the docs4llm documentation.
           </SheetDescription>
         </SheetHeader>
         <div className="overflow-y-auto p-4">

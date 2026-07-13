@@ -7,7 +7,7 @@ order: 2
 
 # API keys & tokens
 
-doc2mcp is hosted. You do not paste Stripe, OpenAI, or other vendor API keys into Cursor — docs are served from doc2mcp's MCP endpoint.
+docs4llm is hosted. You do not paste Stripe, OpenAI, or other vendor API keys into Cursor — docs are served from docs4llm's MCP endpoint.
 
 ## Token types
 
@@ -15,7 +15,7 @@ doc2mcp is hosted. You do not paste Stripe, OpenAI, or other vendor API keys int
 |-------|--------|------------------|
 | **Project token** | `d2mcp_…` | You created the MCP — copy from the result page once |
 | **MCP access token** | `d2mcp_usr_…` | You install someone else's MCP from the [marketplace](/docs/marketplace) |
-| **CLI PAT** | `d2mcp_pat_…` | Terminal only (`doc2mcp login`) — not for Cursor |
+| **CLI PAT** | `d2mcp_pat_…` | Terminal only (`docs4llm login`) — not for Cursor |
 
 Full guide: [MCP access tokens](/docs/mcp-access-tokens).
 
@@ -25,7 +25,7 @@ Full guide: [MCP access tokens](/docs/mcp-access-tokens).
 {
   "mcpServers": {
     "langchain": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": {
         "Authorization": "Bearer d2mcp_<project-token>"
       }

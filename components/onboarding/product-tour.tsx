@@ -5,7 +5,7 @@ import { type DriveStep, driver } from "driver.js";
 import { useEffect } from "react";
 import "./product-tour.css";
 
-const STORAGE_PREFIX = "doc2mcp_tour_";
+const STORAGE_PREFIX = "docs4llm_tour_";
 
 export type TourStep = DriveStep;
 
@@ -70,7 +70,7 @@ export function ProductTour({
         overlayColor: "rgba(8, 10, 14, 0.62)",
         stagePadding: 6,
         stageRadius: 12,
-        popoverClass: "doc2mcp-tour",
+        popoverClass: "docs4llm-tour",
         nextBtnText: "Next →",
         prevBtnText: "← Back",
         doneBtnText: "Got it",
@@ -100,7 +100,7 @@ export function startTour(tourKey: string, steps: TourStep[]) {
     overlayColor: "rgba(8, 10, 14, 0.62)",
     stagePadding: 6,
     stageRadius: 12,
-    popoverClass: "doc2mcp-tour",
+    popoverClass: "docs4llm-tour",
     nextBtnText: "Next →",
     prevBtnText: "← Back",
     doneBtnText: "Got it",

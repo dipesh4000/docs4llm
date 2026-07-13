@@ -40,8 +40,8 @@ import {
 } from "@/components/ai-elements/model-selector";
 import { useChatDocPreview } from "@/components/chat/chat-doc-preview-context";
 import { useChatMcp } from "@/components/chat/chat-mcp-context";
-import { Doc2McpModeToggle } from "@/components/doc2mcp/mode-toggle";
-import { UrlDetectBanner } from "@/components/doc2mcp/url-detect-banner";
+import { Docs4LlmModeToggle } from "@/components/docs4llm/mode-toggle";
+import { UrlDetectBanner } from "@/components/docs4llm/url-detect-banner";
 import {
   type ChatModel,
   chatModels,
@@ -49,7 +49,7 @@ import {
   type ModelCapabilities,
 } from "@/lib/ai/models";
 import { guestRegex } from "@/lib/constants";
-import { detectDoc2McpIntent, extractDocsUrl } from "@/lib/doc2mcp/detect-url";
+import { detectDocs4LlmIntent, extractDocsUrl } from "@/lib/docs4llm/detect-url";
 import { useSupabaseAuth } from "@/lib/supabase/auth";
 import type { Attachment, ChatMessage } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -138,27 +138,27 @@ function PureMultimodalInput({
     "input",
     ""
   );
-  const [persistedDoc2mcpMode, setPersistedDoc2mcpMode] = useLocalStorage(
-    "doc2mcp-mode",
+  const [persistedDocs4llmMode, setPersistedDocs4llmMode] = useLocalStorage(
+    "docs4llm-mode",
     false
   );
   const [hasMounted, setHasMounted] = useState(false);
   useEffect(() => {
     setHasMounted(true);
   }, []);
-  const doc2mcpMode = hasMounted ? persistedDoc2mcpMode : false;
-  const setDoc2mcpMode = setPersistedDoc2mcpMode;
+  const docs4llmMode = hasMounted ? persistedDocs4llmMode : false;
+  const setDocs4llmMode = setPersistedDocs4llmMode;
 
   useEffect(() => {
     const urlParam = searchParams.get("url");
     if (urlParam) {
       setInput(urlParam);
-      setDoc2mcpMode(true);
+      setDocs4llmMode(true);
       const cleanUrl = window.location.pathname;
       window.history.replaceState({}, "", cleanUrl);
     }
-  }, [searchParams, setInput, setDoc2mcpMode]);
-  const [doc2mcpLoading, setDoc2mcpLoading] = useState(false);
+  }, [searchParams, setInput, setDocs4llmMode]);
+  const [docs4llmLoading, setDocs4llmLoading] = useState(false);
   const { user } = useSupabaseAuth();
   // Anonymous Supabase users have no email on the client, so the synthesized
   // `guest-…` address only exists server-side. Detect the anonymous flag too,
@@ -255,7 +255,7 @@ function PureMultimodalInput({
   const [slashQuery, setSlashQuery] = useState("");
   const [slashIndex, setSlashIndex] = useState(0);
 
-  const runDoc2McpConversion = useCallback(
+  const runDocs4LlmConversion = useCallback(
     async (url: string) => {
       if (isGuest) {
         toast.error("Sign in to generate an MCP server");
@@ -263,13 +263,13 @@ function PureMultimodalInput({
         return;
       }
 
-      setDoc2mcpLoading(true);
+      setDocs4llmLoading(true);
       // Clear input immediately so the user sees the chat reset while the
       // conversion starts. The actual navigation happens as soon as the
       // server returns a project id (the heavy pipeline runs in `after()`).
       setInput("");
       setLocalStorageInput("");
-      const startToast = toast.loading("Starting doc2mcp pipeline…", {
+      const startToast = toast.loading("Starting docs4llm pipeline…", {
         description: "Crawl → analyze → MCP server",
       });
 
@@ -317,7 +317,7 @@ function PureMultimodalInput({
             return;
           }
 
-          toast.error("Could not start doc2mcp conversion", {
+          toast.error("Could not start docs4llm conversion", {
             description: serverMessage ?? "Please try again in a moment.",
           });
           return;
@@ -330,9 +330,9 @@ function PureMultimodalInput({
         router.push(`/convert/${id}`);
       } catch {
         toast.dismiss(startToast);
-        toast.error("Could not start doc2mcp conversion");
+        toast.error("Could not start docs4llm conversion");
       } finally {
-        setDoc2mcpLoading(false);
+        setDocs4llmLoading(false);
       }
     },
     [router, setInput, setLocalStorageInput, isGuest]
@@ -346,7 +346,7 @@ function PureMultimodalInput({
     !editingMessage &&
     detectedUrl !== null &&
     detectedUrl !== dismissedUrl &&
-    !doc2mcpLoading;
+    !docs4llmLoading;
 
   const { setPreview } = useChatDocPreview();
   const {
@@ -392,14 +392,14 @@ function PureMultimodalInput({
   useEffect(() => {
     setPreview({
       url: detectedUrl,
-      doc2mcpMode: hasMounted && doc2mcpMode,
-      isLoading: doc2mcpLoading,
+      docs4llmMode: hasMounted && docs4llmMode,
+      isLoading: docs4llmLoading,
       isDismissed: detectedUrl !== null && detectedUrl === dismissedUrl,
     });
   }, [
     detectedUrl,
-    doc2mcpMode,
-    doc2mcpLoading,
+    docs4llmMode,
+    docs4llmLoading,
     dismissedUrl,
     hasMounted,
     setPreview,
@@ -414,11 +414,11 @@ function PureMultimodalInput({
       router.push(`/login?redirectUrl=${encodeURIComponent("/chat")}`);
       return;
     }
-    setDoc2mcpMode(true);
-    runDoc2McpConversion(detectedUrl).catch(() => {
-      // already toasted inside runDoc2McpConversion
+    setDocs4llmMode(true);
+    runDocs4LlmConversion(detectedUrl).catch(() => {
+      // already toasted inside runDocs4LlmConversion
     });
-  }, [detectedUrl, isGuest, router, runDoc2McpConversion, setDoc2mcpMode]);
+  }, [detectedUrl, isGuest, router, runDocs4LlmConversion, setDocs4llmMode]);
 
   // Prefetch the conversion route so navigation feels instant when the
   // server returns the project id.
@@ -427,7 +427,7 @@ function PureMultimodalInput({
   }, [router]);
 
   const submitForm = useCallback(() => {
-    if (doc2mcpMode) {
+    if (docs4llmMode) {
       if (isGuest) {
         toast.error("Sign in to generate an MCP server");
         router.push(`/login?redirectUrl=${encodeURIComponent("/chat")}`);
@@ -435,8 +435,8 @@ function PureMultimodalInput({
       }
       const url = extractDocsUrl(input);
       if (url) {
-        runDoc2McpConversion(url).catch(() => {
-          // error already toasted inside runDoc2McpConversion
+        runDocs4LlmConversion(url).catch(() => {
+          // error already toasted inside runDocs4LlmConversion
         });
         return;
       }
@@ -446,18 +446,18 @@ function PureMultimodalInput({
 
     // Auto-detect: even with the toggle off, phrases like
     // "Build an MCP from https://github.com/..." should trigger conversion
-    // and flip the doc2mcp toggle on for visual feedback.
-    const intent = detectDoc2McpIntent(input);
+    // and flip the docs4llm toggle on for visual feedback.
+    const intent = detectDocs4LlmIntent(input);
     if (intent.shouldAutoConvert && intent.url) {
       if (isGuest) {
         toast.error("Sign in to generate an MCP server");
         router.push(`/login?redirectUrl=${encodeURIComponent("/chat")}`);
         return;
       }
-      setDoc2mcpMode(true);
-      toast.message("doc2mcp mode on — generating MCP from your URL");
-      runDoc2McpConversion(intent.url).catch(() => {
-        // already toasted inside runDoc2McpConversion
+      setDocs4llmMode(true);
+      toast.message("docs4llm mode on — generating MCP from your URL");
+      runDocs4LlmConversion(intent.url).catch(() => {
+        // already toasted inside runDocs4LlmConversion
       });
       return;
     }
@@ -519,9 +519,9 @@ function PureMultimodalInput({
     setLocalStorageInput,
     width,
     chatId,
-    doc2mcpMode,
-    setDoc2mcpMode,
-    runDoc2McpConversion,
+    docs4llmMode,
+    setDocs4llmMode,
+    runDocs4LlmConversion,
     isGuest,
     messages,
     router,
@@ -692,8 +692,8 @@ function PureMultimodalInput({
 
       {showUrlBanner && detectedUrl ? (
         <UrlDetectBanner
-          loading={doc2mcpLoading}
-          modeEnabled={hasMounted && doc2mcpMode}
+          loading={docs4llmLoading}
+          modeEnabled={hasMounted && docs4llmMode}
           onDismiss={() => setDismissedUrl(detectedUrl)}
           onGenerate={handleBannerGenerate}
           url={detectedUrl}
@@ -794,11 +794,11 @@ function PureMultimodalInput({
           placeholder={
             editingMessage
               ? "Edit your message..."
-              : hasMounted && doc2mcpMode
+              : hasMounted && docs4llmMode
                 ? "Paste docs URL — https://docs.example.com"
                 : hasMounted && mcpEnabled
                   ? "Ask your documentation anything..."
-                  : "Ask anything — or sign in and enable doc2mcp"
+                  : "Ask anything — or sign in and enable docs4llm"
           }
           ref={textareaRef}
           value={input}
@@ -814,9 +814,9 @@ function PureMultimodalInput({
               onModelChange={onModelChange}
               selectedModelId={selectedModelId}
             />
-            <span data-tour="chat-doc2mcp">
-              <Doc2McpModeToggle
-                enabled={doc2mcpMode}
+            <span data-tour="chat-docs4llm">
+              <Docs4LlmModeToggle
+                enabled={docs4llmMode}
                 onChange={(next) => {
                   if (next && isGuest) {
                     toast.error("Sign in to generate an MCP server");
@@ -825,7 +825,7 @@ function PureMultimodalInput({
                     );
                     return;
                   }
-                  setDoc2mcpMode(next);
+                  setDocs4llmMode(next);
                 }}
               />
             </span>
@@ -888,7 +888,7 @@ function PureMultimodalInput({
               disabled={
                 (!input.trim() && attachments.length === 0) ||
                 uploadQueue.length > 0 ||
-                doc2mcpLoading
+                docs4llmLoading
               }
               status={status}
               variant="secondary"

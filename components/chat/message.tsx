@@ -24,12 +24,12 @@ import { PreviewAttachment } from "./preview-attachment";
 import { Weather } from "./weather";
 
 function imageFileName(prompt?: string): string {
-  const base = (prompt ?? "doc2mcp-image")
+  const base = (prompt ?? "docs4llm-image")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 48);
-  return `${base || "doc2mcp-image"}.png`;
+  return `${base || "docs4llm-image"}.png`;
 }
 
 async function downloadImage(src: string, filename: string): Promise<void> {

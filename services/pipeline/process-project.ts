@@ -4,8 +4,8 @@ import {
   getPlatformProjectById,
   updatePlatformProject,
 } from "@/lib/db/queries";
-import { DOC_MCP_TOOL_NAMES } from "@/lib/doc2mcp/doc-tools-registry";
-import { createMcpProjectToken, hashMcpToken } from "@/lib/doc2mcp/mcp-access";
+import { DOC_MCP_TOOL_NAMES } from "@/lib/docs4llm/doc-tools-registry";
+import { createMcpProjectToken, hashMcpToken } from "@/lib/docs4llm/mcp-access";
 import { publishProjectToRegistry } from "@/lib/mcp-registry/publish";
 import { createLogger } from "@/lib/observability/logger";
 import {
@@ -78,10 +78,10 @@ export async function processProjectPipeline(args: {
     "pipeline.run",
     {
       attributes: {
-        "doc2mcp.project_id": args.projectId,
-        "doc2mcp.source_type": args.sourceType,
-        "doc2mcp.source_url": args.sourceUrl,
-        "doc2mcp.pipeline_phase": args.phase ?? "full",
+        "docs4llm.project_id": args.projectId,
+        "docs4llm.source_type": args.sourceType,
+        "docs4llm.source_url": args.sourceUrl,
+        "docs4llm.pipeline_phase": args.phase ?? "full",
       },
     },
     () => runPipeline(args)
@@ -284,7 +284,7 @@ async function runGeneratePhase({
 
   const registry = await withSpan(
     "pipeline.registry_publish",
-    { attributes: { "doc2mcp.project_id": projectId } },
+    { attributes: { "docs4llm.project_id": projectId } },
     () =>
       publishProjectToRegistry({
         projectId,
@@ -447,10 +447,10 @@ async function runPipeline({
     addLog("Starting documentation crawl...", "info", "crawl");
     const crawlResults = await withSpan(
       "pipeline.crawl",
-      { attributes: { "doc2mcp.source_type": sourceType } },
+      { attributes: { "docs4llm.source_type": sourceType } },
       () => crawlDocsSource(sourceUrl, sourceType)
     );
-    addSpanAttributes({ "doc2mcp.pages_crawled": crawlResults.length });
+    addSpanAttributes({ "docs4llm.pages_crawled": crawlResults.length });
     addLog(`Crawled ${crawlResults.length} pages`, "success", "crawl");
 
     await updatePlatformProject({
@@ -459,24 +459,24 @@ async function runPipeline({
       data: { status: "analyzing", crawlData: crawlResults, logs },
     });
 
-    addLog("Analyzing documentation with Gemini...", "info", "ai");
+    addLog("Analyzing documentation with OpenRouter...", "info", "ai");
     const analysis = await withSpan(
       "pipeline.analyze",
-      { attributes: { "doc2mcp.page_count": crawlResults.length } },
+      { attributes: { "docs4llm.page_count": crawlResults.length } },
       () =>
         analyzeDocumentation(crawlResults, projectName, sourceUrl, (l) =>
           logs.push(l)
         )
     );
     addSpanAttributes({
-      "doc2mcp.endpoints_detected": analysis.endpoints.length,
-      "doc2mcp.tools_compressed": analysis.compressedTools.length,
-      "doc2mcp.workflows_inferred": analysis.workflows.length,
-      "doc2mcp.workflow_confidence": analysis.workflowDetection.confidence,
-      "doc2mcp.extraction_mode": analysis.extractionMode,
-      "doc2mcp.tokens.prompt": analysis.tokenUsage?.prompt_tokens ?? 0,
-      "doc2mcp.tokens.completion": analysis.tokenUsage?.completion_tokens ?? 0,
-      "doc2mcp.tokens.total": analysis.tokenUsage?.total_tokens ?? 0,
+      "docs4llm.endpoints_detected": analysis.endpoints.length,
+      "docs4llm.tools_compressed": analysis.compressedTools.length,
+      "docs4llm.workflows_inferred": analysis.workflows.length,
+      "docs4llm.workflow_confidence": analysis.workflowDetection.confidence,
+      "docs4llm.extraction_mode": analysis.extractionMode,
+      "docs4llm.tokens.prompt": analysis.tokenUsage?.prompt_tokens ?? 0,
+      "docs4llm.tokens.completion": analysis.tokenUsage?.completion_tokens ?? 0,
+      "docs4llm.tokens.total": analysis.tokenUsage?.total_tokens ?? 0,
     });
 
     await updatePlatformProject({

@@ -30,10 +30,10 @@ export type McpExportBundle = {
   artifacts: McpExportArtifact[];
 };
 
-const TOKEN_PLACEHOLDER = "Bearer <DOC2MCP_TOKEN>";
+const TOKEN_PLACEHOLDER = "Bearer <DOCS4LLM_TOKEN>";
 
 function serverEntry(config: McpServerConfig) {
-  const name = config.name || "doc2mcp";
+  const name = config.name || "docs4llm";
   const entry = (
     config.cursorConfig?.mcpServers as Record<
       string,
@@ -99,7 +99,7 @@ const docsTools = hostedMcpTool({
   serverLabel: "${options.serverName}",
   serverUrl: "${options.endpointUrl}",
   headers: {
-    Authorization: "${options.authHeader ?? "Bearer <DOC2MCP_TOKEN>"}",
+    Authorization: "${options.authHeader ?? "Bearer <DOCS4LLM_TOKEN>"}",
   },
 });
 

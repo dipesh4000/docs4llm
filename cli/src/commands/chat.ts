@@ -163,7 +163,7 @@ async function askDocs(
 }
 
 function renderAnswer(answer: AskAnswer): void {
-  process.stdout.write(`\n${pc.green("●")} ${pc.bold("doc2mcp")}\n\n`);
+  process.stdout.write(`\n${pc.green("●")} ${pc.bold("docs4llm")}\n\n`);
   process.stdout.write(`${renderMarkdown(answer.answer.trim())}\n`);
   if (answer.sources && answer.sources.length > 0) {
     process.stdout.write(`\n${pc.dim("Sources")}\n`);
@@ -205,7 +205,7 @@ export async function runChat(
 
     if (!detail.mcp) {
       process.stderr.write(
-        `${pc.red("That project is not ready yet.")} Check: ${pc.bold("doc2mcp list")}\n`
+        `${pc.red("That project is not ready yet.")} Check: ${pc.bold("docs4llm list")}\n`
       );
       process.exitCode = 1;
       return;
@@ -219,7 +219,7 @@ export async function runChat(
     }
 
     printBanner();
-    const title = ` doc2mcp chat · ${detail.project.name} `;
+    const title = ` docs4llm chat · ${detail.project.name} `;
     const bar = "─".repeat(title.length);
     process.stdout.write(`\n${pc.cyan(`╭${bar}╮`)}\n`);
     process.stdout.write(`${pc.cyan("│")}${pc.bold(title)}${pc.cyan("│")}\n`);

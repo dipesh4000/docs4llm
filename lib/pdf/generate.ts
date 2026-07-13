@@ -216,8 +216,8 @@ export async function generatePdfBuffer(
 ): Promise<Uint8Array> {
   const pdf = await PDFDocument.create();
   pdf.setTitle(input.title);
-  pdf.setCreator("doc2mcp");
-  pdf.setProducer("doc2mcp (pdf-lib)");
+  pdf.setCreator("docs4llm");
+  pdf.setProducer("docs4llm (pdf-lib)");
   pdf.setCreationDate(new Date());
 
   const body = await pdf.embedFont(StandardFonts.Helvetica);

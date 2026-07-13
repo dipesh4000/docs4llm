@@ -1,6 +1,6 @@
 # Branching & Release Workflow
 
-doc2mcp uses a three-tier flow so every change is previewed, QA'd, and
+docs4llm uses a three-tier flow so every change is previewed, QA'd, and
 released deliberately.
 
 ```
@@ -18,7 +18,7 @@ main        →   production, tag-gated         (deploy only on vX.Y.Z tag)
 | Branch       | Purpose                          | Deploys to                                  |
 | ------------ | -------------------------------- | ------------------------------------------- |
 | `feature/*`  | One change / one developer       | Unique preview URL per push (auto)          |
-| `staging`    | Integration branch for QA        | Stable staging URL (e.g. `staging.doc2mcp.site`) |
+| `staging`    | Integration branch for QA        | Stable staging URL (e.g. `staging.docs4llm.site`) |
 | `main`       | Released code                    | Production — **only when a `v*` tag is pushed** |
 
 **Developers always cut from `staging`:**
@@ -77,14 +77,14 @@ cat .vercel/project.json
 ### Vercel dashboard
 
 1. **Production branch** = `main` (Settings → Git).
-2. **Staging branch domain**: Settings → Domains → add `staging.doc2mcp.site`
+2. **Staging branch domain**: Settings → Domains → add `staging.docs4llm.site`
    (or use the auto `*-git-staging-*.vercel.app` URL) and assign it to the
    `staging` branch so QA always has a stable link.
 3. **Environment variables**: ensure `POSTGRES_URL` and Supabase vars exist
    for **Preview** so feature/staging deployments can authenticate and use
    database-backed routes (`/api/history`, `/api/chat`, dashboard, project
    reads). Keep `NEXT_PUBLIC_APP_URL` set only for **Production**
-   (`https://doc2mcp.site`); leave it unset on Preview so previews resolve
+   (`https://docs4llm.site`); leave it unset on Preview so previews resolve
    their own deployment origin. See
    [CONTRIBUTING.md](./CONTRIBUTING.md#working-with-vercel-preview-deployments).
 
@@ -94,8 +94,8 @@ Add wildcards so login works on every preview/staging URL (Authentication →
 URL Configuration → Redirect URLs):
 
 ```
-https://doc2mcp.site/**
-https://doc2mcp-*-<team>.vercel.app/**
-https://staging.doc2mcp.site/**
+https://docs4llm.site/**
+https://docs4llm-*-<team>.vercel.app/**
+https://staging.docs4llm.site/**
 http://localhost:3000/**
 ```

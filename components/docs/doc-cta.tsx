@@ -21,7 +21,7 @@ export function DocCta() {
         <div className="flex shrink-0 flex-wrap gap-3">
           <Link
             className="group inline-flex h-10 items-center gap-2 rounded-full bg-primary px-5 font-medium text-primary-foreground text-sm transition-colors hover:bg-primary/90"
-            href="https://doc2mcp.site"
+            href="https://docs4llm.site"
           >
             Open app
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />

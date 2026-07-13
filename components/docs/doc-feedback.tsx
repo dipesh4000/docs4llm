@@ -39,7 +39,7 @@ export function DocFeedback({ pageHref }: { pageHref: string }) {
         Spotted an issue?{" "}
         <Link
           className="text-primary underline-offset-2 hover:underline"
-          href={`mailto:doc2mcp@gmail.com?subject=Docs%20feedback&body=Page%3A%20${encodeURIComponent(pageHref)}`}
+          href={`mailto:docs4llm@gmail.com?subject=Docs%20feedback&body=Page%3A%20${encodeURIComponent(pageHref)}`}
         >
           Email us feedback
         </Link>

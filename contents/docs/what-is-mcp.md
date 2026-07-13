@@ -14,7 +14,7 @@ every chat, you register an MCP server once; the agent calls tools like
 `search_documentation` or `get_customer` when it needs facts.
 
 Think of MCP as **USB-C for AI**: one protocol, many clients (Cursor, Claude, VS Code,
-Windsurf, OpenAI Agents) and many servers (your APIs, databases, or doc2mcp-hosted docs).
+Windsurf, OpenAI Agents) and many servers (your APIs, databases, or docs4llm-hosted docs).
 
 ## Why it matters
 
@@ -25,20 +25,20 @@ that break when docs change. MCP gives agents a **stable contract**:
 - **Resources** — readable blobs (files, indexes, manifests).
 - **Prompts / workflows** — optional packaged instructions some servers expose.
 
-doc2mcp's job is the **write path**: crawl your docs → index → host an MCP server. Your
+docs4llm's job is the **write path**: crawl your docs → index → host an MCP server. Your
 job on the **read path** is to paste the endpoint into your client.
 
 ![One endpoint, every MCP client](/diagrams/integrations.svg)
 
 ## Example
 
-A minimal Cursor config for a doc2mcp server:
+A minimal Cursor config for a docs4llm server:
 
 ```json
 {
   "mcpServers": {
     "stripe": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer <project-token>" }
     }
   }
@@ -56,7 +56,7 @@ and receive ranked sections with source URLs — not a hallucinated endpoint lis
 ## Step-by-step (mental model)
 
 1. **Client** (Cursor) sends JSON-RPC to your MCP URL.
-2. **Server** (doc2mcp) authenticates the Bearer token.
+2. **Server** (docs4llm) authenticates the Bearer token.
 3. **Tools** run against the crawled index (search, read, ask).
 4. **Result** returns structured text the model cites in its answer.
 

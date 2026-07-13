@@ -10,7 +10,7 @@ order: 3
 
 ## 1. Convert docs
 
-Open the doc2mcp chat → enable **doc2mcp** toggle → paste a documentation URL → wait until status is **Ready**.
+Open the docs4llm chat → enable **docs4llm** toggle → paste a documentation URL → wait until status is **Ready**.
 
 ## 2. Copy from the result page
 
@@ -27,7 +27,7 @@ Open **Cursor → Settings → MCP → Edit `mcp.json`** and merge into `mcpServ
 {
   "mcpServers": {
     "langchain": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": {
         "Authorization": "Bearer <project-token>"
       }
@@ -47,9 +47,9 @@ In Cursor chat:
 - "Search the langchain docs for streaming examples"
 - "How do I use tools with LangGraph? Give me code"
 
-Cursor calls doc2mcp's MCP tools and receives the **full crawled markdown** with code blocks preserved.
+Cursor calls docs4llm's MCP tools and receives the **full crawled markdown** with code blocks preserved.
 
-## Tools exposed by every doc2mcp server
+## Tools exposed by every docs4llm server
 
 | Tool | What it does |
 |------|---------------|

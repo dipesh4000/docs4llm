@@ -15,7 +15,7 @@ if echo "$MSG" | grep -qi '\[skip vercel\]'; then
   exit 0
 fi
 
-REPO="${VERCEL_GIT_REPO_OWNER:-doc2mcp}/${VERCEL_GIT_REPO_SLUG:-doc2mcp}"
+REPO="${VERCEL_GIT_REPO_OWNER:-docs4llm}/${VERCEL_GIT_REPO_SLUG:-docs4llm}"
 PR_ID="${VERCEL_GIT_PULL_REQUEST_ID:-}"
 
 if [ -z "$PR_ID" ] || [ "$PR_ID" = "0" ]; then

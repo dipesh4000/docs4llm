@@ -1,13 +1,13 @@
 ---
 title: Connect to Windsurf
-description: Add a doc2mcp server to Windsurf's MCP settings.
+description: Add a docs4llm server to Windsurf's MCP settings.
 category: Guides
 order: 3
 ---
 
 ## Overview
 
-Windsurf supports remote MCP servers. Paste the doc2mcp config to give Cascade
+Windsurf supports remote MCP servers. Paste the docs4llm config to give Cascade
 access to your docs.
 
 ## Step-by-step
@@ -21,7 +21,7 @@ access to your docs.
 {
   "mcpServers": {
     "stripe": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer <project-token>" }
     }
   }

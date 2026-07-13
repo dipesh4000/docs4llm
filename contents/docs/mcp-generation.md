@@ -1,6 +1,6 @@
 ---
 title: MCP generation
-description: How doc2mcp mints a hosted, secured MCP endpoint for your docs.
+description: How docs4llm mints a hosted, secured MCP endpoint for your docs.
 category: Core Concepts
 order: 4
 ---
@@ -12,7 +12,7 @@ token, ready to paste into any MCP client.
 
 ## Why it matters
 
-The endpoint is what agents actually talk to. doc2mcp hosts it, so there is no
+The endpoint is what agents actually talk to. docs4llm hosts it, so there is no
 server for you to deploy, scale, or secure.
 
 ## What gets generated
@@ -34,7 +34,7 @@ server for you to deploy, scale, or secure.
   "cursorConfig": {
     "mcpServers": {
       "stripe": {
-        "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+        "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
         "headers": { "Authorization": "Bearer <project-token>" }
       }
     }

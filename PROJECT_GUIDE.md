@@ -1,12 +1,12 @@
-# doc2mcp — Complete Project Guide
+# docs4llm — Complete Project Guide
 
 ## What Is This?
 
-**doc2mcp** converts any documentation URL into a hosted [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server. You paste a docs link, it crawls the pages, uses AI to understand the API/tools, and generates a working MCP server that Cursor, Claude, Windsurf, or any MCP client can connect to.
+**docs4llm** converts any documentation URL into a hosted [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server. You paste a docs link, it crawls the pages, uses AI to understand the API/tools, and generates a working MCP server that Cursor, Claude, Windsurf, or any MCP client can connect to.
 
 **Core pipeline:**
 ```
-URL → Detect source type → Crawl docs → AI analysis (Gemini) → Generate MCP tools → Host at /api/mcp/{id}/mcp
+URL → Detect source type → Crawl docs → AI analysis (OpenRouter) → Generate MCP tools → Host at /api/mcp/{id}/mcp
 ```
 
 **Supported sources:** Mintlify, Docusaurus, GitBook, Nextra, OpenAPI JSON/YAML, Postman collections, GitHub repos, raw .md/.mdx URLs, plain HTML (with Jina Reader fallback).
@@ -17,7 +17,7 @@ URL → Detect source type → Crawl docs → AI analysis (Gemini) → Generate 
 - `search_documentation` — heading-aware BM25 section search
 - `get_documentation_overview` — summary + llms.txt index
 - `read_full_documentation` — all pages combined
-- `ask_documentation` — natural-language Q&A with Gemini + citations
+- `ask_documentation` — natural-language Q&A with OpenRouter + citations
 - Plus up to 10 AI-extracted custom tools per API
 
 ---
@@ -31,7 +31,7 @@ URL → Detect source type → Crawl docs → AI analysis (Gemini) → Generate 
 | Package Manager | pnpm 10.32.1 |
 | Framework | Next.js 16 (App Router, Turbopack, React Compiler) |
 | Frontend | React 19, Tailwind CSS v4, shadcn/ui, Framer Motion |
-| AI / LLM | Google Gemini (`gemini-2.5-flash` default), Anthropic SDK, Vercel AI SDK |
+| AI / LLM | OpenRouter (free NVIDIA Nemotron by default), Anthropic SDK, Vercel AI SDK |
 | MCP | `@modelcontextprotocol/sdk`, Streamable HTTP (JSON-RPC 2.0) |
 | Database | Supabase Postgres via Drizzle ORM |
 | Auth | Supabase Auth (GitHub OAuth), guest sessions |
@@ -48,7 +48,7 @@ URL → Detect source type → Crawl docs → AI analysis (Gemini) → Generate 
 ## Project Structure
 
 ```
-doc2mcp/
+docs4llm/
 ├── app/                    # Next.js 16 App Router
 │   ├── (auth)/             # Login / Register pages
 │   ├── (chat)/             # AI chat interface
@@ -68,7 +68,7 @@ doc2mcp/
 │   ├── db/                 # Drizzle ORM schema, migrations, queries
 │   ├── supabase/           # Supabase Auth helpers
 │   ├── billing/            # Plans & Razorpay integration
-│   ├── doc2mcp/            # Source detection, URL normalization, tools runtime
+│   ├── docs4llm/            # Source detection, URL normalization, tools runtime
 │   ├── search/             # Web search providers (Tavily, Brave, Exa, Serper)
 │   ├── queue/              # QStash background jobs
 │   ├── redis/              # Upstash Redis client
@@ -98,7 +98,7 @@ doc2mcp/
 | Node.js 20 | Pinned in CI, required for Next.js 16 |
 | pnpm 10.32.1 | Exact version in `packageManager` field |
 | Supabase project | Auth + Postgres database |
-| Google Gemini API key | AI analysis is the core of the pipeline |
+| OpenRouter API key | AI analysis is the core of the pipeline |
 | `.env.local` with all required vars | App won't start without them |
 
 ### You DON'T NEED (can delete/ignore)
@@ -116,7 +116,7 @@ doc2mcp/
 ### Optional (features degrade gracefully)
 | Item | What it enables |
 |---|---|
-| `cli/` directory | Terminal-based `doc2mcp` CLI tool |
+| `cli/` directory | Terminal-based `docs4llm` CLI tool |
 | Upstash Redis env vars | Caching + rate limiting (falls back to in-memory) |
 | QStash env vars | Async pipeline processing (falls back to inline) |
 | Search API keys (Tavily, Brave, etc.) | Enriching sparse documentation pages |
@@ -135,7 +135,7 @@ POSTGRES_URL="postgres://user:pass@host:5432/db"
 NEXT_PUBLIC_SUPABASE_URL="https://your-project.supabase.co"
 NEXT_PUBLIC_SUPABASE_ANON_KEY="your-anon-key"
 SUPABASE_SERVICE_ROLE_KEY="your-service-role-key"
-GEMINI_API_KEY="your-gemini-api-key"              # https://aistudio.google.com/apikey
+OPENROUTER_API_KEY="your-openrouter-api-key"       # https://openrouter.ai/keys
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 
 # GitHub OAuth — create at https://github.com/settings/developers -> OAuth Apps
@@ -145,17 +145,17 @@ GITHUB_CLIENT_ID="your-github-oauth-app-client-id"
 GITHUB_CLIENT_SECRET="your-github-oauth-app-client-secret"
 ```
 
-### Optional — AI Model Overrides
+### Optional — AI Model Overrides (free-only)
 
 ```env
-GEMINI_MODEL="gemini-2.5-flash"                    # default: gemini-2.5-flash-lite
-GEMINI_IMAGE_MODEL="gemini-3-pro-image-preview"    # default: gemini-3-pro-image-preview
+OPENROUTER_MODEL="nvidia/nemotron-3-ultra-550b-a55b:free"
+OPENROUTER_FALLBACK_MODELS="nvidia/nemotron-3-ultra-550b-a55b:free,openrouter/free"
 ```
 
 ### Optional — Admin Access
 
 ```env
-ADMIN_EMAILS="you@example.com,other@example.com"   # comma-separated, defaults to doc2mcp@gmail.com if unset!
+ADMIN_EMAILS="you@example.com,other@example.com"   # comma-separated, defaults to docs4llm@gmail.com if unset!
 ```
 
 ### Optional — Upstash (Caching / Queue)
@@ -194,7 +194,7 @@ Billing has been removed from this fork. No payment env vars are needed.
 ```env
 MCP_REGISTRY_GITHUB_TOKEN=""       # GitHub token for auto-publishing
 MCP_REGISTRY_AUTOPUBLISH="true"    # set "false" to disable
-MCP_REGISTRY_NAMESPACE=""          # e.g. "io.github.doc2mcp"
+MCP_REGISTRY_NAMESPACE=""          # e.g. "io.github.docs4llm"
 MCP_REGISTRY_BASE_URL=""           # default: https://registry.modelcontextprotocol.io
 MCP_REGISTRY_SOURCE_REPO=""        # source repo URL for registry manifest
 ```
@@ -215,15 +215,15 @@ SUPABASE_POOLER_HOST=""            # Override hardcoded Mumbai pooler host
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/garvitsingh006/doc2mcp.git
-cd doc2mcp
+git clone https://github.com/garvitsingh006/docs4llm.git
+cd docs4llm
 pnpm install
 
 # 2. Configure environment
 cp .env.example .env.local
 # Edit .env.local — fill in at minimum:
 #   AUTH_SECRET, POSTGRES_URL, NEXT_PUBLIC_SUPABASE_URL,
-#   NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, GEMINI_API_KEY
+#   NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, OPENROUTER_API_KEY
 
 # 3. Run database migrations
 pnpm db:migrate
@@ -238,9 +238,9 @@ pnpm dev
 cd cli
 pnpm install
 pnpm build
-npm link          # makes 'doc2mcp' available globally
-doc2mcp login     # browser-based device auth
-doc2mcp https://docs.example.com
+npm link          # makes 'docs4llm' available globally
+docs4llm login     # browser-based device auth
+docs4llm https://docs.example.com
 ```
 
 ---
@@ -275,7 +275,7 @@ The example file ships with `SKIP_MIGRATE="1"`. If you copy it verbatim and run 
 
 ### 3. Default Admin Email
 
-If `ADMIN_EMAILS` is not set, `proxy.ts` defaults to `doc2mcp@gmail.com` — that email gets admin access out of the box. Set `ADMIN_EMAILS` to your own email.
+If `ADMIN_EMAILS` is not set, `proxy.ts` defaults to `docs4llm@gmail.com` — that email gets admin access out of the box. Set `ADMIN_EMAILS` to your own email.
 
 ### 4. GitHub OAuth Setup
 

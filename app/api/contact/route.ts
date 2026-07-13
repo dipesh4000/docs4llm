@@ -45,10 +45,10 @@ async function deliverViaResend(
     };
   }
   const from =
-    process.env.RESEND_FROM ?? "doc2mcp contact <onboarding@resend.dev>";
+    process.env.RESEND_FROM ?? "docs4llm contact <onboarding@resend.dev>";
   const to = process.env.CONTACT_INBOX ?? CONTACT_EMAIL;
 
-  const subject = `[doc2mcp contact] ${payload.subject ?? "General question"} — ${payload.name}`;
+  const subject = `[docs4llm contact] ${payload.subject ?? "General question"} — ${payload.name}`;
   const text = [
     `From: ${payload.name} <${payload.email}>`,
     payload.subject ? `Subject: ${payload.subject}` : null,

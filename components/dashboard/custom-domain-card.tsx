@@ -24,19 +24,19 @@ type Props = {
 };
 
 const REQUIRED_PLANS = new Set(["team", "enterprise"]);
-const TARGET_HOST = "cname.doc2mcp.app";
+const TARGET_HOST = "cname.docs4llm.app";
 
 const DNS_RECORDS = [
   {
     type: "CNAME",
     host: "mcp",
     value: TARGET_HOST,
-    note: "Routes mcp.your-domain.com to doc2mcp's edge.",
+    note: "Routes mcp.your-domain.com to docs4llm's edge.",
   },
   {
     type: "TXT",
-    host: "_doc2mcp",
-    value: "doc2mcp-verify=<paste-from-support>",
+    host: "_docs4llm",
+    value: "docs4llm-verify=<paste-from-support>",
     note: "One-time verification record we email after you request setup.",
   },
 ] as const;

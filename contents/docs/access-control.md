@@ -7,7 +7,7 @@ order: 1
 
 ## Overview
 
-Access in doc2mcp is organized around accounts, projects, and per-project tokens.
+Access in docs4llm is organized around accounts, projects, and per-project tokens.
 
 ## Why it matters
 

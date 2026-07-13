@@ -7,7 +7,7 @@ order: 5
 
 # Marketplace
 
-Every **ready** MCP on doc2mcp is listed at [/marketplace](https://doc2mcp.site/marketplace).
+Every **ready** MCP on docs4llm is listed at [/marketplace](https://docs4llm.site/marketplace).
 
 ## Browse
 
@@ -27,8 +27,8 @@ Every **ready** MCP on doc2mcp is listed at [/marketplace](https://doc2mcp.site/
 ### CLI
 
 ```bash
-doc2mcp token create
-doc2mcp marketplace <project-id>
+docs4llm token create
+docs4llm marketplace <project-id>
 ```
 
 ## Publish your MCP
@@ -37,4 +37,4 @@ Convert any docs URL — when status is **ready**, your MCP appears on the marke
 
 ## Founder / official MCPs
 
-Official doc2mcp infrastructure MCPs are pinned to the top of the marketplace.
+Official docs4llm infrastructure MCPs are pinned to the top of the marketplace.

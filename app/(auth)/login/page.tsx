@@ -9,35 +9,13 @@ import { isAdminEmail } from "@/lib/admin/admin-access";
 
 const BENEFITS = [
   { icon: Zap, text: "5 free doc conversions every month" },
-<<<<<<< HEAD
-  { icon: MessageSquare, text: "Jump straight into chat after sign-in" },
-  { icon: Sparkles, text: "One-click GitHub — no password to remember" },
-=======
   { icon: Code2, text: "Export MCP configs for Cursor, Claude & VS Code" },
   { icon: Plug, text: "Hosted servers — no local setup or API keys to share" },
-  { icon: Sparkles, text: "One-click Google sign-in" },
->>>>>>> upstream/main
+  { icon: Sparkles, text: "One-click GitHub sign-in" },
 ] as const;
 
 function LoginHeading() {
   return (
-<<<<<<< HEAD
-    <div className="mb-6 space-y-3">
-      <p className="inline-flex items-center rounded-full border border-[#24292f]/25 bg-[#24292f]/8 px-3 py-1 font-medium text-[#24292f] text-xs dark:border-[#f0f6fc]/30 dark:bg-[#f0f6fc]/10 dark:text-[#f0f6fc]">
-        Free to get started
-      </p>
-      <h1 className="font-semibold text-2xl tracking-tight sm:text-[1.65rem]">
-        Create your account
-      </h1>
-      <p className="text-muted-foreground text-sm leading-relaxed">
-        Sign up or sign in with GitHub. We&apos;ll send you to chat as soon as
-        you&apos;re in.
-      </p>
-      <ul className="space-y-2.5 pt-1">
-        {BENEFITS.map(({ icon: Icon, text }) => (
-          <li className="flex items-start gap-2.5 text-sm" key={text}>
-            <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#24292f]/10 text-[#24292f] dark:bg-[#f0f6fc]/15 dark:text-[#f0f6fc]">
-=======
     <div className="mb-8 space-y-5">
       <LoginHeroStrip />
 
@@ -46,7 +24,7 @@ function LoginHeading() {
           Free to get started
         </p>
         <h1 className="font-display font-semibold text-2xl tracking-tight sm:text-3xl">
-          Welcome to doc2mcp
+          Welcome to docs4llm
         </h1>
         <p className="text-muted-foreground text-sm leading-relaxed sm:text-[15px]">
           Sign in to turn documentation into MCP servers your AI editors can
@@ -62,7 +40,6 @@ function LoginHeading() {
             key={text}
           >
             <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#4285f4]/10 text-[#4285f4] dark:bg-[#8ab4f8]/15 dark:text-[#8ab4f8]">
->>>>>>> upstream/main
               <Icon className="size-3" strokeWidth={2.25} />
             </span>
             <span className="text-foreground/90">{text}</span>

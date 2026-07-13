@@ -21,8 +21,8 @@ const CARDS = [
     icon: BookOpen,
   },
   {
-    href: "/docs/what-is-doc2mcp",
-    title: "What is doc2mcp?",
+    href: "/docs/what-is-docs4llm",
+    title: "What is docs4llm?",
     body: "Documentation infrastructure — crawl, index, host, and connect agents.",
     icon: Compass,
   },
@@ -90,7 +90,7 @@ export function DocsHome() {
           </Link>
           <Link
             className="inline-flex h-11 items-center gap-2 rounded-full border border-border/60 px-6 font-medium text-muted-foreground text-sm transition-colors hover:bg-accent hover:text-foreground"
-            href="https://doc2mcp.site"
+            href="https://docs4llm.site"
           >
             Open app
           </Link>
@@ -99,7 +99,7 @@ export function DocsHome() {
 
       <div className="mt-10 overflow-hidden rounded-2xl border border-border/60">
         <Image
-          alt="The doc2mcp pipeline: documentation, crawling, knowledge processing, retrieval, MCP generation, AI agents"
+          alt="The docs4llm pipeline: documentation, crawling, knowledge processing, retrieval, MCP generation, AI agents"
           className="w-full"
           height={300}
           src="/diagrams/pipeline.svg"

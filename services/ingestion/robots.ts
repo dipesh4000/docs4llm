@@ -1,6 +1,6 @@
 /**
  * Minimal robots.txt parser focused on what the crawler needs:
- *   - Allow / Disallow rules for our User-Agent (doc2mcp) and "*"
+ *   - Allow / Disallow rules for our User-Agent (docs4llm) and "*"
  *   - Sitemap declarations (for downstream sitemap discovery)
  *   - Crawl-delay (advisory; we already pace with the in-process queue)
  *
@@ -10,7 +10,7 @@
 
 import { fetchWithRetry } from "./fetch-with-retry";
 
-const USER_AGENT = "doc2mcp";
+const USER_AGENT = "docs4llm";
 
 export type RobotsRules = {
   allow: string[];

@@ -1,13 +1,13 @@
 ---
 title: Connect to Claude Desktop
-description: Add a doc2mcp server to Claude Desktop's MCP configuration.
+description: Add a docs4llm server to Claude Desktop's MCP configuration.
 category: Guides
 order: 2
 ---
 
 ## Overview
 
-Claude Desktop reads MCP servers from its config file. doc2mcp generates a
+Claude Desktop reads MCP servers from its config file. docs4llm generates a
 ready-to-paste block.
 
 ## Step-by-step
@@ -18,7 +18,7 @@ ready-to-paste block.
 {
   "mcpServers": {
     "stripe": {
-      "url": "https://doc2mcp.site/api/mcp/<projectId>/mcp",
+      "url": "https://docs4llm.site/api/mcp/<projectId>/mcp",
       "headers": { "Authorization": "Bearer <project-token>" }
     }
   }

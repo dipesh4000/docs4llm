@@ -11,9 +11,9 @@ import { CtaSection } from "@/components/landing/cta-section";
 import { FooterSection } from "@/components/landing/footer-section";
 
 export const metadata: Metadata = {
-  title: "doc2mcp CLI — Turn Docs Into MCP From Your Terminal",
+  title: "docs4llm CLI — Turn Docs Into MCP From Your Terminal",
   description:
-    "Install the doc2mcp CLI to convert any documentation URL into a hosted, token-secured MCP server, install it into Cursor/VS Code/Claude/Windsurf, and chat with your docs — all from the terminal.",
+    "Install the docs4llm CLI to convert any documentation URL into a hosted, token-secured MCP server, install it into Cursor/VS Code/Claude/Windsurf, and chat with your docs — all from the terminal.",
 };
 
 export default function CliPage() {
