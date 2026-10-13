@@ -39,12 +39,13 @@ TINYFISH_API_KEY="sk-tinyfish-your-api-key"
 ## 3. Implementation Blueprint
 
 ### Agent Orchestration Code
-Located at [`services/ingestion/tinyfish-agent.ts`](file:///home/nithin/Projects/docs4llm/services/ingestion/tinyfish-agent.ts):
+Located at [`services/ingestion/tinyfish-agent.ts`](https://github.com/dipesh4000/docs4llm/blob/main/services/ingestion/tinyfish-agent.ts):
 
 ```typescript
-import { TinyFish } from "@tiny-fish/sdk";
+import { TinyFish, RunStatus } from "@tiny-fish/sdk";
 import type { CrawlResult } from "@/types/platform";
 
+// Automatically reads TINYFISH_API_KEY from environment
 const client = new TinyFish({
   apiKey: process.env.TINYFISH_API_KEY,
 });
@@ -53,36 +54,35 @@ export async function crawlDocsWithTinyFish(
   rootUrl: string,
   maxPages = 40
 ): Promise<CrawlResult[]> {
-  // Define clear, autonomous operational objective for the TinyFish Agent
+  // Operational goal instructed to TinyFish autonomous browser agent
   const goalPrompt = `
     You are an expert technical documentation scraper.
     Explore this documentation website starting at: ${rootUrl}.
     Traverse the navigation sidebar, API references, tutorials, and guides.
-    Extract the clean markdown for each documentation page.
-    Preserve code blocks with syntax highlighting language tags, tables, and section headings.
+    Extract the clean markdown for each documentation page as JSON:
+    [
+      { "url": string, "title": string, "markdown": string }
+    ]
+    Preserve code blocks with language tags, tables, and section headings.
     Omit headers, footers, cookie banners, and navigation menus.
     Limit your exploration to at most ${maxPages} key documentation pages.
   `.trim();
 
-  // Trigger autonomous agent session
-  const session = await client.agent.start({
+  // Run autonomous browser agent session
+  const run = await client.agent.run({
     url: rootUrl,
     goal: goalPrompt,
-    options: {
-      format: "markdown",
-      maxPages,
-      waitForNetworkIdle: true,
-      antiBotBypass: true,
-    },
   });
 
-  // Await completion with timeout handling
-  const results = await session.waitForCompletion({
-    timeoutMs: 45_000, // 45 second boundary to stay within SLA
-  });
+  if (run.status !== RunStatus.COMPLETED) {
+    throw new Error(`TinyFish agent run failed with status: ${run.status}`);
+  }
 
-  // Map to Docs4LLM canonical CrawlResult schema
-  return results.pages.map((page) => ({
+  // Parse extracted pages from agent result
+  const pages: Array<{ url: string; title: string; markdown: string }> =
+    typeof run.result === "string" ? JSON.parse(run.result) : run.result;
+
+  return pages.map((page) => ({
     url: page.url,
     title: page.title || "Documentation Page",
     content: page.markdown,

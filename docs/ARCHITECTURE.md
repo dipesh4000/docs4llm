@@ -31,7 +31,7 @@ graph LR
 ## 2. Core Architecture Subsystems
 
 ### Subsystem 1: Ingestion & Source Detection
-- **File Location:** [`lib/docs4llm/detect-source-type.ts`](file:///home/nithin/Projects/docs4llm/lib/docs4llm/detect-source-type.ts)
+- **File Location:** [`lib/docs4llm/detect-source-type.ts`](https://github.com/dipesh4000/docs4llm/blob/main/lib/docs4llm/detect-source-type.ts)
 - **Role:** Inspects input URLs to detect framework signatures:
   - Mintlify (`mintlify.com`, `docs.json`, `mint.json`)
   - GitBook (`gitbook.io`, `__gitbook_` tags)
@@ -42,7 +42,7 @@ graph LR
   - Plain HTML / Markdown files
 
 ### Subsystem 2: Autonomous Agentic Crawling (TinyFish)
-- **File Location:** [`services/ingestion/`](file:///home/nithin/Projects/docs4llm/services/ingestion/)
+- **File Location:** [`services/ingestion/`](https://github.com/dipesh4000/docs4llm/tree/main/services/ingestion/)
 - **Engine:** Powered by the **TinyFish Agent API** (`@tiny-fish/sdk`).
 - **Why TinyFish?**
   - **Dynamic SPA Hydration:** Modern docs rely on client-side React/Vue rendering. TinyFish executes JavaScript in a cloud headless browser and waits for network idle.
@@ -51,7 +51,7 @@ graph LR
 - **Output:** Standardized `CrawlResult[]` array containing URL, page title, section type, and clean markdown content.
 
 ### Subsystem 3: Semantic Indexing & AI Analysis (Option D: Hybrid)
-- **File Location:** [`lib/docs4llm/chunks.ts`](file:///home/nithin/Projects/docs4llm/lib/docs4llm/chunks.ts), [`services/ai/understanding.ts`](file:///home/nithin/Projects/docs4llm/services/ai/understanding.ts)
+- **File Location:** [`lib/docs4llm/chunks.ts`](https://github.com/dipesh4000/docs4llm/blob/main/lib/docs4llm/chunks.ts), [`services/ai/understanding.ts`](https://github.com/dipesh4000/docs4llm/blob/main/services/ai/understanding.ts)
 - **Why Hybrid Indexing?**
   - Vector-only search often fails on exact code identifiers, method names (e.g. `client.auth.getUser()`), and HTTP error codes.
   - Plain keyword search fails on natural-language synonyms.
@@ -61,7 +61,7 @@ graph LR
     3. **OpenRouter AI Analysis:** One-shot analysis extracting structured API endpoints, authentication schemes, multi-step agent recipes, and generating `llms.txt`.
 
 ### Subsystem 4: Dynamic MCP Server Engine
-- **File Location:** [`lib/docs4llm/mcp-tools-runtime.ts`](file:///home/nithin/Projects/docs4llm/lib/docs4llm/mcp-tools-runtime.ts), [`app/api/mcp/[id]/mcp/route.ts`](file:///home/nithin/Projects/docs4llm/app/api/mcp/[id]/mcp/route.ts)
+- **File Location:** [`lib/docs4llm/mcp-tools-runtime.ts`](https://github.com/dipesh4000/docs4llm/blob/main/lib/docs4llm/mcp-tools-runtime.ts), [`app/api/mcp/[id]/mcp/route.ts`](https://github.com/dipesh4000/docs4llm/blob/main/app/api/mcp/%5Bid%5D/mcp/route.ts)
 - **Protocol:** Model Context Protocol (MCP) Streamable HTTP transport (JSON-RPC 2.0).
 - **Core Standard Tools Provided:**
   - `list_documentation_pages`: Lists page tree and metadata.

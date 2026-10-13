@@ -19,7 +19,7 @@ This guide covers everything needed to set up, develop, test, and contribute to 
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-org/docs4llm.git
+git clone https://github.com/dipesh4000/docs4llm.git
 cd docs4llm
 
 # 2. Install dependencies

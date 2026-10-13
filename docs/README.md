@@ -10,11 +10,11 @@ Docs4LLM transforms any public or private documentation site into a hosted, auth
 
 | Document | Description | Target Audience |
 |---|---|---|
-| **[System Architecture](file:///home/nithin/Projects/docs4llm/docs/ARCHITECTURE.md)** | Full end-to-end architecture, system decomposition, data flow, and runtime mechanics. | Architects, System Engineers |
-| **[Pipeline Specification](file:///home/nithin/Projects/docs4llm/docs/PIPELINE_SPEC.md)** | Step-by-step breakdown of the 5-stage conversion pipeline from URL to live server. | Backend Engineers, Integrators |
-| **[TinyFish Crawler Integration](file:///home/nithin/Projects/docs4llm/docs/TINYFISH_INTEGRATION.md)** | Autonomous agentic web crawling using TinyFish: SPA handling, anti-bot bypass, and markdown extraction. | Crawler & Ingestion Engineers |
-| **[Model Context Protocol (MCP) Spec](file:///home/nithin/Projects/docs4llm/docs/MCP_SPEC.md)** | JSON-RPC 2.0 specifications, standard tools (`search`, `get_page`, `ask`, etc.), custom API tools, and client configs. | AI Agent Builders, IDE Users |
-| **[Developer & Contributor Guide](file:///home/nithin/Projects/docs4llm/docs/DEVELOPER_GUIDE.md)** | Local environment setup, running tests, CLI usage, environment variables, and deployment. | Contributors, Developers |
+| **[System Architecture](https://github.com/dipesh4000/docs4llm/blob/main/docs/ARCHITECTURE.md)** | Full end-to-end architecture, system decomposition, data flow, and runtime mechanics. | Architects, System Engineers |
+| **[Pipeline Specification](https://github.com/dipesh4000/docs4llm/blob/main/docs/PIPELINE_SPEC.md)** | Step-by-step breakdown of the 5-stage conversion pipeline from URL to live server. | Backend Engineers, Integrators |
+| **[TinyFish Crawler Integration](https://github.com/dipesh4000/docs4llm/blob/main/docs/TINYFISH_INTEGRATION.md)** | Autonomous agentic web crawling using TinyFish: SPA handling, anti-bot bypass, and markdown extraction. | Crawler & Ingestion Engineers |
+| **[Model Context Protocol (MCP) Spec](https://github.com/dipesh4000/docs4llm/blob/main/docs/MCP_SPEC.md)** | JSON-RPC 2.0 specifications, standard tools (`search`, `get_page`, `ask`, etc.), custom API tools, and client configs. | AI Agent Builders, IDE Users |
+| **[Developer & Contributor Guide](https://github.com/dipesh4000/docs4llm/blob/main/docs/DEVELOPER_GUIDE.md)** | Local environment setup, running tests, CLI usage, environment variables, and deployment. | Contributors, Developers |
 
 ---
 
