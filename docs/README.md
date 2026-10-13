@@ -15,6 +15,9 @@ Docs4LLM transforms any public or private documentation site into a hosted, auth
 | **[TinyFish Crawler Integration](https://github.com/dipesh4000/docs4llm/blob/main/docs/TINYFISH_INTEGRATION.md)** | Autonomous agentic web crawling using TinyFish: SPA handling, anti-bot bypass, and markdown extraction. | Crawler & Ingestion Engineers |
 | **[Model Context Protocol (MCP) Spec](https://github.com/dipesh4000/docs4llm/blob/main/docs/MCP_SPEC.md)** | JSON-RPC 2.0 specifications, standard tools (`search`, `get_page`, `ask`, etc.), custom API tools, and client configs. | AI Agent Builders, IDE Users |
 | **[Developer & Contributor Guide](https://github.com/dipesh4000/docs4llm/blob/main/docs/DEVELOPER_GUIDE.md)** | Local environment setup, running tests, CLI usage, environment variables, and deployment. | Contributors, Developers |
+| **[Database Schema & Data Model](https://github.com/dipesh4000/docs4llm/blob/main/docs/DATABASE_SCHEMA.md)** | PostgreSQL / Drizzle ORM schema, entities (`projects`, `mcp_servers`, `pages`), and migrations. | Backend & DB Engineers |
+| **[Platform REST API Reference](https://github.com/dipesh4000/docs4llm/blob/main/docs/API_REFERENCE.md)** | HTTP REST endpoints for URL conversion, status polling, and CLI auth. | API & Frontend Engineers |
+| **[CLI Tool Reference](https://github.com/dipesh4000/docs4llm/blob/main/docs/CLI_REFERENCE.md)** | Command-line client (`npm i -g docs4llm`), flags, and automated editor configuration. | Developers, CLI Users |
 
 ---
 

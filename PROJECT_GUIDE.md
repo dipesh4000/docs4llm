@@ -32,6 +32,8 @@ URL → Detect source type → Crawl docs → AI analysis (OpenRouter) → Gener
 | Framework | Next.js 16 (App Router, Turbopack, React Compiler) |
 | Frontend | React 19, Tailwind CSS v4, shadcn/ui, Framer Motion |
 | AI / LLM | OpenRouter (free NVIDIA Nemotron by default), Anthropic SDK, Vercel AI SDK |
+| Web Crawler | TinyFish Agent API (`@tiny-fish/sdk`), headless browser SPA hydration |
+| Search Index | In-memory Heading-Aware BM25+ Scorer |
 | MCP | `@modelcontextprotocol/sdk`, Streamable HTTP (JSON-RPC 2.0) |
 | Database | Supabase Postgres via Drizzle ORM |
 | Auth | Supabase Auth (GitHub OAuth), guest sessions |
@@ -62,6 +64,7 @@ docs4llm/
 ├── cli/                    # Standalone npm CLI tool (separate package)
 ├── components/             # React UI components (shadcn/ui based)
 ├── contents/               # Documentation markdown files
+├── docs/                   # Full Technical Architecture & Specification Hub (8 guides)
 ├── features/               # Feature modules (convert UX)
 ├── hooks/                  # React hooks
 ├── lib/                    # Core business logic (29 subdirs)
@@ -76,7 +79,7 @@ docs4llm/
 │   └── observability/      # Tracing, logging, caching
 ├── services/               # Domain services (the pipeline)
 │   ├── pipeline/           # Pipeline orchestrator
-│   ├── ingestion/          # Crawling, sitemap, robots.txt
+│   ├── ingestion/          # TinyFish Agent scraper, robots.txt, sitemap parsing
 │   ├── ai/                 # AI analysis, tool compression
 │   ├── extraction/         # OpenAPI endpoint extraction
 │   ├── mcp/                # MCP server generation, validation
@@ -98,6 +101,7 @@ docs4llm/
 | Node.js 20 | Pinned in CI, required for Next.js 16 |
 | pnpm 10.32.1 | Exact version in `packageManager` field |
 | Supabase project | Auth + Postgres database |
+| TinyFish API key | Autonomous web crawling for SPAs & anti-bot bypass |
 | OpenRouter API key | AI analysis is the core of the pipeline |
 | `.env.local` with all required vars | App won't start without them |
 
@@ -135,6 +139,7 @@ POSTGRES_URL="postgres://user:pass@host:5432/db"
 NEXT_PUBLIC_SUPABASE_URL="https://your-project.supabase.co"
 NEXT_PUBLIC_SUPABASE_ANON_KEY="your-anon-key"
 SUPABASE_SERVICE_ROLE_KEY="your-service-role-key"
+TINYFISH_API_KEY="your-tinyfish-api-key"           # https://agent.tinyfish.ai/api-keys
 OPENROUTER_API_KEY="your-openrouter-api-key"       # https://openrouter.ai/keys
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 
@@ -215,7 +220,7 @@ SUPABASE_POOLER_HOST=""            # Override hardcoded Mumbai pooler host
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/garvitsingh006/docs4llm.git
+git clone https://github.com/dipesh4000/docs4llm.git
 cd docs4llm
 pnpm install
 

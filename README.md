@@ -10,47 +10,55 @@ No install. No local clone. No API keys to hand over.
 
 ![docs4llm — documentation infrastructure for AI agents](./mcp-registry/assets/banner.png)
 
-[**Live**](https://docs4llm.site) · [Docs](https://docs4llm.site/docs) · [Pricing](https://docs4llm.site/pricing) · [Comparison](https://docs4llm.site/comparison)
+[**Live**](https://docs4llm.site) · [Docs](https://github.com/dipesh4000/docs4llm/tree/main/docs) · [Pricing](https://docs4llm.site/pricing) · [Comparison](https://docs4llm.site/comparison)
 
-[![GitHub stars](https://img.shields.io/github/stars/garvitsingh006/docs4llm?style=social)](https://github.com/garvitsingh006/docs4llm/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/dipesh4000/docs4llm?style=social)](https://github.com/dipesh4000/docs4llm/stargazers)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs)](https://nextjs.org)
+[![TinyFish](https://img.shields.io/badge/Crawler-TinyFish_Agent-00E5FF)](https://tinyfish.ai)
 [![OpenRouter](https://img.shields.io/badge/AI-OpenRouter-6467F2)](https://openrouter.ai)
 [![MCP](https://img.shields.io/badge/Model_Context_Protocol-SDK-7c3aed)](https://modelcontextprotocol.io)
 [![Registry](https://img.shields.io/badge/MCP_Registry-io.github.docs4llm-2563eb)](https://registry.modelcontextprotocol.io/?search=docs4llm)
 [![npm](https://img.shields.io/npm/v/docs4llm?color=8b5cf6&label=docs4llm&logo=npm)](https://www.npmjs.com/package/docs4llm)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-22c55e)](https://github.com/garvitsingh006/docs4llm/pulls)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-22c55e)](https://github.com/dipesh4000/docs4llm/pulls)
 [![License](https://img.shields.io/badge/License-Apache_2.0-green)](#license)
-[![GitHub Auth](https://img.shields.io/badge/Auth-GitHub_OAuth-24292f?logo=github)](https://docs.github.com/en/apps/oauth-apps)
 
-**If docs4llm is useful to you, please [⭐ star the repo](https://github.com/garvitsingh006/docs4llm) — it helps other developers find it.**
+**If docs4llm is useful to you, please [⭐ star the repo](https://github.com/dipesh4000/docs4llm) — it helps other developers find it.**
 
 </div>
 
 ---
 
-> **Private codebase.** This repository contains proprietary product code.
-> It is not open source. For public docs, badges, and MCP Registry publishing,
-> see **[docs4llm/docs4llm-registry](https://github.com/docs4llm/docs4llm-registry)**.
+## 📚 Project Documentation Hub
 
-## Product
+Comprehensive architectural specs, pipeline internals, and integration guides are located in the [`docs/`](https://github.com/dipesh4000/docs4llm/tree/main/docs) directory:
 
-- **Site:** [docs4llm.site](https://docs4llm.site)
-- **CLI:** `npm install -g docs4llm`
-- **Registry:** every converted MCP auto-publishes to `io.github.docs4llm/<slug>` on the [official MCP Registry](https://registry.modelcontextprotocol.io/?search=docs4llm) when `MCP_REGISTRY_GITHUB_TOKEN` is configured in production.
+| Guide | Description |
+|---|---|
+| **[Architecture & System Design](https://github.com/dipesh4000/docs4llm/blob/main/docs/ARCHITECTURE.md)** | Subsystems, data flow, multi-tenancy, and runtime mechanics. |
+| **[5-Stage Pipeline Specification](https://github.com/dipesh4000/docs4llm/blob/main/docs/PIPELINE_SPEC.md)** | Step-by-step breakdown of URL-to-MCP transformation. |
+| **[TinyFish Crawler Integration](https://github.com/dipesh4000/docs4llm/blob/main/docs/TINYFISH_INTEGRATION.md)** | Autonomous agentic web crawling, SPA hydration, and anti-bot bypass. |
+| **[Model Context Protocol (MCP) Spec](https://github.com/dipesh4000/docs4llm/blob/main/docs/MCP_SPEC.md)** | JSON-RPC 2.0 schemas, standard tools, custom API tools, and IDE setup. |
+| **[Database Schema & Data Model](https://github.com/dipesh4000/docs4llm/blob/main/docs/DATABASE_SCHEMA.md)** | PostgreSQL / Drizzle ORM entities and database migrations. |
+| **[Platform REST API Reference](https://github.com/dipesh4000/docs4llm/blob/main/docs/API_REFERENCE.md)** | REST endpoints for conversions, polling status, and CLI auth. |
+| **[CLI Tool Reference](https://github.com/dipesh4000/docs4llm/blob/main/docs/CLI_REFERENCE.md)** | Global terminal client (`npm i -g docs4llm`) and automated editor configuration. |
+| **[Developer & Contributor Guide](https://github.com/dipesh4000/docs4llm/blob/main/docs/DEVELOPER_GUIDE.md)** | Local environment setup, environment variables, and testing. |
 
-## How it works
+---
 
-1. Paste a docs URL — LangChain, Stripe, your own — in the chat with the
-   **docs4llm** toggle on.
-2. The pipeline crawls the site (Mintlify, Docusaurus, OpenAPI JSON/YAML,
-   GitHub repos, GitBook, plain HTML), preserving code blocks and chunking by
-   heading.
-3. You get a remote MCP URL + Bearer token. Paste it into Cursor's `mcp.json`
-   and reload.
-4. Every generated MCP is **auto-published to the official MCP Registry** under
-   `io.github.docs4llm/<slug>` and listed in the marketplace.
+## How It Works
 
-> **Auth:** Sign in with GitHub OAuth — no passwords, no Google account required.
+```
+[Docs URL] ──► [Source Detector] ──► [TinyFish Autonomous Crawler] ──► [Heading BM25 + OpenRouter AI] ──► [Hosted MCP Server]
+```
+
+1. **Paste a Docs URL**: LangChain, Stripe, Mintlify, GitBook, Nextra, OpenAPI specs, or GitHub repos.
+2. **Autonomous Agent Crawl (TinyFish)**: The TinyFish cloud agent executes client-side JavaScript, bypasses bot protections, and captures clean GitHub-Flavored Markdown.
+3. **Semantic Indexing & AI Analysis**:
+   - **ATX Heading Chunking**: Splits sections hierarchically while retaining full ancestor breadcrumb trails.
+   - **BM25+ Lexical Scorer**: Delivers sub-10ms keyword and exact code-identifier search.
+   - **OpenRouter AI Analysis**: Deduplicates API endpoints, detects auth patterns, infers workflows, and generates standardized `llms.txt`.
+4. **Instant MCP Server**: Serves a secure, bearer-token authenticated Streamable HTTP endpoint at `/api/mcp/{id}/mcp`.
+5. **Direct Editor Connection**: Plugs straight into Cursor, Claude Desktop, VS Code, Windsurf, and agent frameworks like LangChain.
 
 ```json
 {
@@ -65,158 +73,121 @@ No install. No local clone. No API keys to hand over.
 }
 ```
 
-## CLI
+---
 
-[![npm version](https://img.shields.io/npm/v/docs4llm?color=8b5cf6&label=docs4llm&logo=npm)](https://www.npmjs.com/package/docs4llm)
-[![npm downloads](https://img.shields.io/npm/dm/docs4llm?color=8b5cf6&logo=npm)](https://www.npmjs.com/package/docs4llm)
+## 🛠️ CLI Quick Start
 
-Install the terminal client and run the same conversion pipeline from your shell:
+Install the terminal client and run conversions straight from your shell:
 
 ```bash
-npm install -g docs4llm   # global install puts `docs4llm` on your PATH
-docs4llm login            # browser-based device auth
-docs4llm https://docs.example.com
+# Global install (puts `docs4llm` on your PATH)
+npm install -g docs4llm
+
+# Authorize with your account
+docs4llm login
+
+# Convert docs and auto-install into your editor
+docs4llm https://docs.stripe.com
 ```
 
-> Use `-g`. A local `npm i docs4llm` won't expose the `docs4llm` command — use `npx docs4llm <url>` instead.
-
-The CLI uses browser-based device auth, shares your web account limits, auto-lists
-ready MCPs in the marketplace, and can write configs to Cursor, VS Code, Claude
-Desktop, and Windsurf.
-
 - 📦 npm: https://www.npmjs.com/package/docs4llm
-- 📖 Full command reference: [`cli/README.md`](./cli/README.md) · [docs/cli](https://docs4llm.site/docs/cli)
+- 📖 Full command reference: [`docs/CLI_REFERENCE.md`](https://github.com/dipesh4000/docs4llm/blob/main/docs/CLI_REFERENCE.md)
 
-## MCP tools
+---
 
-| Tool | What it does |
-|------|--------------|
-| `list_documentation_pages` | Every crawled page |
-| `get_documentation_page` | Full markdown of one page |
-| `search_documentation` | Heading-aware search |
-| `get_documentation_overview` | Summary + index |
-| `read_full_documentation` | All pages combined |
-| `ask_documentation` | Q&A with citations |
+## 🧰 MCP Tools Generated Per Project
 
-## Stack
+| Tool | What It Does |
+|---|---|
+| `list_documentation_pages` | Lists all crawled pages, titles, and paths |
+| `get_documentation_page` | Retrieves full markdown of a specific page |
+| `search_documentation` | Sub-10ms heading-aware BM25+ search with breadcrumbs |
+| `get_documentation_overview` | Summary of the platform, auth guides, and `llms.txt` |
+| `read_full_documentation` | All pages combined for frontier models |
+| `ask_documentation` | Natural-language Q&A powered by OpenRouter with source citations |
+| *Custom API Tools* | Up to 10 compressed tools synthesized from detected endpoints |
 
-Next.js 16 · OpenRouter · Supabase · Upstash Redis + QStash · Streamable HTTP MCP
+---
 
-## Internal development
+## 🏗️ Tech Stack
 
-For team members with repo access:
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router, React 19, Turbopack) |
+| Web Crawler | TinyFish Agent API (`@tiny-fish/sdk`) |
+| AI / LLM | OpenRouter (`nvidia/nemotron-3-ultra-550b-a55b:free` default) |
+| Search Engine | In-Memory Heading-Aware BM25+ |
+| Database | Supabase Postgres via Drizzle ORM |
+| Auth | Supabase Auth (GitHub OAuth) |
+| Protocol | `@modelcontextprotocol/sdk` (Streamable HTTP / JSON-RPC 2.0) |
+| UI | Tailwind CSS v4, shadcn/ui, Framer Motion |
+| Cache & Queue | Upstash Redis + QStash |
+
+---
+
+## 💻 Local Development
 
 ```bash
-git clone https://github.com/garvitsingh006/docs4llm.git
+# 1. Clone repository
+git clone https://github.com/dipesh4000/docs4llm.git
 cd docs4llm
+
+# 2. Install dependencies
 pnpm install
+
+# 3. Configure environment variables
 cp .env.example .env.local
-# fill OPENROUTER_API_KEY, AUTH_SECRET, POSTGRES_URL, Supabase keys, GitHub OAuth
-pnpm db:migrate
+
+# 4. Push database schema
+pnpm db:push
+
+# 5. Start development server
 pnpm dev
 ```
 
 Open <http://localhost:3000>.
 
-### Environment variables
+### Environment Variables
 
 ```env
-# Core
-AUTH_SECRET=...                 # openssl rand -base64 32
-OPENROUTER_API_KEY=...          # https://openrouter.ai/keys
-OPENROUTER_MODEL=nvidia/nemotron-3-ultra-550b-a55b:free
+# Application
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+AUTH_SECRET="..."                 # openssl rand -base64 32
 
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=...
-NEXT_PUBLIC_SUPABASE_ANON_KEY=...
-SUPABASE_SERVICE_ROLE_KEY=...
-POSTGRES_URL=...                # Supabase pooler URI
+# Crawler Engine (TinyFish)
+TINYFISH_API_KEY="..."            # https://agent.tinyfish.ai/api-keys
 
-# GitHub OAuth (login/signup)
-# Create at https://github.com/settings/developers → OAuth Apps
-# Callback URL: https://<your-project>.supabase.co/auth/v1/callback
-GITHUB_CLIENT_ID=...
-GITHUB_CLIENT_SECRET=...
+# AI Analysis (OpenRouter)
+OPENROUTER_API_KEY="..."          # https://openrouter.ai/keys
+OPENROUTER_MODEL="nvidia/nemotron-3-ultra-550b-a55b:free"
 
-# Admin access (comma-separated emails)
-ADMIN_EMAILS=you@example.com
+# Supabase Postgres Database
+POSTGRES_URL="..."
+NEXT_PUBLIC_SUPABASE_URL="..."
+NEXT_PUBLIC_SUPABASE_ANON_KEY="..."
+SUPABASE_SERVICE_ROLE_KEY="..."
 
-# MCP Registry auto-publish (optional — no-op if unset)
-MCP_REGISTRY_GITHUB_TOKEN=...   # token for a member of the docs4llm GitHub org
-
-# Optional — improves crawl quality for SPA / sparse docs
-TAVILY_API_KEY=
-BRAVE_SEARCH_API_KEY=
-EXA_API_KEY=
-JINA_API_KEY=
-FIRECRAWL_API_KEY=
+# GitHub OAuth
+GITHUB_CLIENT_ID="..."
+GITHUB_CLIENT_SECRET="..."
 ```
-
-> **Never commit secrets.** All keys above belong in `.env.local` (gitignored)
-> or your host's environment settings.
-
-## Deploy to Vercel
-
-1. Fork / clone this repo, push to your GitHub.
-2. Import the repo at <https://vercel.com/new>.
-3. Add the env vars above in **Settings → Environment Variables**.
-4. Deploy. docs4llm runs on Vercel Functions out of the box.
-
-Set `NEXT_PUBLIC_APP_URL` to your deployed domain so generated MCP configs
-point at the right host. Leave it **unset on Preview** so per-branch preview
-URLs resolve correctly for auth.
-
-## Stack
-
-| | |
-|---|---|
-| Framework | Next.js 16, React 19, Turbopack |
-| AI | OpenRouter (`nvidia/nemotron-3-ultra-550b-a55b:free` by default) |
-| Database | Supabase Postgres |
-| Auth | Supabase Auth (GitHub OAuth) |
-| UI | Tailwind v4, shadcn/ui, Framer Motion, Streamdown |
-| Lint | Ultracite (Biome) |
-| MCP | `@modelcontextprotocol/sdk` + official MCP Registry |
-
-## CI / CD
-
-A single GitHub Actions workflow ([.github/workflows/ci.yml](.github/workflows/ci.yml))
-runs on every push and PR:
-
-- TypeScript type-check (`tsc --noEmit --skipLibCheck`)
-- Ultracite / Biome lint (`pnpm check`)
-- Next.js production build (`pnpm exec next build`)
-
-Branching: feature branches cut from `staging` → PR → `staging` preview for QA
-→ `main` → tagged release to production. Preview deploys are created per branch
-and support full login.
-
-## Contributing
-
-Contributions are welcome! Whether it's a bug fix, a new source-format adapter,
-or docs improvements:
-
-1. Fork the repo and create a branch off `staging`.
-2. Run `pnpm check` and `pnpm exec tsc --noEmit` before opening a PR.
-3. Open a PR against `staging` with a clear description.
-
-Found a bug or have an idea? [Open an issue](https://github.com/garvitsingh006/docs4llm/issues).
-
-## Security
-
-Never commit secrets — all API keys belong in `.env.local` (gitignored) or your
-host's environment settings. If you discover a security issue, please open a
-[private security advisory](https://github.com/garvitsingh006/docs4llm/security/advisories/new)
-instead of a public issue.
-
-## License
-
-[Apache 2.0](./LICENSE)
 
 ---
 
-<div align="center">
+## 🤝 Contributing
 
-**Built for developers shipping AI agents.** If this saved you time, [⭐ star the repo](https://github.com/garvitsingh006/docs4llm).
+Contributions are welcome! Please see the [Developer & Contributor Guide](https://github.com/dipesh4000/docs4llm/blob/main/docs/DEVELOPER_GUIDE.md) and [CONTRIBUTING.md](https://github.com/dipesh4000/docs4llm/blob/main/CONTRIBUTING.md) for guidelines.
 
-</div>
+Found a bug or have an idea? [Open an issue](https://github.com/dipesh4000/docs4llm/issues).
+
+---
+
+## 🔒 Security
+
+Never commit secrets — all API keys belong in `.env.local` (gitignored). If you discover a security issue, please open a [private security advisory](https://github.com/dipesh4000/docs4llm/security/advisories/new).
+
+---
+
+## 📄 License
+
+[Apache 2.0](./LICENSE)
